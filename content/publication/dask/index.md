@@ -1,6 +1,11 @@
 ---
 date: 2018-03-19
 title: Ad hoc Big Data Analysis with Dask 
+abstract: How can we keep the simplicity and power of pandas, while extending it to be out-of-core and parallel?
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: true
 ---
 
 Creating custom reports and machine learning models with pandas can be cumbersome with limited hardware resources (memory and CPU). Financial constraints can make spawning cloud instances to side-step this issue a problem, while adding the complexity of libraries such as Apache Spark isn't worth the trouble and staggers data exploration. **How can we keep the simplicity and power of pandas, while extending it to be out-of-core and parallel?**
