@@ -10,11 +10,11 @@ authors:
 superuser: true
 
 # Role/position
-role: Machine Learning Researcher for Healthcare
+role: Machine Learning Researcher
 
 # Organizations/Affiliations
 organizations:
-- name: 3778 Healtcare
+- name: 3778 Healthcare
   url: "https://www.3778.care"
 
 # Short bio (displayed in user profile at end of posts)
@@ -39,9 +39,6 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
-- icon: envelope
-  icon_pack: fas
-  link: "danielsouzasevero@gmail.com"
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/_dsevero
@@ -66,6 +63,8 @@ user_groups:
 - Researchers
 - Visitors
 ---
+`{first name}souza{last name} at gmail dot com`
+
 Looking for an opportunity to make the jump from Industry to Academia. I'm interested in learning more about the intersection between Probabilistic Graphical Models and Deep Learning for Neural Networks and their applications to Health and Privacy. I'm also interested in how Machine Learning can be seen as an Information Theory problem.
 
 For recruiters: I'm not interested in positions working directly, or indirectly, with e-commerce. 

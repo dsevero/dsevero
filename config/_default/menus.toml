@@ -8,13 +8,17 @@
   url = "#about"
   weight = 10
 [[main]]
+  name = "Posts"
+  url = "#posts"
+  weight = 15
+[[main]]
   name = "Publications"
   url = "#publications"
-  weight = 25
+  weight = 20
 [[main]]
   name = "Open Source"
   url = "#opensource"
-  weight = 40
+  weight = 30
 
 
 # Link to a PDF of your resume/CV from the menu.
