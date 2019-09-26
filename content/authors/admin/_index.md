@@ -50,9 +50,9 @@ social:
   link: https://www.linkedin.com/in/danielsevero
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+- icon: cv
+  icon_pack: ai
+  link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 # email: ""
@@ -65,6 +65,12 @@ user_groups:
 ---
 `{first name}souza{last name} at gmail dot com`
 
-Looking for an opportunity to make the jump from Industry to Academia. I'm interested in learning more about the intersection between Probabilistic Graphical Models and Deep Learning for Neural Networks and their applications to Health and Privacy. I'm also interested in how Machine Learning can be seen as an Information Theory problem.
-
-For recruiters: I'm not interested in positions working directly, or indirectly, with e-commerce. 
+<div style="text-align: justify">
+I'm a Researcher at <a href="https://research.3778.care/">3778 Healthcare</a> working with Machine Learning for Healthcare. Previously, I was Head of Data Science at <a href="https://www.linkedin.com/showcase/linx-impulse/">Linx Impulse</a> and a Researcher at the <a href="https://www.certi.org.br/en/">CERTI Foundation</a> where I worked with Signal Processing and Embedded Systems.
+<br>
+<br>
+I'm interested in learning more about the intersection between Probabilistic Graphical Models and Deep Learning for Neural Networks as well as their applications to Health and Privacy. I'm also interested in how Machine Learning can be seen as an Information Theory problem.
+<br>
+<br>
+Originally, I am from Florianópolis, Brazil but I've lived in New Jersey, Orlando, Toronto and São Paulo as well as other smaller cities in the south of Brazil. I enjoy reading, playing american football and <a href="https://www.kerbalspaceprogram.com/">KSP</a>
+</div>

@@ -5,15 +5,15 @@
 
 [[main]]
   name = "Home"
-  url = "#about"
+  url = "/"
   weight = 10
 [[main]]
   name = "Publications"
-  url = "#publications"
+  url = "/publication"
   weight = 20
 [[main]]
   name = "Open Source"
-  url = "#opensource"
+  url = "/opensource"
   weight = 30
 
 
