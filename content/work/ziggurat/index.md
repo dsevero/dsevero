@@ -20,10 +20,8 @@ publication_types: ["4"]
 publication: ""
 publication_short: ""
 
-abstract: "Mathematical proof of functionality, of a highly efficient pseudo-random number generator: The Ziggurat Method"
-
 # Summary. An optional shortened abstract.
-summary: ""
+summary: "Mathematical proof of functionality, of a highly efficient pseudo-random number generator: The Ziggurat Method"
 
 tags: []
 categories: []

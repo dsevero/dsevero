@@ -34,6 +34,10 @@ education:
     institution: Federal University of Santa Catarina
     year: 2015
 
+news:
+- date: 02/Oct/2019
+  text: This page was created!
+
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the

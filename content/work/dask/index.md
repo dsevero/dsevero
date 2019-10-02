@@ -2,6 +2,7 @@
 date: 2018-03-19
 title: Ad hoc Big Data Analysis with Dask 
 abstract: How can we keep the simplicity and power of pandas, while extending it to be out-of-core and parallel?
+summary: How can we keep the simplicity and power of pandas, while extending it to be out-of-core and parallel?
 image:
   caption: ""
   focal_point: ""

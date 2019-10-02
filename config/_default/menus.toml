@@ -8,8 +8,8 @@
   url = "/"
   weight = 10
 [[main]]
-  name = "Publications"
-  url = "/publication"
+  name = "Work"
+  url = "/work"
   weight = 20
 [[main]]
   name = "Open Source"
