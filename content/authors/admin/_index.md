@@ -30,13 +30,17 @@ education:
   - course: Exchange Program
     institution: University of Toronto
     year: 2013
+    icon: img/utoronto.svg
   - course: BSc in Electronics Engineering
     institution: Federal University of Santa Catarina
     year: 2015
+    icon: img/ufsc.svg
 
 news:
 - date: 02/Oct/2019
   text: This page was created!
+- date: 19/Sep/2019
+  text: Claimed a paper for the Reproducibility Challenge @ NeurIPS 2019
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
