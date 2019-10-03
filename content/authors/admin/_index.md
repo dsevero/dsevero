@@ -40,7 +40,7 @@ news:
 - date: 02/Oct/2019
   text: This page was created!
 - date: 19/Sep/2019
-  text: Claimed a paper for the Reproducibility Challenge @ NeurIPS 2019
+  text: Claimed a paper for the [Reproducibility Challenge @ NeurIPS 2019](https://reproducibility-challenge.github.io/neurips2019/)
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
