@@ -23,6 +23,7 @@ bio: Trying to teach machines things I don't know.
 interests:
 - Generative Models
 - Information Theory
+- Statistical Learning
 - Machine Learning for Healthcare
 
 education:
@@ -77,7 +78,7 @@ user_groups:
 I'm a Researcher at <a href="https://research.3778.care/">3778 Healthcare</a> working with Machine Learning for Healthcare. Previously, I was Head of Data Science at <a href="https://www.linkedin.com/showcase/linx-impulse/">Linx Impulse</a> and a Researcher at the <a href="https://www.certi.org.br/en/">CERTI Foundation</a> where I worked with Signal Processing and Embedded Systems.
 <br>
 <br>
-I'm interested in learning more about the intersection between Probabilistic Graphical Models and Deep Learning for Neural Networks as well as their applications to Health and Privacy. I'm also interested in how Machine Learning can be seen as an Information Theory problem.
+I'm interested in learning more about the intersection between Statistical Learning and Deep Learning as well as how Machine Learning can be seen as an Information Theory problem. I'm also interested in their applications to Health and Privacy.
 <br>
 <br>
 Originally, I am from Florianópolis, Brazil but I've lived in New Jersey, Orlando, Toronto and São Paulo as well as other smaller cities in the south of Brazil. I enjoy reading, playing american football and <a href="https://www.kerbalspaceprogram.com/">KSP</a>
