@@ -21,9 +21,9 @@ organizations:
 bio: Trying to teach machines things I don't know.
 
 interests:
-- Generative Models
-- Information Theory
 - Statistical Learning
+- Information Theory
+- Generative Models
 - Machine Learning for Healthcare
 
 education:
@@ -57,6 +57,9 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/danielsevero
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.fr/citations?user=5bQjLz4AAAAJ
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
 - icon: cv
