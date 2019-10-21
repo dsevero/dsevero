@@ -15,7 +15,7 @@ role: Machine Learning Researcher
 # Organizations/Affiliations
 organizations:
 - name: 3778 Healthcare
-  url: "https://www.3778.care"
+  url: "http://research.3778.care"
 
 # Short bio (displayed in user profile at end of posts)
 bio: Trying to teach machines things I don't know.
@@ -24,6 +24,7 @@ interests:
 - Statistical Learning
 - Information Theory
 - Generative Models
+- Privacy in Machine Learning
 - Machine Learning for Healthcare
 
 education:
@@ -38,6 +39,8 @@ education:
     icon: img/ufsc.svg
 
 news:
+- date: 21/Oct/2019
+  text: Preprint of [Ward2ICU](https://arxiv.org/abs/1910.00752) posted on arXiv.
 - date: 02/Oct/2019
   text: This page was created!
 - date: 19/Sep/2019
