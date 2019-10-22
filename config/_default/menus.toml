@@ -7,14 +7,14 @@
   name = "Home"
   url = "/"
   weight = 10
-[[main]]
-  name = "Work"
-  url = "/work"
-  weight = 20
-[[main]]
-  name = "Open Source"
-  url = "/opensource"
-  weight = 30
+# [[main]]
+#   name = "Work"
+#   url = "/work"
+#   weight = 20
+# [[main]]
+#   name = "Open Source"
+#   url = "/opensource"
+#   weight = 30
 
 
 # Link to a PDF of your resume/CV from the menu.
