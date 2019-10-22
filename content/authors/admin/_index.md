@@ -52,6 +52,8 @@ papers:
 opensource:
 - dask/[Dask&#58;](https://github.com/dask/dask/pulls?q=author:dsevero) Parallel computing with task scheduling
 - dask/[Dask-ML&#58;](https://github.com/dask/dask-ml/pulls?q=author:dsevero) Scalable Machine Learn with Dask
+- 3778/[Ward2ICU&#58;](https://github.com/3778/Ward2ICU) Source code for [arXiv preprint arXiv&#58;1910.00752 (2019)](https://arxiv.org/abs/1910.00752).
+- 3778/[ml-challenge&#58;](https://github.com/3778/ml-challenge) 3778's Machine Learning Challenge.
 
 otherwork:
 - Mathematical proof of functionality, of a highly efficient pseudo-random number generator&#58; [The Ziggurat Method](https://github.com/dsevero/A-Report-on-the-Ziggurat-Method)
