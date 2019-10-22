@@ -46,6 +46,17 @@ news:
 - date: 19/Sep/2019
   text: Claimed a paper for the [Reproducibility Challenge @ NeurIPS 2019](https://reproducibility-challenge.github.io/neurips2019/)
 
+papers:
+- Severo, Daniel, et al. "Ward2ICU&#58; A Vital Signs Dataset of Inpatients from the General Ward." [arXiv preprint arXiv&#58;1910.00752 (2019)](https://arxiv.org/abs/1910.00752).
+
+opensource:
+- dask/[Dask&#58;](https://github.com/dask/dask/pulls?q=author:dsevero) Parallel computing with task scheduling
+- dask/[Dask-ML&#58;](https://github.com/dask/dask-ml/pulls?q=author:dsevero) Scalable Machine Learn with Dask
+
+otherwork:
+- Mathematical proof of functionality, of a highly efficient pseudo-random number generator&#58; [The Ziggurat Method](https://github.com/dsevero/A-Report-on-the-Ziggurat-Method)
+- How can we keep the simplicity and power of pandas, while extending it to be out-of-core and parallel? [Ad hoc Big Data Analysis with Dask](work/dask)
+
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
