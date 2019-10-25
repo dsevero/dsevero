@@ -23,6 +23,7 @@ Consider leaving a <span style="text-shadow: none;"><a class="github-button" hre
 **Probabilistic Graphical Models**
 
 - MAC6916: ***Probabilistic Graphical Models*** [[course]](https://www.ime.usp.br/~ddm/mac6916/)
+- ***DAFT Beautifully rendered probabilistic graphical models.*** [[code]](https://github.com/daft-dev/daft) [[docs]](https://docs.daft-pgm.org/en/latest/)
 
 ---
 **Deep Learning Theory**
