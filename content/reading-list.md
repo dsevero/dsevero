@@ -9,7 +9,22 @@ Consider leaving a <span style="text-shadow: none;"><a class="github-button" hre
 ---
 **Statistical Learning Theory**
 
-- Abu-Mostafa, Yaser S., Malik Magdon-Ismail, and Hsuan-Tien Lin. ***Learning from data.*** Vol. 4. New York, NY, USA:: AMLBook, 2012. [[website]](http://www.amlbook.com)
+- Abu-Mostafa, Yaser S., Malik Magdon-Ismail, and Hsuan-Tien Lin. ***Learning from data.*** Vol. 4. New York, NY, USA:: AMLBook, 2012. [[book]](http://www.amlbook.com)
 - ISIT 2018 - S. Kannan, H. Kim & S. Oh - ***Deep learning and information theory An Emerging Interface*** [[video]](https://youtu.be/t7azfdvGCcc) [[slides]](https://homes.cs.washington.edu/~sewoong/slide_ISITTutorial2018.pdf)
-- Ashish Khisti. ECE1508: ***Introduction to Statistical Learning*** [[website]](https://sites.google.com/site/ece1508uoft/home)
+- Ashish Khisti. ECE1508: ***Introduction to Statistical Learning*** [[course]](https://sites.google.com/site/ece1508uoft/home)
 
+---
+**Information Theory**
+
+- Cover, Thomas M., and Joy A. Thomas. ***Elements of information theory.*** John Wiley & Sons, 2012.
+- Gleick, James. ***The information: A history, a theory, a flood.*** Vintage, 2012.
+
+---
+**Probabilistic Graphical Models**
+
+- MAC6916: ***Probabilistic Graphical Models*** [[course]](https://www.ime.usp.br/~ddm/mac6916/)
+
+---
+**Deep Learning Theory**
+
+- Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. ***Deep learning.*** MIT press, 2016. [[book]](https://www.deeplearningbook.org/)
