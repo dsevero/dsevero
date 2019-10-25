@@ -58,6 +58,7 @@ opensource:
 otherwork:
 - Mathematical proof of functionality, of a highly efficient pseudo-random number generator&#58; [The Ziggurat Method](https://github.com/dsevero/A-Report-on-the-Ziggurat-Method)
 - How can we keep the simplicity and power of pandas, while extending it to be out-of-core and parallel? [Ad hoc Big Data Analysis with Dask](work/dask)
+- An Introduction to [Handling Time-series in Pandas and numpy](work/pandas)
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
