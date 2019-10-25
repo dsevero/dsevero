@@ -7,10 +7,10 @@
   name = "Home"
   url = "/"
   weight = 10
-# [[main]]
-#   name = "Work"
-#   url = "/work"
-#   weight = 20
+[[main]]
+  name = "Reading List"
+  url = "/reading-list"
+  weight = 20
 # [[main]]
 #   name = "Open Source"
 #   url = "/opensource"
