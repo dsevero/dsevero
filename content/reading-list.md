@@ -29,3 +29,10 @@ Consider leaving a <span style="text-shadow: none;"><a class="github-button" hre
 **Deep Learning Theory**
 
 - Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. ***Deep learning.*** MIT press, 2016. [[book]](https://www.deeplearningbook.org/)
+
+
+---
+***Machine Learning for Health***
+
+- CSC2541HS: ***Topics in Machine Learning*** [[course]](https://cs2541-ml4h2019.github.io/schedule/)
+- Ghassemi, Marzyeh, et al. ***"Opportunities in machine learning for healthcare."*** arXiv preprint arXiv:1806.00388 (2018). [[paper]](https://arxiv.org/abs/1806.00388)
