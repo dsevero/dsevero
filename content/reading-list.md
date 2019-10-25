@@ -16,6 +16,7 @@ Consider leaving a <span style="text-shadow: none;"><a class="github-button" hre
 ---
 **Information Theory**
 
+- Shannon, Claude Elwood. ***"A mathematical theory of communication."*** Bell system technical journal 27.3 (1948): 379-423. [[paper]](http://www.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf)
 - Cover, Thomas M., and Joy A. Thomas. ***Elements of information theory.*** John Wiley & Sons, 2012.
 - Gleick, James. ***The information: A history, a theory, a flood.*** Vintage, 2012.
 
