@@ -36,6 +36,8 @@ Here we will show you how to properly use the Python Data Analysis Library (pand
 5. From pandas to numpy
 6. Simple Linear Regression
 
+Consider leaving a <span style="text-shadow: none;"><a class="github-button" href="https://github.com/dsevero/dsevero.com" data-icon="octicon-star" data-size="small" data-show-count="true" aria-label="Star this on GitHub">Star</a><script async defer src="https://buttons.github.io/buttons.js"></script></span> if this helps you.
+
 The following ipython magic (this is literally the name) will enable plots made by matplotlib to be rendered inside this notebook.
 
 

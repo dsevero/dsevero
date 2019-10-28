@@ -13,6 +13,8 @@ Creating custom reports and machine learning models with pandas can be cumbersom
 
 Enter [Dask](https://dask.pydata.org/en/latest/): a flexible parallel computing library for analytic computing. With it we will create a linear regression model to predict [read time in Medium posts](https://help.medium.com/hc/en-us/articles/214991667-Read-time) using a Kaggle dataset, while comparing the equivalent implementation with pandas.
 
+Consider leaving a <span style="text-shadow: none;"><a class="github-button" href="https://github.com/dsevero/dsevero.com" data-icon="octicon-star" data-size="small" data-show-count="true" aria-label="Star this on GitHub">Star</a><script async defer src="https://buttons.github.io/buttons.js"></script></span> if this helps you.
+
 ### 1. Kaggle data
 
 We will be using the official kaggle api to automate our data fetching process.
