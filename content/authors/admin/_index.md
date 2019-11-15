@@ -39,6 +39,8 @@ education:
     icon: img/ufsc.svg
 
 news:
+- date: 15/Nov/2019
+  text: Finished writing [Proof of Novelty](https://github.com/dsevero/Proof-of-Novelty).
 - date: 21/Oct/2019
   text: Preprint of [Ward2ICU](https://arxiv.org/abs/1910.00752) posted on arXiv.
 - date: 02/Oct/2019
