@@ -39,6 +39,8 @@ education:
     icon: img/ufsc.svg
 
 news:
+- date: 03/Dec/2019
+  text: Proof of Novelty was awarded by [Blockchain@UBC](https://blockchain.ubc.ca/news/virtual-design-challenge-authenticating-and-protecting-full-motion-videos)!
 - date: 15/Nov/2019
   text: Finished writing [Proof of Novelty](https://github.com/dsevero/Proof-of-Novelty).
 - date: 21/Oct/2019
@@ -49,7 +51,8 @@ news:
   text: Claimed a paper for the [Reproducibility Challenge @ NeurIPS 2019](https://reproducibility-challenge.github.io/neurips2019/)
 
 papers:
-- Severo, Daniel, et al. "Ward2ICU&#58; A Vital Signs Dataset of Inpatients from the General Ward." [arXiv preprint arXiv&#58;1910.00752 (2019)](https://arxiv.org/abs/1910.00752).
+- Severo, D., et al. "Ward2ICU&#58; A Vital Signs Dataset of Inpatients from the General Ward." [arXiv preprint arXiv&#58;1910.00752 (2019)](https://arxiv.org/abs/1910.00752).
+- Severo, D. "Proof of Novelty". [figshare preprint 10324883](https://doi.org/10.6084/m9.figshare.10324883.v1)
 
 opensource:
 - dask/[Dask&#58;](https://github.com/dask/dask/pulls?q=author:dsevero) Parallel computing with task scheduling
