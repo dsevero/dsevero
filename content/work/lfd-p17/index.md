@@ -70,11 +70,56 @@ Thus, resulting in
 $$P\\left[ \\bigvee\\limits\_{m} k\_m = 0 \\right] = 1 - \\left(  1 - \\left(1 - \\mu\\right)^N \\right)^M $$
 
 
+Let's take a look at this in python.
+
 ```python
-def prob_no_heads(μ: 'probability of heads', 
-                  N: 'number of tosses', 
-                  M: 'number of coins'):
+import matplotlib.pyplot as plt
+import pandas as pd
+
+def prob_zero_error(μ: 'true probability of error',
+                    M: 'number of hypotheses',
+                    N: 'number of data points'):
     return 1 - (1 - (1 - μ)**N)**M
+
+d = [{'μ': μ, 
+      'M': M, 
+      'p': prob_zero_error(μ, M, N=10)} 
+     for μ in [0.05, 0.8] 
+     for M in [1, 1_000, 1_000_000]]
+
+pd.DataFrame(d).pivot('M', 'μ', 'p').to_html()
 ```
+
+<table>
+  <thead>
+    <tr style="text-align: right;">
+      <th>μ</th>
+      <th>0.05</th>
+      <th>0.8</th>
+    </tr>
+    <tr>
+      <th>M</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>0.598737</td>
+      <td>1.024000e-07</td>
+    </tr>
+    <tr>
+      <th>1000</th>
+      <td>1.000000</td>
+      <td>1.023948e-04</td>
+    </tr>
+    <tr>
+      <th>1000000</th>
+      <td>1.000000</td>
+      <td>9.733159e-02</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
