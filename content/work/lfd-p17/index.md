@@ -44,9 +44,22 @@ $$ P\\left[ k\_1=0 \vee k\_2=0 \vee ... k\_m=0 \\right] = P\\left[ \\bigvee\\lim
 
 Here, we employ the common trick of computing the probability of the complement
 
-$$P\\left[ \\bigvee\\limits\_{m} k\_m = 0 \\right] = 1 - P\\left[ \\bigwedge\\limits\_{m} k\_m > 0 \\right] = 1 - \\prod\\limits\_{m}P\\left[ k\_m > 0 \\right]$$
+$$
+\begin{aligned}
+  P\\left[ \\bigvee\\limits\_{m} k\_m = 0 \\right] &= 1 - P\\left[ \\bigwedge\\limits\_{m} k\_m > 0 \\right] \\\\\\
+                                                   &= 1 - \\prod\\limits\_{m}P\\left[ k\_m > 0 \\right]
+\end{aligned}
+$$
 
-Summing over the values of $k$ and using the fact that $\\sum\\limits_{k=0}^N P\\left[k\\right] = 1$ we can compute $$P\\left[ k\_m > 0 \\right] = \\sum\\limits\_{i=1}^N P\\left[k\\right] = \\sum\\limits\_{i=0}^N P\\left[k\\right] - P\\left[0\\right] = 1 - \\left(1 - \\mu\\right)^N$$
+Summing over the values of $k$ and using the fact that $\\sum\\limits_{k=0}^N P\\left[k\\right] = 1$ we can compute 
+
+$$
+\begin{aligned}
+  P\\left[ k\_m > 0 \\right] &= \\sum\\limits\_{i=1}^N P\\left[k\\right] \\\\\\
+                             &= \\sum\\limits\_{i=0}^N P\\left[k\\right] - P\\left[0\\right] \\\\\\
+                             &= 1 - \\left(1 - \\mu\\right)^N
+\end{aligned}
+$$
 
 Thus, resulting in
 
