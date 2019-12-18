@@ -67,8 +67,9 @@ $$
 
 Thus, resulting in
 
-$$P\\left[ \\bigvee\\limits\_{m} k\_m = 0 \\right] = 1 - \\left(  1 - \\left(1 - \\mu\\right)^N \\right)^M $$
+$$P\\left[ \\bigvee\\limits\_{m} k\_m = 0 \\right] = 1 - \\left(  1 - \\left(1 - \\mu\\right)^N \\right)^M$$
 
+The result is intuitive. For a single coin, if $\\left(1 - \\mu\\right)^N$ is the probability that **all** $N$ flips result in tails, the complement $1 - \\left(1 - \\mu\\right)^N$ is the probability that **at least one** flip will result in heads. For this to happen to **all** $M$ coins, we get $\\left(  1 - \\left(1 - \\mu\\right)^N \\right)^M$. Similarly, the probability of the complement is $1 - \\left(  1 - \\left(1 - \\mu\\right)^N \\right)^M$ and can be interpretated as the probability that **at least one** coin out of $M$ will have **at least one** flip out of $N$ resulting in heads.
 
 Let's take a look at this in python.
 
@@ -121,5 +122,11 @@ pd.DataFrame(d).pivot('M', 'μ', 'p').to_html()
     </tr>
   </tbody>
 </table>
+
+> (b) For the case $N = 6$ and $2$ coins with $\\mu = 0.5$ for both coins, plot the probability $$P\[ \\max\\limits\_i \\mid \\nu\_i - \\mu\_i \\mid > \\epsilon \]$$ for $\\epsilon$ in the range $\[0, 1\]$ (the max is over coins). On the same plot show the bound that would be obtained using the Hoeffding Inequality. Remember that for a single coin, the Hoeffding bound is $$P\[\\mid \\nu- \\mu \\mid > \\epsilon \] \\leq 2e^{-2N\\epsilon^2}$$
+
+<!---
+> [Hint: Use $P\[A\\space\\text{or}\\space B\] = P\[A\] + P\[B\] \\space \\space \\space \\space P\[A\\space\\text{and}\\space B\] = P\[A\] + P\[B\] - P\[A\] P\[B\]$, where the last equality follows by independence, to evaluate $P\[\\max \\dots \]]$.
+-->
 
 ---
