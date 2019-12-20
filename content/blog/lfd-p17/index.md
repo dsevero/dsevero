@@ -152,7 +152,7 @@ If we want to bound this probability (for the sake of sanity) to some value $\\l
 $$M \\leq \\frac{log\\left(1 - \\lambda\\right)}{log\\left(1 - \\left(1 - \\mu\\right)^N\\right)}$$
 $$N \\geq \\frac{log\\left(1 - \\sqrt[M]{1 - \\lambda} \\right)}{log\\left(1 - \\mu\\right)}$$
 
-We can use these result to calculate how fast the number of hypotheses $M$ can grow with respect to the number of datapoints $N$ for a fixed probability of zero error $\\lambda$$, and vice-versa.
+We can use these result to calculate how fast the number of hypotheses $M$ can grow with respect to the number of datapoints $N$ for a fixed probability of zero error $\\lambda$, and vice-versa.
 
 > (b) For the case $N = 6$ and $2$ coins with $\\mu = 0.5$ for both coins, plot the probability $$P\[ \\max\\limits\_i \\mid \\nu\_i - \\mu\_i \\mid > \\epsilon \]$$ for $\\epsilon$ in the range $\[0, 1\]$ (the max is over coins). On the same plot show the bound that would be obtained using the Hoeffding Inequality. Remember that for a single coin, the Hoeffding bound is $$P\[\\mid \\nu- \\mu \\mid > \\epsilon \] \\leq 2e^{-2N\\epsilon^2}$$
 
