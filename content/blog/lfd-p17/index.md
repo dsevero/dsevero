@@ -144,22 +144,22 @@ N = 6
 M = 2
 μ = 0.5
 
-def hoeffding_bound(ϵ, N, M=1):
-    return 2*M*np.exp(-2*N*ϵ**2)
+def hoeffding_bound(ε, N, M=1):
+    return 2*M*np.exp(-2*N*ε**2)
 
-def P(N, M, ϵ_space, μ):
+def P(N, M, ε_space, μ):
     k = np.random.binomial(n=N,
                            p=μ,
                            size=(1_000, M))
     P = np.abs(k/N - μ).max(axis=1)
-    return [(P > ϵ).mean() for ϵ in ϵ_space]
+    return [(P > ε).mean() for ε in ε_space]
 
-ϵ_space = np.linspace(0, 1, 100)
+ε_space = np.linspace(0, 1, 100)
 plt.figure(figsize=(12,5))
-plt.plot(ϵ_space, hoeffding_bound(ϵ_space, N), '--',
-         ϵ_space, hoeffding_bound(ϵ_space, N, M=3), '--', 
-         ϵ_space, P(6, 2, ϵ_space, μ),
-         ϵ_space, P(6, 10, ϵ_space, μ));
+plt.plot(ε_space, hoeffding_bound(ε_space, N), '--',
+         ε_space, hoeffding_bound(ε_space, N, M=3), '--', 
+         ε_space, P(6, 2, ε_space, μ),
+         ε_space, P(6, 10, ε_space, μ));
 plt.title('Average over $1000$ iterations of\n'
           '$\max \{ \mid k_1/6 - 0.5 \mid,'
           '\mid k_2/6 - 0.5 \mid\} > \epsilon $\n',
