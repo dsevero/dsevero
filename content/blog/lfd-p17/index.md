@@ -148,8 +148,11 @@ def hoeffding_bound(ϵ, N, M=1):
     return 2*M*np.exp(-2*N*ϵ**2)
 
 def P(N, M, ϵ_space, μ):
-    Ps = np.abs(np.random.binomial(n=N, p=μ, size=(1_000, M))/N - μ).max(axis=1)
-    return [(Ps > ϵ).mean() for ϵ in ϵ_space]
+    k = np.random.binomial(n=N,
+                           p=μ,
+                           size=(1_000, M))
+    P = np.abs(k/N - μ).max(axis=1)
+    return [(P > ϵ).mean() for ϵ in ϵ_space]
 
 ϵ_space = np.linspace(0, 1, 100)
 plt.figure(figsize=(12,5))
@@ -158,10 +161,13 @@ plt.plot(ϵ_space, hoeffding_bound(ϵ_space, N), '--',
          ϵ_space, P(6, 2, ϵ_space, μ),
          ϵ_space, P(6, 10, ϵ_space, μ));
 plt.title('Average over $1000$ iterations of\n'
-          '$\max \{ \mid k_1/6 - 0.5 \mid, \mid k_2/6 - 0.5 \mid\} > \epsilon $\n', 
+          '$\max \{ \mid k_1/6 - 0.5 \mid,'
+          '\mid k_2/6 - 0.5 \mid\} > \epsilon $\n',
           fontsize=20)
-plt.legend(['Hoeffding Bound ($M=1 \\rightarrow 2e^{-12\epsilon^2}$)',
-            'Hoeffding Bound ($M=3 \\rightarrow 6e^{-12\epsilon^2}$)',
+plt.legend(['Hoeffding Bound '
+            '($M=1 \\rightarrow 2e^{-12\epsilon^2}$)',
+            'Hoeffding Bound '
+            '($M=3 \\rightarrow 6e^{-12\epsilon^2}$)',
             '$M=2$',
             '$M=3$'], fontsize=18)
 plt.yticks(fontsize=18)
