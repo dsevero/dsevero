@@ -42,9 +42,9 @@ Consider leaving a <span style="text-shadow: none;"><a class="github-button" hre
 > $$ P\\left[ k \\mid N, \\mu \\right] = {N\\choose k} \\mu^k \\left(1 - \\mu\\right)^{N-k}$$
 > Remember that the training error $\\nu$ is $\frac{k}{N}$
 
-The objective of this problem is to show that, given a large enough set of hypotheses $\\mathcal{H}$, the probability of obtaining low training error on at least one $h \\in \\mathcal{H}$ is high if the data is i.i.d. Therefore, we should be careful when evaluating models even if we have followed the standard train, test and validation split procedure.
+The learning model used in this chapter is the following: assume you have a $N$ datapoints sampled independently from some unkown distribution $\\mathbf{x}\_n \sim P$, targets $y\_n = f(\\mathbf{x\_n})$ and a set of hypotheses (e.g. machine learning models) $h \\in \\mathcal{H}$ of size $\\mid \\mathcal{H} \\mid = M$. A coin flipping experiment is used to draw conclusions on the accuracy of binary classifiers. The $n$-th flip of a coin is the evaluation of some hypothesis $h$ on point $(\\mathbf{x}\_n, y\_n)$. Heads (numerically, 1) represents an error $h(\\mathbf{x}\_n) \\neq y\_n$, while tails is a successful prediction. In the case of $M$ coins, we have $M$ hypotheses and $NM$ data points $(x\_{m,n}, y\_{m,n})$
 
-A coin flip represents a data point $\\mathbf{x} \\in \\mathcal{X}$, therefore $N$ is the size of the dataset. Each coin is a hypothesis $h \\in \\mathcal{H}$, hence $M$ is the cardinality of $\mathcal{H}$. Following the bin analogy from the book, heads (numerically, $1$) represents a _miss_ $h(\mathbf{x}) \neq f(\mathbf{x})$ where $f: \\mathcal{X} \\rightarrow \\left\\{\\text{heads}, \\text{tails}\\right\\}$ is the target function.
+The objective of this problem is to show that, given a large enough set of hypotheses $\\mathcal{H}$, the probability of obtaining low training error on at least one $h \\in \\mathcal{H}$ is high if the data is i.i.d. Therefore, we should be careful when evaluating models even if we have followed the standard train, test and validation split procedure.
 
 How does this translate to practice? Say you have a training dataset $\\mathcal{D}$ and $M$ models $h\_m \\in \\mathcal{H}$ that you wish to evaluate. You sample (with replacement) $N$ points $\\mathbf{x}\_{m,n} \\in \\mathcal{D}$ (e.g. mini-batch training) for each $h\_m$ (i.e. a total of $NM$ points). What is the probability that at least one hypothesis will have zero in-sample error?
 
@@ -56,14 +56,14 @@ $$ P\\left[ k\_1=0 \vee k\_2=0 \vee ... k\_m=0 \\right] = P\\left[ \\bigvee\\lim
 
 Here, we employ the common trick of computing the probability of the complement
 
+Note that the following step stems from the fact that $\\mathbf{x}\_{m,n}$ are independent. If we had used the same set of $N$ points for all $h\_m$ (i.e. $\\mathbf{x}\_{m,n} \\rightarrow \\mathbf{x}\_{n})$, the set of $k\_m$ would not be independent, since looking at a specific $k\_m$ would give you information regarding some other $k\_{m^\\prime}$.
+
 $$
 \begin{aligned}
   P\\left[ \\bigvee\\limits\_{m} k\_m = 0 \\right] &= 1 - P\\left[ \\bigwedge\\limits\_{m} k\_m > 0 \\right] \\\\\\
                                                    &= 1 - \\prod\\limits\_{m}P\\left[ k\_m > 0 \\right]
 \end{aligned}
 $$
-
-Note that this step follows from the fact that $\\mathbf{x}\_{m,n}$ are independent. If we had used the same set of $N$ points for all $h\_m$ (i.e. $\\mathbf{x}\_{m,n} \\rightarrow \\mathbf{x}\_{n})$, the set of $k\_m$ would not be independent, since looking at a specific $k\_m$ would give you information regarding some other $k\_{m^\\prime}$.
 
 Summing over the values of $k$ and using the fact that $\\sum\\limits_{k=0}^N P\\left[k\\right] = 1$ we can compute 
 
@@ -106,10 +106,12 @@ pd.DataFrame(d).pivot('M', 'μ', 'p').to_html()
     <tr style="text-align: right;">
       <th>μ</th>
       <th>0.05</th>
+      <th>0.5</th>
       <th>0.8</th>
     </tr>
     <tr>
       <th>M</th>
+      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -118,20 +120,39 @@ pd.DataFrame(d).pivot('M', 'μ', 'p').to_html()
     <tr>
       <th>1</th>
       <td>0.598737</td>
+      <td>0.000977</td>
       <td>1.024000e-07</td>
     </tr>
     <tr>
       <th>1000</th>
       <td>1.000000</td>
+      <td>0.623576</td>
       <td>1.023948e-04</td>
     </tr>
     <tr>
       <th>1000000</th>
       <td>1.000000</td>
+      <td>1.000000</td>
       <td>9.733159e-02</td>
     </tr>
   </tbody>
 </table>
+
+We've included the results for $\\mu = 0.5$, which represents a reasonable error rate for an untrained binary classification model. The middle cell tells us that a sample of size $NM = 10^4$ evaluated on $M=10^3$ hypotheses (with $10$ samples each) has a $62.36\\%$ chance of at least one hypothesis having error zero.
+
+Let's take a look at the asymptotic properties of $P(N,M) = 1 - \\left(  1 - \\left(1 - \\mu\\right)^N \\right)^M$ for $\\mu \\in (0, 1)$.
+
+$$\\lim\\limits\_{M \\rightarrow \\infty} P(N,M) = 1$$
+$$\\lim\\limits\_{N \\rightarrow \\infty} P(N,M) = 0$$
+
+Intuitvely, evaluating on more datapoints $N$ should make it harder for all points (coins) to have zero error (tails) for any number of hypotheses. Using a larger hypothesis set $\\mid\\mathcal{H}\\mid = M$ is analogous to brute forcing the appearance of $k=0$ through repetitive attempts.
+
+If we want to bound this probability (for the sake of sanity) to some value $\\lambda$, how should we chose $M$ and $N$? Solving independently for $N$ and $M$ in $P(N,M) \\leq \\lambda$
+
+$$M \\leq \\frac{log\\left(1 - \\lambda\\right)}{log\\left(1 - \\left(1 - \\mu\\right)^N\\right)}$$
+$$N \\geq \\frac{log\\left(1 - \\sqrt[M]{1 - \\lambda} \\right)}{log\\left(1 - \\mu\\right)}$$
+
+We can use these result to calculate how fast the number of hypotheses $M$ can grow with respect to the number of datapoints $N$ for a fixed probability of zero error $\\lambda$$, and vice-versa.
 
 > (b) For the case $N = 6$ and $2$ coins with $\\mu = 0.5$ for both coins, plot the probability $$P\[ \\max\\limits\_i \\mid \\nu\_i - \\mu\_i \\mid > \\epsilon \]$$ for $\\epsilon$ in the range $\[0, 1\]$ (the max is over coins). On the same plot show the bound that would be obtained using the Hoeffding Inequality. Remember that for a single coin, the Hoeffding bound is $$P\[\\mid \\nu- \\mu \\mid > \\epsilon \] \\leq 2e^{-2N\\epsilon^2}$$
 
