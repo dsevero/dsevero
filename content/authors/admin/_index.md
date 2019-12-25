@@ -23,7 +23,6 @@ bio: Trying to teach machines things I don't know.
 interests:
 - Statistical Learning
 - Information Theory
-- Generative Models
 - Privacy in Machine Learning
 - Machine Learning for Healthcare
 
@@ -101,10 +100,10 @@ user_groups:
 `{first name}souza{last name} at gmail dot com`
 
 <div style="text-align: justify">
-I'm a Researcher at <a href="https://research.3778.care/">3778 Healthcare</a> working with Machine Learning for Healthcare. Previously, I was Head of Data Science at <a href="https://www.linkedin.com/showcase/linx-impulse/">Linx Impulse</a> and a Researcher at the <a href="https://www.certi.org.br/en/">CERTI Foundation</a> where I worked with Signal Processing and Embedded Systems.
+I'm an independent researcher and engineer at <a href="https://research.3778.care/">3778 Healthcare</a> working with Machine Learning for Healthcare. Previously, I was Head of Data Science at <a href="https://www.linkedin.com/showcase/linx-impulse/">Linx Impulse</a> and a Researcher at the <a href="https://www.certi.org.br/en/">CERTI Foundation</a> where I worked with Signal Processing and Embedded Systems.
 <br>
 <br>
-I'm interested in learning more about the intersection between Statistical Learning and Deep Learning as well as how Machine Learning can be seen as an Information Theory problem. I'm also interested in their applications to Health and Privacy.
+I'm interested in Statistical Learning and Information Theory, as well as their application to health and privacy.
 <br>
 <br>
 Originally, I am from Florianópolis, Brazil but I've lived in New Jersey, Orlando, Toronto and São Paulo as well as other smaller cities in the south of Brazil. I enjoy reading, playing american football and <a href="https://www.kerbalspaceprogram.com/">KSP</a>
