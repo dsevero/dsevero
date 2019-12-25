@@ -13,6 +13,7 @@ Things I think are worth reading. Consider leaving a <span style="text-shadow: n
 - Abu-Mostafa, Yaser S., Malik Magdon-Ismail, and Hsuan-Tien Lin. ***Learning from data.*** Vol. 4. New York, NY, USA:: AMLBook, 2012. [[book]](http://www.amlbook.com)
 - ISIT 2018 - S. Kannan, H. Kim & S. Oh - ***Deep learning and information theory An Emerging Interface*** [[video]](https://youtu.be/t7azfdvGCcc) [[slides]](https://homes.cs.washington.edu/~sewoong/slide_ISITTutorial2018.pdf)
 - Ashish Khisti. ECE1508: ***Introduction to Statistical Learning*** [[course]](https://sites.google.com/site/ece1508uoft/home)
+- Shalev-Shwartz, Shai, and Shai Ben-David. **Understanding machine learning: From theory to algorithms.** Cambridge university press, 2014. [[book]](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html)
 
 ---
 **Information Theory**
