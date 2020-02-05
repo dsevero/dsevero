@@ -64,6 +64,10 @@ blog:
 - How can we keep the simplicity and power of pandas, while extending it to be out-of-core and parallel? [Ad hoc Big Data Analysis with Dask](blog/dask)
 - An Introduction to [Handling Time-series in Pandas and numpy](blog/pandas)
 
+talks:
+- Commit 77338d2 [Pursuing a Career in Data Science](https://anchor.fm/codenationdev/episodes/77338d2---Seguindo-carreira-em-Data-Science-eal947) (pt-BR)
+- Hipsters \#106 [Cool Data Science Cases](https://hipsters.tech/casos-bacanas-de-data-science-hipsters-106/) (pt-BR)
+
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
