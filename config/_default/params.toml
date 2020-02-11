@@ -22,7 +22,7 @@ font = "minimal"
 
 # Choose a font size.
 # Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
-font_size = "XS"
+font_size = "S"
 
 ############################
 ## Basic Info
