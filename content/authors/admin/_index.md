@@ -38,7 +38,7 @@ education:
 
 news:
 - date: 27/Feb/2019
-  text: Accepted an offer for graduate studies in ECE, University of Toronto!
+  text: Accepted an offer for graduate studies in ML Theory at UofT!
 - date: 03/Dec/2019
   text: Proof of Novelty was awarded by [Blockchain@UBC](https://blockchain.ubc.ca/news/virtual-design-challenge-authenticating-and-protecting-full-motion-videos)!
 - date: 15/Nov/2019
