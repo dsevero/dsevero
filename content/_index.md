@@ -5,7 +5,7 @@ type: docs
 
 <img src="http://2.gravatar.com/avatar/5f4137714834378cbeb267932bb101c3?s=200" style="border-radius: 15%; float: left; padding-right: 15px ">
 
-My name is Daniel de Souza Severo. I'm an independent researcher and engineer at <a href="https://research.3778.care/">3778 Healthcare</a> working with Machine Learning for Healthcare. Previously, I was Head of Data Science at <a href="https://www.linkedin.com/showcase/linx-impulse/">Linx Impulse</a> and a Researcher at the <a href="https://www.certi.org.br/en/">CERTI Foundation</a> where I worked with Signal Processing and Embedded Systems.
+My name is Daniel de Souza Severo, I have a B.Sc in Electronics Engineering from the Federal University of Santa Catarina. I'm an independent researcher and engineer at <a href="https://research.3778.care/">3778 Healthcare</a> working with Machine Learning for Healthcare. Previously, I was Head of Data Science at <a href="https://www.linkedin.com/showcase/linx-impulse/">Linx Impulse</a> and a Researcher at the <a href="https://www.certi.org.br/en/">CERTI Foundation</a> where I worked with Signal Processing and Embedded Systems.
 
 I'm interested in Statistical/Computational Learning and Information Theory.
 
@@ -30,17 +30,23 @@ I've accepted an offer for graduate studies in ML and Information Theory at Univ
 {{< /expand >}}
 
 # Preprints
+{{< expand "Severo, D. \"Proof of Novelty\"" >}}
+[figshare preprint 10324883](https://doi.org/10.6084/m9.figshare.10324883.v1)
+
+We propose a design for securing novelty of archived content in distributed ledgers, called Proof of Novelty. What constitutes as novel is decided through a consensus mechanism together with a similarity function, which is selected according to the content type (e.g. full-motion videos, textual documents). Scalability is guaranteed by forming a validation committee with cryptographic sortition, which use statistical hypothesis testing to decide on the probability of a content being novel or not. The system can trade-off computational with statistical performance by manipulating parameters. We discuss the usage of this design to secure the novelty of full-motion videos and end with a proposal of future lines of research that can extend the systems capabilities.
+{{< /expand >}}
 {{< expand "Severo, D., et al. \"Ward2ICU: A Vital Signs Dataset of Inpatients from the General Ward.\" ." >}}
 [arXiv preprint arXiv&#58;1910.00752 (2019)](https://arxiv.org/abs/1910.00752)
 
 We present a proxy dataset of vital signs with class labels indicating patient transitions from the ward to intensive care units called Ward2ICU. Patient privacy is protected using a Wasserstein Generative Adversarial Network to implicitly learn an approximation of the data distribution, allowing us to sample synthetic data. The quality of data generation is assessed directly on the binary classification task by comparing specificity and sensitivity of an LSTM classifier on proxy and original datasets. We initialize a discussion of unintentionally disclosing commercial sensitive information and propose a solution for a special case through class label balancing
 
 {{< /expand >}}
-{{< expand "Severo, D. \"Proof of Novelty\"" >}}
-[figshare preprint 10324883](https://doi.org/10.6084/m9.figshare.10324883.v1)
+{{< expand "Severo D. \"A Report on the Ziggurat Method\"" >}}
+[figshare preprint 10324868](https://doi.org/10.6084/m9.figshare.10324868.v1)
 
-We propose a design for securing novelty of archived content in distributed ledgers, called Proof of Novelty. What constitutes as novel is decided through a consensus mechanism together with a similarity function, which is selected according to the content type (e.g. full-motion videos, textual documents). Scalability is guaranteed by forming a validation committee with cryptographic sortition, which use statistical hypothesis testing to decide on the probability of a content being novel or not. The system can trade-off computational with statistical performance by manipulating parameters. We discuss the usage of this design to secure the novelty of full-motion videos and end with a proposal of future lines of research that can extend the systems capabilities.
+This report outlines, as well as provides a mathematical proof of functionality, of a highly efficient pseudo-random number generator: The Ziggurat Method. A simple ready-to-use code has been provided by previous authors. We contribute to this with a speed test on a modern Intel processor, as well as a Python script that generates all the necessary information to implement a specific version of the algorithm.
 {{< /expand >}}
+
 
 # Talks
 - Commit 77338d2 [Pursuing a Career in Data Science](https://anchor.fm/codenationdev/episodes/77338d2---Seguindo-carreira-em-Data-Science-eal947) (pt-BR)
