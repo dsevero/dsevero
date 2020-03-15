@@ -2,7 +2,6 @@
 title: "Practical Machine Learning Theory"
 draft: true
 ---
-Given {{< katex >}} \mathcal{H} {{< /katex >}}
 
 ```python3
 𝓗 = [lambda x: x > 0.25,
