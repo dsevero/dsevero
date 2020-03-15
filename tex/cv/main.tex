@@ -1,0 +1,171 @@
+\documentclass[margin, line]{res}  
+\usepackage{helvet}
+\usepackage{hyperref}
+
+
+\textheight=700pt
+\newsectionwidth{1.5in}
+
+\begin{document}
+\name{Daniel de Souza Severo}
+\address{\textbf{For more information}: \url{https://dsevero.com}}
+\begin{resume}
+
+\section{EDUCATION}
+\textbf{University of Toronto}\hfill 2013 - 2014\\
+{\sl Electrical \& Computer Engineering}\\
+1 year Exchange Program
+
+\textbf{Federal University of Santa Catarina}, Brazil\hfill 2010 - 2015 \\
+{\sl Bachelor of Science in Electronics Engineering}\\
+First Class Honours, 99th percentile.
+
+\section{AWARDS}
+\textbf{Virtual Design Challenge Winner} \hfill 2019\\
+Won 1st place at the VDC hosted by The University of British Columbia with my paper \emph{Proof of Novelty}. Received a cash prize of \$ 3,000.00.
+
+\textbf{Student Merit Award} \hfill 2015\\
+Graduated with the highest GPA ever obtained (at the time) for my major.
+
+\textbf{Student Merit Medal} \hfill 2015\\
+Elected "Best Student" by the faculty of Electrical \& Electronics Engineering at the Federal University of Santa Catarina.
+
+\textbf{Science Without Borders Scholarship} \hfill 2013\\
+Awarded a full scholarship that covered tuition, transportation, necessary materials and living costs to study 2 academic semesters at the University of Toronto.
+
+\section{RESEARCH EXPERIENCE}
+\textbf{Independent}\\
+\\
+\underline{\sl Proof of Novelty}\\
+\begin{small}
+    We propose a design for securing novelty of archived content in distributed ledgers, called Proof of Novelty. What constitutes as novel is decided through a consensus mechanism together with a similarity function, which is selected according to the content type (e.g. full-motion videos, textual documents). Scalability is guaranteed by forming a validation committee with cryptographic sortition, which use statistical hypothesis testing to decide on the probability of a content being novel or not. The system can trade-off computational with statistical performance by manipulating parameters. We discuss the usage of this design to secure the novelty of full-motion videos and end with a proposal of future lines of research that can extended the systems capabilities. \href{https://github.com/dsevero/Proof-of-Novelty}{\sl \textbf{dsevero/Proof-of-Novelty}}
+\end{small}
+
+\textbf{Syrian-Lebanese Hospital} \hfill 2018 - Current\\
+\\
+\underline{\sl Ward2ICU: A Vital Signs Dataset of Inpatients from the General Ward}\\
+\begin{small}
+    We present a proxy dataset of vital signs with class labels indicating patient transitions from the ward to intensive care units called Ward2ICU. Patient privacy is protected using a Wasserstein Generative Adversarial Network to implicitly learn an approximation of the data distribution, allowing us to sample synthetic data. The quality of data generation is assessed directly on the binary classification task by comparing specificity and sensitivity of an LSTM classifier on proxy and original datasets. We initialize a discussion of unintentionally disclosing commercial sensitive information and propose a solution for a special case through class label balancing. \href{https://arxiv.org/abs/1910.00752}{\sl \textbf{arXiv:1910.00752}}
+\end{small}
+\newpage
+\underline{\sl Predicting Patient Health Risk through Financial Data.}\\
+\begin{small}
+    Adoption of Electronic Health Records in Brazilian hospitals is slow due to administrative inertia. Most hospitals collect and organize only financial claims of patient spendings, making it difficult to apply ML techniques to predict patients with high health risk. We show that it is possible to use financial risk as a proxy for health risk and apply it to a Learning to Rank task for medical prevention. {\sl \textbf{Writing in progress.}}
+\end{small}
+
+\underline{\sl Reducing Readmission Rates with Time Series Data of Patient Vital Signs.}\\
+\begin{small}
+    Hospital Readmission Rates are a key indicator of efficiency as it depends on a hospital's ability to prioritize admitted patients and administer the allocation of intense-care units. Since patient prioritization must be transparent, explainability in ML applications are an important factor. Hence, traditional ML is still preferred over Neural Networks despite the latter having superior performance. We propose a middle-ground approach by using Deep Feature Synthesis to learn features from patient vital signs as inputs to highly explainable models such as Random Forests. {\sl \textbf{Writing in progress.}}
+\end{small}
+
+\textbf{Linx Impulse} \hfill 2016 - 2017\\
+\\
+\underline{\sl Hypothesis Testing for Competitive A/B Experiments with High Data Volume.}\\
+\begin{small}
+    In the ecommerce sector, high paying customers usually demand that an A/B experiment take place. This pins competitors against each other in an online testing environment devised to measure the performance of each recommender system at once. Due to the dynamic nature of evaluation metric (e.g. click-through-rate, revenue-per-user) chosen for each test, my research focused on developing a generic statistical hypothesis test that could be used to prove the effect our product had on the website, while handling unstructured data ingestion values averaging 1TB per day. Our results showed that a specific sub-sampling strategy together with Bootstrapping significantly reduced the computational complexity sacrificing very little power. {\sl \textbf{Publishing not authorized by employer.}}
+\end{small}
+
+\textbf{University of Toronto} \hfill 2014 - 2015\\
+\\
+\underline{\sl A Report on the Ziggurat Method.}\\
+\begin{small}
+    Pseudo-random number generators (PRNG's) are crucial in the context of simulating noise in communication channels. We present a report on an efficient method for generating pseudo-random samples from any decreasing probability distribution called the Ziggurat Method. Specifically, we will show the latest and most efficient version presented by McFarland. In the latter paper, the method shows a speedup of over 3 times compared to traditional algorithms such as Marsaglia's Polar Method. We present a speed comparison in C implemented on an Intel i7-4790 clocked at 3.60 GHz. A proof that the samples from this method are truly Gaussian is also provided. {\sl \textbf{Source code and writing available at} \url{https://github.com/dsevero/A-Report-on-the-Ziggurat-Method}}
+\end{small}
+
+\underline{\sl Optimal Decision Methods and Feedback in Physical Layer Network Coding.}\\
+\begin{small}
+    Interference is becoming a fundamental limitation for modern wireless networks. To mitigate interference, a number of advanced signal-processing techniques have recently been proposed. One such example is Physical Layer Network Coding (PNC), which allows each relay node in the network to decode a function of transmitted messages from interfering signals. With relays decoding and forwarding these functions to a central destination, the destination can potentially recover all the transmitted messages in the network. In this way, interference can be cleverly harnessed and the network throughput can be greatly improved. Despite a large body of work on PNC, the following two questions remain unanswered: (1) How can a relay node decode a function in the most reliable way? (2) How can a relay node make use of feedback to further improve the decoding performance? Our project is motivated by these two questions. In particular, we aim to discover how to decode said function in order to minimize the probability of error detection. \href{https://www.ime.unicamp.br/spcodingschool/}{\sl \textbf{Presented at the SP Coding and Information School 2015.}}
+\end{small}
+\newpage
+\section{TEACHING EXPERIENCE}
+\textbf{Federal University of Santa Catarina}\\
+{\sl Teaching Assistant}\\
+Assisted professors by ministering tutorials, preparing lecture materials and helped students individually at regular office hours.
+
+\begin{itemize}
+    \item Communications Theory \hfill 2015
+    \item Non-linear Electronic Circuits \hfill 2013
+    \item Single-Variable Calculus \hfill 2010
+\end{itemize}
+
+\textbf{CERTI Foundation} \hfill 2010 - 2013\\
+{\sl Intern Programming Instructor}\\
+Responsible for the technical training of new and current interns. Created a training course in LabVIEW programming that is still in use as of 2019.
+
+\section{PROFESSIONAL SERVICE}
+\textbf{NeurIPS 2019: Conference on Neural Information Processing Systems}\\
+Reviewer for the Machine Learning for Health (ML4H) workshop.
+
+\section{OPEN SOURCE CONTRIBUTIONS}
+\textbf{Dask: Scalable analytics in Python}\\
+\url{https://github.com/dask/dask/pulls?q=author:dsevero}
+
+\textbf{Dask-ML: Scalable Machine Learn with Dask}\\
+\url{https://github.com/dask/dask-ml/pulls?q=author:dsevero}
+
+\textbf{Ward2ICU: A Vital Signs Dataset of Inpatients from the General Ward}\\
+\url{https://github.com/3778/Ward2ICU}
+
+\section{PROFESSIONAL EXPERIENCE}
+\textbf{Independent Contractor} \hfill 2018 - Current\\
+{\sl Machine Learning Engineer \& Researcher}\\
+\begin{small}
+    Developed a Fast Healthcare Interoperability Resources DataLake for running high volume machine learning models; Feature engineering and mathematical modeling for clustering algorithms used to segment patients into similar health groups; Ranked patients by future spendings using financial data achieving a precision at n=1,000 of 50\% from a 15,000 total; Predicted patient LoS (Length of Stay) with regression techniques and hospital sensor data; Modified CoSimRank to create a similarity measure between developers and companies using Stack OverFlow data using Neo4j and Python.
+\end{small}
+
+\textbf{Linx Impulse} \hfill 2016 - 2018\\
+{\sl Head of Data Science}\\
+\begin{small}
+    Developed recommendation algorithms for E-commerce customers; Provided ad-hoc big data analyses to find insights from our data; Designed and monitored competitive A/B experiments devised to validate our systems performance in the face of competition; Internal A/B testing tool using the SciPy and Jupyter stack; Bandit algorithms for online optimization
+\end{small}
+
+\textbf{Wavetech Technology Solutions} \hfill 2015\\
+{\sl Embedded Systems Engineering Intern.}\\
+\begin{small}
+    Worked on microcontroller programming in C/C++ for cochlear implants.
+\end{small}
+
+\textbf{CERTI Foundation} \hfill 2010 - 2013 (Intern.)\\
+\begin{small}
+    Implemented signal processing routines (filter design 
+\end{small}
+\hfill 2015 - 2016 (R. Eng)\\ 
+\begin{small}
+    and realization) in C; Programmed back-end and front-end Python software for Raspberry Pi; Embedded eLua on a platform previously developed by CERTI.
+\end{small}
+\newpage
+\textbf{WEG Industries}  \hfill Summers 2011 and 2012\\
+{\sl Electrical Engineering Intern.}\\
+\begin{small}
+    Software upgrade, in LabVIEW, of an automatic calibrator of multimeters in order to account for different input frequencies; Conception and implementation of a hardware and software (LabVIEW) system that acquires, processes and stores data of specific parameters of electric motors.
+\end{small}
+
+\section{REFERENCES}
+\textbf{Prof. Frank R. Kschischang} \hfill University of Toronto\\
+{\sl Distinguished Professor of Digital Communication}\\
+{\sl Department of Electrical \& Computer Engineering}\\
+\url{https://www.comm.utoronto.ca/frank/}
+
+\textbf{Prof. Estevam Rafael Hruschka Junior} \hfill Carnegie Mellon University\\
+{\sl Visiting Professor}\\
+{\sl Machine Learning Department}\\
+\url{http://www.cs.cmu.edu/~estevam/}
+
+\textbf{Prof. Chen Feng} \hfill The University of British Columbia\\
+{\sl Assistant Professor}\\
+{\sl School of Engineering}\\
+\url{https://people.ok.ubc.ca/cfeng01/index.html}
+
+\textbf{Prof. Danilo Silva} \hfill Federal University of Santa Catarina\\
+{\sl Associate Professor}\\
+{\sl Department of Electrical and Electronic Engineering}\\
+\url{http://danilosilva.sites.ufsc.br/index.html}
+
+\begin{format}
+\title{l}\\
+\dates{l}\location{r}\\
+\body\\
+\end{format}
+
+\end{resume}
+\(\)\end{document}
