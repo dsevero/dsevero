@@ -13,9 +13,9 @@ Originally, I am from Florianópolis, Brazil but I've lived in New Jersey, Orlan
 ---
 # News
 {{< hint info >}}
-**27/Feb/2019**
-I've accepted an offer for graduate studies in ML and Information Theory at University of Toronto starting Fall/2020!
+**14/May/2020** I am a Vector Scholarship in Artificial Intelligence Recipient 2020-21!
 {{< /hint >}}
+- **27/Feb/2020** Starting graduate studies at University of Toronto in Fall/2020!
 - **03/Dec/2019** Proof of Novelty was awarded by [Blockchain@UBC](https://blockchain.ubc.ca/news/virtual-design-challenge-authenticating-and-protecting-full-motion-videos)!
 - **15/Nov/2019** Finished writing [Proof of Novelty](https://github.com/dsevero/Proof-of-Novelty).
 - **21/Oct/2019** Preprint of [Ward2ICU](https://arxiv.org/abs/1910.00752) posted on arXiv.
@@ -40,9 +40,16 @@ This report outlines, as well as provides a mathematical proof of functionality,
 {{< /details >}}
 
 # Awards
+{{< details "Vector Scholarship in Artificial Intelligence Recipient 2020-21" >}}
+The Vector Scholarship in Artificial Intelligence supports the recruitment of top students to AI-related master’s programs in Ontario. Valued at $17,500 for one year of full-time study at an Ontario university, these merit-based entrance awards recognize exceptional candidates pursuing a master’s program recognized by the Vector Institute or who are following an individualized study path that is demonstrably AI-focused.
+
+https://vectorinstitute.ai/aimasters
+{{< /details >}}
+
 {{< details "Virtual Design Challenge Winner 2019" >}}
-Won 1st place at the VDC hosted by The University of British Columbia with my
-paper Proof of Novelty. Received a cash prize of $ 3,000.00.
+Won 1st place at the VDC hosted by The University of British Columbia with my paper Proof of Novelty. Received a cash prize of $ 3,000.00.
+
+https://blockchain.ubc.ca/virtual-design-challenge-authenticating-and-protecting-full-motion-videos
 {{< /details >}}
 
 {{< details "Student Merit Award 2015" >}}
