@@ -36,7 +36,7 @@ menu:
       url: "/cv.pdf"
       weight: 5
     - name: "Notebooks"
-      url: "https://nbviewer.jupyter.org/github/dsevero/dsevero.com/tree/master/notebooks/"
+      url: "https://github.com/dsevero/dsevero.com/tree/master/notebooks"
       weight: 6 
 
 params:
