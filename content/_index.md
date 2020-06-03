@@ -65,6 +65,6 @@ Awarded a full scholarship that covered tuition, transportation, necessary mater
 {{< /details >}}
 
 # Talks and Media
-- [Eleven U of T Engineering grad students receive Vector Institute Scholarships in AI](https://news.engineering.utoronto.ca/eleven-u-of-t-engineering-grad-students-receive-vector-institute-scholarships-in-ai/)
+- [Two ECE grad students receive Vector Institute Scholarships in AI.](https://www.ece.utoronto.ca/news/two-ece-grad-students-receive-vector-institute-scholarships-in-ai/)
 - Commit 77338d2 [Pursuing a Career in Data Science](https://anchor.fm/codenationdev/episodes/77338d2---Seguindo-carreira-em-Data-Science-eal947) (pt-BR)
 - Hipsters \#106 [Cool Data Science Cases](https://hipsters.tech/casos-bacanas-de-data-science-hipsters-106/) (pt-BR)
