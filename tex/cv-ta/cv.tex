@@ -1,7 +1,7 @@
 \documentclass[margin, line]{res}
 \usepackage{helvet}
 \usepackage{hyperref}
-\usepackage[backend=biber, style=alphabetic, sorting=ynt]{biblatex}
+\usepackage[date=year, style=authoryear]{biblatex}
 \addbibresource{cv.bib}
 
 \textheight=700pt
@@ -50,7 +50,7 @@ Assisted professors by ministering tutorials, preparing lecture materials and he
 
 \begin{itemize}
     \item \textbf{Communications Theory} \hfill Fall and Winter 2015\\
-Analog modulations in amplitude and frequency; multiplexing; noise in communication systems; pulse modulation; analog-to-digital conversion; digital transmission in baseband and passband.
+Amplitude and frequency modulations; multiplexing; noise in communication systems; pulse modulation; analog-to-digital conversion; digital transmission in baseband and passband.
     \item \textbf{Introduction to Electronics} \hfill Fall and Winter 2013\\
 Operational amplifiers; diodes; the bipolar junction transistor; field effect transistors; optoelectronic components.
     \item \textbf{Single-Variable Calculus} \hfill Fall 2010\\
@@ -62,8 +62,9 @@ Real-valued functions; limits; continuity; derivatives and applications; definit
 Responsible for the technical training of new and current interns. Created a training course in LabVIEW programming that is still in use as of 2020.
 
 \section{UNPUBLISHED RESEARCH}
-\cite{severo2019ward2icu}
-\printbibliography
+\nocite{severo_2019}
+\nocite{severo2019ward2icu}
+\printbibliography[heading=none]
 
 \section{PROFESSIONAL SERVICE}
 \textbf{NeurIPS 2019: Conference on Neural Information Processing Systems}\\
@@ -85,7 +86,7 @@ Reviewer for the Machine Learning for Health (ML4H) workshop.
 \begin{small}
     Developed a Fast Healthcare Interoperability Resources DataLake for running high volume machine learning models; Feature engineering and mathematical modeling for clustering algorithms used to segment patients into similar health groups; Ranked patients by future spendings using financial data achieving a precision at n=1,000 of 50\% from a 15,000 total; Predicted patient LoS (Length of Stay) with regression techniques and hospital sensor data; Modified CoSimRank to create a similarity measure between developers and companies using Stack OverFlow data using Neo4j and Python.
 \end{small}
-\newpage
+
 \textbf{Linx Impulse} \hfill 2016 - 2018\\
 {\sl Head of Data Science}\\
 \begin{small}
