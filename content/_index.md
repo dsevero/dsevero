@@ -52,12 +52,8 @@ Won 1st place at the VDC hosted by The University of British Columbia with my pa
 https://blockchain.ubc.ca/virtual-design-challenge-authenticating-and-protecting-full-motion-videos
 {{< /details >}}
 
-{{< details "Student Merit Award 2015" >}}
-Graduated with the highest GPA ever obtained (at the time) for my major.
-{{< /details >}}
-
-{{< details "Student Merit Medal 2015" >}}
-Elected ”Best Student” by the faculty of Electrical & Electronics Engineering at the Federal University of Santa Catarina
+{{< details "Student Merit Award & Medal 2015" >}}
+Graduated with the highest GPA ever obtained (at the time) for my major. Elected ”Best Student” by the faculty of Electrical & Electronics Engineering at the Federal University of Santa Catarina
 {{< /details >}}
 
 {{< details "Science Without Borders Scholarship 2013" >}}
