@@ -1,11 +1,11 @@
 # Fdb version 3
-["bibtex cv"] 1594002169 "cv.aux" "cv.bbl" "cv" 1594002360
+["bibtex cv"] 1594002169 "cv.aux" "cv.bbl" "cv" 1594002819
   "cv.aux" 1594002169 8 a94a2480d3289e625eea47cd1b285758 ""
   "cv.bcf" 0 -1 0 ""
   (generated)
   "cv.blg"
   "cv.bbl"
-["pdflatex"] 1594002357 "cv.tex" "cv.pdf" "cv" 1594002360
+["pdflatex"] 1594002683 "cv.tex" "cv.pdf" "cv" 1594002819
   "/etc/texmf/web2c/texmf.cnf" 1593989253 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/dsevero/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1593990353 11524 5edd415359729b56e8681d12e21403c4 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -40,7 +40,18 @@
   "/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty" 1576191570 19336 ce7ae9438967282886b3b036cfad1e4d ""
   "/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty" 1576625391 3935 57aa3c3e203a5c2effb4d2bd2efbc323 ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1580683321 20023 e427dd9e17e239bf926ef3aab67fe35e ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty" 1580683321 5159 892429808d9e0e2b3548aaefd9a06ed0 ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo" 1580683321 8446 9874cccac5fee462272c582807dbbf56 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/alphabetic.bbx" 1566680006 1731 ebd75bda3dd71a7cbd30fde6e3bb6391 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx" 1566680006 25703 d3ef9d5e51205b85b7c5803f5bc4945e ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg" 1342308459 69 249fa6df04d948e51b6d5c67bea30c42 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def" 1575845417 89825 5be42972936c98326631c47686cd5b70 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty" 1575845417 487938 f1cb8a63882acf2a1f1b144d32b407d6 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def" 1566680006 13136 44dd5518476508a5daf59afd6ef412e0 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def" 1575845417 32965 817e7da9f6f53e5072a4c2e8f56c4aa9 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/alphabetic.cbx" 1510525977 4261 a05ff2d7f15400c462523859a171f7b4 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx" 1566680006 38102 0107e531be1e2d63345edc3b268e7658 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1569190624 45259 743c52a37a6e5ed83cfe0e128b2da10d ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty" 1580683321 2590 e3b24ff953e5b58d924f163d25380312 ""
   "/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty" 1580250785 17914 4c28a13fc3d975e6e81c9bea1d697276 ""
   "/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def" 1579642962 50630 3d9728faf8630190cf601ce2cbe470d9 ""
@@ -50,6 +61,8 @@
   "/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty" 1575152344 22520 c4c2dab203104295e1e618be7e5c0f5b ""
   "/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def" 1580854751 25404 9d60f463a00d154207ec0048dee27cf0 ""
   "/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty" 1575499565 5766 13a9e8766c47f30327caf893ece86ac8 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def" 1284153563 1620 fb1c32b818f2058eca187e5c41dfae77 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty" 1284153563 6187 b27afc771af565d3a9ff1ca7d16d0d46 ""
   "/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty" 1574631863 19963 36fd8e818f9f0f32e2db8413d4970122 ""
   "/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty" 1156702453 1500 3c2647c8649928795ededd42a6e85f85 ""
   "/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
@@ -61,8 +74,10 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1593990351 4791331 9ce4378f013256490dd546feadbe5b3a ""
   "cv.aux" 1594002169 8 a94a2480d3289e625eea47cd1b285758 ""
   "cv.bbl" 1594002169 0 d41d8cd98f00b204e9800998ecf8427e "bibtex cv"
-  "cv.tex" 1594002355 7169 44b18afbf6a062c79dc73d253d21fed3 ""
+  "cv.run.xml" 1594002683 2289 2f1f8015e44bfc03e0ed67d34ee8be61 ""
+  "cv.tex" 1594002682 7234 edcc4d967f519e2413d0e6b6a667954d ""
   "res.cls" 1593990525 26969 0be8449645a7b3b020cd272b3187c75b ""
   (generated)
-  "cv.pdf"
   "cv.log"
+  "cv.run.xml"
+  "cv.pdf"

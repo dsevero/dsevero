@@ -1,6 +1,8 @@
 \documentclass[margin, line]{res}
 \usepackage{helvet}
 \usepackage{hyperref}
+\usepackage[backend=biber, style=alphabetic, sorting=ynt]{biblatex}
+\addbibresource{cv.bib}
 
 \textheight=700pt
 \newsectionwidth{1.5in}
@@ -61,8 +63,7 @@ Responsible for the technical training of new and current interns. Created a tra
 
 \section{UNPUBLISHED RESEARCH}
 \cite{severo2019ward2icu}
-\bibliography{pubs}
-\bibliographystyle{plain}
+\printbibliography
 
 \section{PROFESSIONAL SERVICE}
 \textbf{NeurIPS 2019: Conference on Neural Information Processing Systems}\\
