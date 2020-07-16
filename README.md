@@ -6,8 +6,13 @@ For my research, please see my [Google Scholar](https://scholar.google.com/citat
 
 [Click here for a full CV](https://dsevero.com/cv.pdf)
 
+# Education
+- (in progress) MASc Electrical and Computer Engineering @ University of Toronto 
+- 2015 BSc Electronics Engineering (with honors, 99th percentile) @ Federal University of Santa Catarina
+
 # Awards
 - [Vector Scholarship in Artificial Intelligence Recipient 2020-21](https://vectorinstitute.ai/aimasters)
+- [NSERC Applied Research Rapid Response to COVID-19 Grant 2020](https://www.nserc-crsng.gc.ca/Innovate-Innover/CCI-COVID_eng.asp)
 - [Virtual Design Challenge Winner 2019](https://blockchain.ubc.ca/virtual-design-challenge-authenticating-and-protecting-full-motion-videos)
 - Science Without Borders Scholarship 2013
 
