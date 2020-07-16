@@ -4,9 +4,12 @@ Originally, I am from Florianópolis, Brazil but I've lived in New Jersey, Orlan
 
 For my research, please see my [Google Scholar](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en) profile.
 
+[Click here for a full CV](https://dsevero.com/cv.pdf)
+
 # Awards
-[Vector Scholarship in Artificial Intelligence Recipient 2020-21](https://vectorinstitute.ai/aimasters)<br>
-[Virtual Design Challenge Winner 2019](https://blockchain.ubc.ca/virtual-design-challenge-authenticating-and-protecting-full-motion-videos)
+- [Vector Scholarship in Artificial Intelligence Recipient 2020-21](https://vectorinstitute.ai/aimasters)
+- [Virtual Design Challenge Winner 2019](https://blockchain.ubc.ca/virtual-design-challenge-authenticating-and-protecting-full-motion-videos)
+- [Science Without Borders Scholarship 2013]
 
 # Talks and Media
 - [Two ECE grad students receive Vector Institute Scholarships in AI.](https://www.ece.utoronto.ca/news/two-ece-grad-students-receive-vector-institute-scholarships-in-ai/)
@@ -14,4 +17,4 @@ For my research, please see my [Google Scholar](https://scholar.google.com/citat
 - Hipsters \#106 [Cool Data Science Cases](https://hipsters.tech/casos-bacanas-de-data-science-hipsters-106/) (pt-BR)
 
 # Writings
-[Persisting lru_cache to disk while using hashable pandas objects for parallel experiments](https://gist.github.com/dsevero/252a5f280600c6b1118ed42826d188a9)
+- [Persisting lru_cache to disk while using hashable pandas objects for parallel experiments](https://gist.github.com/dsevero/252a5f280600c6b1118ed42826d188a9)
