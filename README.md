@@ -9,7 +9,7 @@ For my research, please see my [Google Scholar](https://scholar.google.com/citat
 # Awards
 - [Vector Scholarship in Artificial Intelligence Recipient 2020-21](https://vectorinstitute.ai/aimasters)
 - [Virtual Design Challenge Winner 2019](https://blockchain.ubc.ca/virtual-design-challenge-authenticating-and-protecting-full-motion-videos)
-- [Science Without Borders Scholarship 2013]
+- Science Without Borders Scholarship 2013
 
 # Talks and Media
 - [Two ECE grad students receive Vector Institute Scholarships in AI.](https://www.ece.utoronto.ca/news/two-ece-grad-students-receive-vector-institute-scholarships-in-ai/)
