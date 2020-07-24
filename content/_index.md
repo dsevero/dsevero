@@ -3,12 +3,10 @@ title: About me
 type: docs
 ---
 <img src="http://2.gravatar.com/avatar/5f4137714834378cbeb267932bb101c3?s=200" style="border-radius: 15%; float: left; padding-right: 15px ">
-My name is Daniel de Souza Severo, I have a B.Sc in Electronics Engineering from the Federal University of Santa Catarina. I'm an independent researcher and engineer at <a href="https://research.3778.care/">3778 Healthcare</a> working with Machine Learning for Healthcare. Previously, I was Head of Data Science at <a href="https://www.linkedin.com/showcase/linx-impulse/">Linx Impulse</a> and a Researcher at the <a href="https://www.certi.org.br/en/">CERTI Foundation</a> where I worked with Signal Processing and Embedded Systems.
-
-I'm interested in Statistical/Computational Learning and Information Theory.
+I'm a graduate student at the <a href="https://www.ece.utoronto.ca/">University of Toronto</a> researching Statistical/Computational/Machine Learning and Information Theory with my advisor <a href="https://www.comm.utoronto.ca/~akhisti/">Ashish Khisti</a>. I have a B.Sc. in Electronics Engineering from the Federal University of Santa Catarina (Brazil) where I was advised by <a href="http://danilosilva.sites.ufsc.br/">Danilo Silva</a>. Previously, I was an engineer at <a href="https://research.3778.care/">37.78</a> working with Machine Learning for healthcare.
 
 Originally, I am from Florianópolis, Brazil but I've lived in New Jersey, Orlando, Toronto and São Paulo as well as other smaller cities in the south of Brazil. I enjoy reading, playing american football and <a href="https://www.kerbalspaceprogram.com/">KSP</a>.
-</img>
+
 
 ---
 # News
@@ -64,3 +62,7 @@ Awarded a full scholarship that covered tuition, transportation, necessary mater
 - [Two ECE grad students receive Vector Institute Scholarships in AI.](https://www.ece.utoronto.ca/news/two-ece-grad-students-receive-vector-institute-scholarships-in-ai/)
 - Commit 77338d2 [Pursuing a Career in Data Science](https://anchor.fm/codenationdev/episodes/77338d2---Seguindo-carreira-em-Data-Science-eal947) (pt-BR)
 - Hipsters \#106 [Cool Data Science Cases](https://hipsters.tech/casos-bacanas-de-data-science-hipsters-106/) (pt-BR)
+---
+
+You may reach me at <img src="email.png" style="display: block; max-width: 350px; width: auto; height: auto">
+</img>
