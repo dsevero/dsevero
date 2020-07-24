@@ -3,7 +3,7 @@ title: About me
 type: docs
 ---
 <img src="http://2.gravatar.com/avatar/5f4137714834378cbeb267932bb101c3?s=200" style="border-radius: 15%; float: left; padding-right: 15px ">
-I'm a graduate student at the <a href="https://www.ece.utoronto.ca/">University of Toronto</a> researching Statistical/Computational/Machine Learning and Information Theory with my advisor <a href="https://www.comm.utoronto.ca/~akhisti/">Ashish Khisti</a>. I have a B.Sc. in Electronics Engineering from the Federal University of Santa Catarina (Brazil) where I was advised by <a href="http://danilosilva.sites.ufsc.br/">Danilo Silva</a>. Previously, I was an engineer at <a href="https://research.3778.care/">37.78</a> working with Machine Learning for healthcare.
+I'm a graduate student at the <a href="https://www.ece.utoronto.ca/">University of Toronto</a> researching Statistical/Computational/Machine Learning and Information Theory with my advisor <a href="https://www.ece.utoronto.ca/people/khisti-a/">Ashish Khisti</a>. I have a B.Sc. in Electronics Engineering from the Federal University of Santa Catarina (Brazil) where I was advised by <a href="http://danilosilva.sites.ufsc.br/">Danilo Silva</a>. Previously, I was an engineer at <a href="https://research.3778.care/">37.78</a> working with Machine Learning for healthcare.
 
 Originally, I am from Florianópolis, Brazil but I've lived in New Jersey, Orlando, Toronto and São Paulo as well as other smaller cities in the south of Brazil. I enjoy reading, playing american football and <a href="https://www.kerbalspaceprogram.com/">KSP</a>.
 
@@ -42,6 +42,12 @@ This report outlines, as well as provides a mathematical proof of functionality,
 The Vector Scholarship in Artificial Intelligence supports the recruitment of top students to AI-related master’s programs in Ontario. Valued at $17,500 for one year of full-time study at an Ontario university, these merit-based entrance awards recognize exceptional candidates pursuing a master’s program recognized by the Vector Institute or who are following an individualized study path that is demonstrably AI-focused.
 
 https://vectorinstitute.ai/aimasters
+{{< /details >}}
+
+{{< details "NSERC Applied Research Rapid Response to COVID-19 Grant" >}}
+Our project titled "Canadian Hospital Simulator For Management of COVID19 Cases and Contact Tracing" was awarded \$75,000.00.
+
+https://www.nserc-crsng.gc.ca/Innovate-Innover/CCI-COVID_eng.asp
 {{< /details >}}
 
 {{< details "Virtual Design Challenge Winner 2019" >}}
