@@ -16,6 +16,16 @@ If $x_i$ is represented by a $32$ bit floating-point number then $32 d$ bits are
 
 As an example, consider the following code, where we've taken $R_i = R, \forall i \in [d]$
 
+```{graphviz}
+:align: center
+:caption: some caption here
+:name: MyDigraphB
+
+digraph foo {
+  "bar" -> "baz";
+}
+```
+
 import matplotlib.pyplot as plt
 import xarray as xr
 import numpy as np

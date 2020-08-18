@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
@@ -208,6 +209,12 @@
 <p>Consider the distributed setting where a central node receives data from <span class="math notranslate nohighlight">\(d\)</span> remote nodes which do not communicate with each other. The central node is equiped with a binary classifier <span class="math notranslate nohighlight">\(C: \R^d \&gt; \{0, 1\}\)</span>. Each remote node <span class="math notranslate nohighlight">\(i\)</span> collects a point <span class="math notranslate nohighlight">\(x_i \in \R\)</span> and sends it to the central node where they are concatenated and fed into the classifier as <span class="math notranslate nohighlight">\(x = (x_1, x_2, \dots, x_d) \in \R^d\)</span>.</p>
 <p>If <span class="math notranslate nohighlight">\(x_i\)</span> is represented by a <span class="math notranslate nohighlight">\(32\)</span> bit floating-point number then <span class="math notranslate nohighlight">\(32 d\)</span> bits are required to transmit <span class="math notranslate nohighlight">\(x\)</span>. Our goal is to reduce this number by using quantization. At each remote node we place an encoder <span class="math notranslate nohighlight">\(\enc_i: \R \&gt; \{0, 1, 2, \dots, 2^{R_i}-1\} = [2^{R_i}-1]\)</span> responsible for mapping <span class="math notranslate nohighlight">\(x_i\)</span> to an integer between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(2^{R_i}-1\)</span>, where <span class="math notranslate nohighlight">\(R_i\)</span> is the number of bits we attribute to node <span class="math notranslate nohighlight">\(i\)</span>. At the transmitter, a decoder <span class="math notranslate nohighlight">\(\dec:[2^{R_1}-1] \times [2^{R_2}-1] \dots \times [2^{R_d}-1] \&gt; \R^d\)</span> maps the tuple of integers <span class="math notranslate nohighlight">\(q = (q_1, q_2, \dots, q_d) = (\enc_1(x_1), \enc_2(x_2), \dots, \enc_d(x_d))\)</span> to a reconstruction point in <span class="math notranslate nohighlight">\(\R^d\)</span>.</p>
 <p>As an example, consider the following code, where we’ve taken <span class="math notranslate nohighlight">\(R_i = R, \forall i \in [d]\)</span></p>
+<div class="figure align-center" id="mydigraphb">
+<div class="graphviz"><img src="_images/graphviz-34853bb78271e93dfae61111c3acdacff41d11c9.png" alt="digraph foo {
+  &quot;bar&quot; -&gt; &quot;baz&quot;;
+}" class="graphviz" /></div>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">some caption here</span><a class="headerlink" href="#mydigraphb" title="Permalink to this image">¶</a></p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>

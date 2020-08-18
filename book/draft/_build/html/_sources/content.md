@@ -30,6 +30,17 @@ If $x_i$ is represented by a $32$ bit floating-point number then $32 d$ bits are
 
 As an example, consider the following code, where we've taken $R_i = R, \forall i \in [d]$
 
+```{graphviz}
+:align: center
+:caption: some caption here
+:name: MyDigraphB
+
+digraph foo {
+  "bar" -> "baz";
+}
+```
+
+
 ```{code-cell} python
 import matplotlib.pyplot as plt
 import xarray as xr
@@ -300,3 +311,4 @@ for ρ in [0, 0.25, 0.5, 0.75, 0.99]:
     print(f'ρ = {ρ}')
     plt.show()
 ```
+
