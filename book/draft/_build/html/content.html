@@ -514,24 +514,43 @@ Dimensions without coordinates: M, d
 <h2>Comparisons<a class="headerlink" href="#comparisons" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
-<span class="n">losses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">R</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
-    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">loss_nondist</span> <span class="o">=</span> <span class="n">lloyd_max</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="n">R</span><span class="p">,</span> <span class="n">iters</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">loss_dist</span> <span class="o">=</span> <span class="n">distributed_lloyd_max</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="n">R</span><span class="p">,</span> <span class="n">iters</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-    <span class="n">losses</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;loss_nondist&#39;</span><span class="p">:</span> <span class="n">loss_nondist</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
-                   <span class="s1">&#39;loss_dist &#39;</span><span class="p">:</span> <span class="n">loss_dist</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
-                   <span class="s1">&#39;R&#39;</span><span class="p">:</span> <span class="n">R</span><span class="p">})</span>
-<span class="n">losses</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">losses</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">)</span>
-<span class="n">losses</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ρ</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">]:</span>
+    <span class="n">losses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="n">ρ</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">R</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">loss_nondist</span> <span class="o">=</span> <span class="n">lloyd_max</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="n">R</span><span class="p">,</span> <span class="n">iters</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">loss_dist</span> <span class="o">=</span> <span class="n">distributed_lloyd_max</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">R</span><span class="o">=</span><span class="n">R</span><span class="p">,</span> <span class="n">iters</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+        <span class="n">losses</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;loss_nondist&#39;</span><span class="p">:</span> <span class="n">loss_nondist</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+                       <span class="s1">&#39;loss_dist &#39;</span><span class="p">:</span> <span class="n">loss_dist</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+                       <span class="s1">&#39;R&#39;</span><span class="p">:</span> <span class="n">R</span><span class="p">})</span>
+    <span class="n">losses</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">losses</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">)</span>
+    <span class="n">losses</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ρ = </span><span class="si">{</span><span class="n">ρ</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fcce115c580&gt;
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>ρ = 0
 </pre></div>
 </div>
 <img alt="_images/content_14_1.png" src="_images/content_14_1.png" />
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>ρ = 0.25
+</pre></div>
+</div>
+<img alt="_images/content_14_3.png" src="_images/content_14_3.png" />
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>ρ = 0.5
+</pre></div>
+</div>
+<img alt="_images/content_14_5.png" src="_images/content_14_5.png" />
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>ρ = 0.75
+</pre></div>
+</div>
+<img alt="_images/content_14_7.png" src="_images/content_14_7.png" />
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>ρ = 0.99
+</pre></div>
+</div>
+<img alt="_images/content_14_9.png" src="_images/content_14_9.png" />
 </div>
 </div>
 </div>

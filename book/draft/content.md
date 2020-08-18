@@ -286,17 +286,17 @@ plt.show()
 
 ## Comparisons
 ```{code-cell} python
-import ipdb; ipdb.set_trace()
-losses = list()
 for ρ in [0, 0.25, 0.5, 0.75, 0.99]:
+    losses = list()
     X = generate_2d_dataset(300, ρ)
     for R in [1, 2, 3]:
         _, _, loss_nondist = lloyd_max(X, R=R, iters=30)
         _, _, _, loss_dist = distributed_lloyd_max(X, R=R, iters=30)
         losses.append({'loss_nondist': loss_nondist.item(),
                        'loss_dist ': loss_dist.item(),
-                       'R': R,
-                       'ρ': ρ})
-losses = pd.DataFrame(losses).set_index('R')
-losses.plot(style='o--');
+                       'R': R})
+    losses = pd.DataFrame(losses).set_index('R')
+    losses.plot(style='o--')
+    print(f'ρ = {ρ}')
+    plt.show()
 ```
