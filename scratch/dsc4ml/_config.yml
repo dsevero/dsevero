@@ -1,0 +1,9 @@
+# Book settings
+title: Distributed Source Coding for Machine Learning
+author: Daniel Severo
+email: d.severo@mail.utoronto.ca
+logo: logo.png
+
+latex:
+  latex_documents:
+    targetname: book.tex

@@ -1,0 +1,18 @@
+from core import Encoder
+import numpy as np
+
+
+class LocalEncoder(Encoder):
+    def __init__(self, P, q):
+        """
+        Args:
+            P (DataArray): 'P', 'd'
+            q (DataArray): 'P'
+        """
+        self.P = P
+        self.q = q
+
+    def encode(self, X):
+        return (np.power(X - self.q, 2)
+                  .sum('d')
+                  .argmin('P'))
