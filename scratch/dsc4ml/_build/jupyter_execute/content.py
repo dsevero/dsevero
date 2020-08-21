@@ -1,26 +1,8 @@
----
-jupytext:
-  cell_metadata_filter: -all
-  formats: md:myst
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: '0.9'
-    jupytext_version: 1.5.2
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
----
-
 Distributed Source Coding for Machine Learning
 ==============================================
 
 ## Compare one and two stage encoders
 
-+++
-
-```{code-cell} python
 from dsc4ml.encoders import LocalEncoder, DistributedEncoder
 from dsc4ml.decoders import FusionDecoder
 import xarray as xr
@@ -45,10 +27,9 @@ def generate_2d_dataset(n, ρ=0.0):
 def sample(A, dim, size):
     i_sample = np.random.randint(A[dim].size, size=size)
     return A[i_sample]
-```
 
 ### One-stage (prototypes $=$ codebook)
-```{code-cell} python
+
 np.random.seed(0)
 
 X = generate_2d_dataset(500, ρ=0.5)
@@ -68,10 +49,9 @@ plt.scatter(*X.T, c=enc(X), alpha=0.15)
 plt.xticks([])
 plt.yticks([])
 plt.show()
-```
 
 ### Two-stage (prototypes $\neq$ codebook)
-```{code-cell} python
+
 np.random.seed(0)
 
 p = 16 
@@ -93,10 +73,9 @@ plt.scatter(*X.T, c=enc(X), alpha=0.15)
 plt.xticks([])
 plt.yticks([])
 plt.show()
-```
 
 ## Two-stage Distributed Encoders
-```{code-cell} python
+
 np.random.seed(5)
 
 X = generate_2d_dataset(1_000, ρ=0.7)
@@ -117,4 +96,12 @@ plt.scatter(*X.T, c=enc(X), alpha=0.15)
 plt.xticks(enc[0].boundaries.round(2))
 plt.yticks(enc[1].boundaries.round(2))
 plt.show()
+
+```{toctree}
+:hidden:
+:titlesonly:
+
+
+.pytest_cache/README
+dsc4ml/decoders
 ```

@@ -6,10 +6,10 @@ class Encoder(ABC):
     def encode(self, X):
         """
         Args:
-            X (DataArray): 'N', 'd'
+            X (DataArray): n, d
 
         Returns:
-            DataArray: 'N'
+            DataArray: n
         """
 
     def __call__(self, *args, **kwargs):
@@ -21,7 +21,7 @@ class Decoder(ABC):
     def decode(self, Q):
         """
         Args:
-            Q (DataArray): N
+            Q (DataArray): n
         """
 
     def __call__(self, *args, **kwargs):
