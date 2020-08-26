@@ -63,6 +63,7 @@ class DistributedEncoder(Encoder):
         """
         self.encoders = encoders
         self.rates = [e.rate for e in encoders]
+        self.rate = np.prod(self.rates)
 
     def encode(self, X):
         Q = [enc(X.sel(d=[i]))

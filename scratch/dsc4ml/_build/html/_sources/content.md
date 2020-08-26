@@ -16,10 +16,6 @@ kernelspec:
 Distributed Source Coding for Machine Learning
 ==============================================
 
-## Compare one and two stage encoders
-
-+++
-
 ```{code-cell} python
 from dsc4ml.encoders import LocalEncoder, DistributedEncoder
 from dsc4ml.decoders import FusionDecoder
@@ -52,13 +48,21 @@ def sample(A, dim, size):
     return A[i_sample]
 
 
-def total_loss(γ):
+def calc_total_loss(γ):
     def curry(A, B):
         w = make_normal_unit_vector(A.sizes['d'])
-        mse = np.power(A - B, 2).sum('d')
-        zero_one = (np.sign(A @ w) != np.sign(B @ w))
+        mse = calc_mse_loss(A, B)
+        zero_one = calc_zero_one_loss(A, B)
         return (1-γ)*mse + γ*zero_one
     return curry
+
+
+def calc_zero_one_loss(A, B):
+    return np.sign(A @ w) != np.sign(B @ w)
+
+
+def calc_mse_loss(A, B):
+    return np.power(A - B, 2).sum('d')
 
 
 def make_normal_unit_vector(d) -> '(d,)':
@@ -71,53 +75,20 @@ def plot_decision_boundary(X):
     p = [X.min(), X.max()]
     plt.plot(p, p, '--', alpha=0.25)
 
+
 w = make_normal_unit_vector(2)
 ```
 
-### One-stage (prototypes $=$ codebook)
+## Two-stage Non-distributed Encoders
 ```{code-cell} python
-for γ in [0, 0.1, 0.9, 1.0]:
+for γ in [0, 1]:
     npr.seed(0)
 
-    X, _ = generate_2d_dataset(500, ρ=0.5, sep=0.15)
-    codebook = sample(X, 'n', 2).rename(n='m')
-    protos = codebook.rename(m='p')
-    q_indices = DA(np.arange(2), dims='p')
-
-    enc = LocalEncoder(protos, q_indices, rate=2)
-    dec = FusionDecoder(codebook)
-
-    losses = list()
-    Z, _ = generate_2d_dataset(500, ρ=0.5, sep=0.15)
-    for i in range(10):
-        dec = dec.optimize(X, enc, γ, w)
-        enc = (LocalEncoder(dec.codebook.rename(m='p'), q_indices, 2)
-               .optimize(X, dec, total_loss(γ)))
-        losses.append({'Train': total_loss(γ)(X, dec(enc(X))).mean().item(),
-                       'Test': total_loss(γ)(Z, dec(enc(Z))).mean().item()})
-
-    losses = pd.DataFrame(losses)
-
-    plt.subplot(1, 2, 1)
-    plt.scatter(*enc.protos.T, c=enc(enc.protos.rename(p='n')), marker='x', s=100)
-    plt.scatter(*dec.codebook.T, c=enc(dec.codebook), marker='^', s=100)
-    plt.scatter(*X.T, c=enc(X), alpha=0.15)
-    plot_decision_boundary(X)
-
-    ax = plt.subplot(1, 2, 2)
-    losses.plot(ax=ax, style='o--')
-    plt.title(f'Total loss ($\gamma = {γ:.2f}$)')
-    plt.show()
-    print(dec)
-```
-
-### Two-stage (prototypes $\neq$ codebook)
-```{code-cell} python
-for γ in [0, 0.1, 0.9, 1.0]:
-    npr.seed(0)
+    ρ = 0.5
+    sep = 0.2
 
     p = 16
-    X, _ = generate_2d_dataset(300, ρ=0.5, sep=0.2)
+    X, _ = generate_2d_dataset(300, ρ, sep)
     protos = sample(X, 'n', p).rename(n='p')
     q_indices = DA(npr.randint(2, size=p), dims='p')
     codebook = sample(X, 'n', 2).rename(n='m')
@@ -126,40 +97,83 @@ for γ in [0, 0.1, 0.9, 1.0]:
     dec = FusionDecoder(codebook)
 
     losses = list()
-    Z, _ = generate_2d_dataset(300, ρ=0.5, sep=0.2)
+    Z, _ = generate_2d_dataset(300, ρ, sep)
     for i in range(10):
         dec = dec.optimize(X, enc, γ, w)
-        enc = enc.optimize(X, dec, total_loss(γ))
-        losses.append({'Train': total_loss(γ)(X, dec(enc(X))).mean().item(),
-                       'Test': total_loss(γ)(Z, dec(enc(Z))).mean().item()})
+        enc = enc.optimize(X, dec, calc_total_loss(γ))
 
-    losses = pd.DataFrame(losses)
+        losses += [
+            {'dataset': 'train',
+             'loss_type': 'total',
+             'value': calc_total_loss(γ)(X, dec(enc(X))).mean().item(),
+             'i': i},
 
-    plt.subplot(1, 2, 1)
-    plt.scatter(*enc.protos.T, c=enc(enc.protos.rename(p='n')), marker='x', s=100)
-    plt.scatter(*dec.codebook.T, c=enc(dec.codebook), marker='^', s=100)
-    plt.scatter(*X.T, c=enc(X), alpha=0.15)
+            {'dataset': 'test',
+             'loss_type': 'total',
+             'value': calc_total_loss(γ)(Z, dec(enc(Z))).mean().item(),
+             'i': i},
+
+            {'dataset': 'train',
+             'loss_type': 'mse',
+             'value': calc_mse_loss(X, dec(enc(X))).mean().item(),
+             'i': i},
+
+            {'dataset': 'test',
+             'loss_type': 'mse',
+             'value': calc_mse_loss(Z, dec(enc(Z))).mean().item(),
+             'i': i},
+
+            {'dataset': 'train',
+             'loss_type': 'zero_one',
+             'value': calc_zero_one_loss(X, dec(enc(X))).mean().item(),
+             'i': i},
+
+            {'dataset': 'test',
+             'loss_type': 'zero_one',
+             'value': calc_zero_one_loss(Z, dec(enc(Z))).mean().item(),
+             'i': i},
+        ]
+
+    losses = (pd.DataFrame(losses)
+                .pivot('i', ['loss_type', 'dataset'], 'value'))
+
+    plt.scatter(*enc.protos.T, c=np.sign(dec(enc(enc.protos.rename(p='n'))) @ w), marker='x', s=100)
+    plt.scatter(*dec.codebook.T, c=np.sign(dec.codebook @ w), marker='^', s=100)
+    plt.scatter(*X.T, c=np.sign(dec(enc(X)) @ w), alpha=0.15)
     plot_decision_boundary(X)
-
-    ax = plt.subplot(1, 2, 2)
-    losses.plot(ax=ax, style='o--')
-    plt.title(f'Total loss ($\gamma = {γ:.2f}$)')
     plt.show()
-    print(dec)
+
+    (losses['total']
+     .plot(style='o--',
+           ax=plt.subplot(1, 3, 1),
+           title=f'Total loss ($\gamma = {γ:.2f}$)'))
+    (losses['mse']
+     .plot(style='o--',
+           ax=plt.subplot(1, 3, 2),
+           title='MSE loss'))
+    (losses['zero_one']
+     .plot(style='o--',
+           ax=plt.subplot(1, 3, 3),
+           title='0-1 loss'))
+
+    plt.show()
 ```
 
 ## Two-stage Distributed Encoders
 ```{code-cell} python
 npr.seed(0)
-for γ in [0, 0.1, 0.9, 1.0]:
+for γ in [0, 1]:
 
     # Untreated corner cases (both will break the code):
     # - If p is too large, there will be proto-regions without points.
     # - If rate_exp is too large, some integer will be proto-region-less
-    p = [10, 5]
+    p = [20, 20]
     rate_exp = [2, 2]
 
-    X, _ = generate_2d_dataset(1_000, ρ=0.5, sep=0.2)
+    ρ = 0.3
+    sep = 0.2
+
+    X, _ = generate_2d_dataset(1_000, ρ, sep)
     encoders = [
         LocalEncoder(DA(np.linspace(-1.5, 1.5, p[0]), dims='p').expand_dims(d=1),
                      DA(npr.randint(rate_exp[0], size=p[0]), dims='p'),
@@ -174,25 +188,70 @@ for γ in [0, 0.1, 0.9, 1.0]:
     dec = FusionDecoder.init_from_encoder(X, enc, γ, w)
 
     losses = list()
-    Z, _ = generate_2d_dataset(1_000, ρ=0.5, sep=0.2)
-    for i in range(10):
+    Z, _ = generate_2d_dataset(1_000, ρ, sep)
+    for i in range(30):
         dec = dec.optimize(X, enc, γ, w)
-        enc = enc.optimize(X, dec, total_loss(γ))
-        losses.append({'Train': total_loss(γ)(X, dec(enc(X))).mean().item(),
-                       'Test': total_loss(γ)(Z, dec(enc(Z))).mean().item()})
+        enc = enc.optimize(X, dec, calc_total_loss(γ))
 
-    losses = pd.DataFrame(losses)
+        losses += [
+            {'dataset': 'train',
+             'loss_type': 'total',
+             'value': calc_total_loss(γ)(X, dec(enc(X))).mean().item(),
+             'i': i},
 
-    plt.subplot(1, 2, 1)
-    plt.scatter(*dec.codebook.T, c=enc(dec.codebook), marker='^', s=100)
-    plt.scatter(*X.T, c=enc(X), alpha=0.15)
+            {'dataset': 'test',
+             'loss_type': 'total',
+             'value': calc_total_loss(γ)(Z, dec(enc(Z))).mean().item(),
+             'i': i},
+
+            {'dataset': 'train',
+             'loss_type': 'mse',
+             'value': calc_mse_loss(X, dec(enc(X))).mean().item(),
+             'i': i},
+
+            {'dataset': 'test',
+             'loss_type': 'mse',
+             'value': calc_mse_loss(Z, dec(enc(Z))).mean().item(),
+             'i': i},
+
+            {'dataset': 'train',
+             'loss_type': 'zero_one',
+             'value': calc_zero_one_loss(X, dec(enc(X))).mean().item(),
+             'i': i},
+
+            {'dataset': 'test',
+             'loss_type': 'zero_one',
+             'value': calc_zero_one_loss(Z, dec(enc(Z))).mean().item(),
+             'i': i},
+        ]
+
+    losses = (pd.DataFrame(losses)
+                .pivot('i', ['loss_type', 'dataset'], 'value'))
+
+    plt.scatter(*dec.codebook.T, c=np.sign(dec.codebook @ w), marker='^', s=100)
+    plt.scatter(*X.T, c=np.sign(dec(enc(X)) @ w), alpha=0.15)
     plt.xticks(enc[0].boundaries.round(2), '')
     plt.yticks(enc[1].boundaries.round(2), '')
     plot_decision_boundary(X)
-
-    ax = plt.subplot(1, 2, 2)
-    losses.plot(ax=ax, style='o--')
-    plt.title(f'Total loss ($\gamma = {γ:.2f}$)')
     plt.show()
-    print(dec)
+
+    (losses['total']
+     .plot(style='o--',
+           ax=plt.subplot(1, 3, 1),
+           title=f'Total loss ($\gamma = {γ:.2f}$)'))
+    (losses['mse']
+     .plot(style='o--',
+           ax=plt.subplot(1, 3, 2),
+           title='MSE loss'))
+    (losses['zero_one']
+     .plot(style='o--',
+           ax=plt.subplot(1, 3, 3),
+           title='0-1 loss'))
+
+    plt.show()
 ```
+
+## Observations
+* Optimizing the 0-1 loss directly will most likely place the codebook on the decision boundary.
+* MSE and 0-1 loss have different scales, therefore the total loss is sensitive to $\gamma$ only in specific ranges.
+* MSE and 0-1 loss are not orthogonal.

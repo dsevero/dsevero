@@ -3,6 +3,8 @@ import numpy as np
 import xarray as xr
 import numpy.random as npr
 
+DA = xr.DataArray
+
 
 class FusionDecoder(Decoder):
     def __init__(self, codebook):
@@ -24,11 +26,15 @@ class FusionDecoder(Decoder):
 
         if w is not None and γ > 0:
             Δ = -(codebook @ w)*w*(1 + 1e-3)
-            codebook = xr.concat((codebook + Δ, codebook), dim='Δ')
-            yhat = np.sign(codebook @ w)
-            y = np.sign(X @ w)
-            loss = (1-γ)*np.power(X - codebook, 2).sum('d') + γ*(y != y)
-            codebook = codebook.sel(Δ=loss.mean('n').argmin('Δ'))
+            codebook = xr.concat((codebook, codebook + Δ), dim='Δ')
+            mse = np.power(X - codebook.sel(m=Q),2).sum('d')
+            zero_one = np.sign(X @ w) != np.sign(codebook.sel(m=Q) @ w)
+            loss = (1-γ)*mse + γ*zero_one
+            i = (loss.groupby(Q)
+                     .mean()
+                     .rename(group='m')
+                     .argmin('Δ'))
+            codebook = codebook.sel(Δ=i)
 
         codebook = self.complete_codebook(codebook, X)
         return type(self)(codebook)

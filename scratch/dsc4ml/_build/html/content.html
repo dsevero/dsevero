@@ -156,33 +156,18 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compare-one-and-two-stage-encoders">
-   Compare one and two stage encoders
+  <a class="reference internal nav-link" href="#two-stage-non-distributed-encoders">
+   Two-stage Non-distributed Encoders
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#one-stage-prototypes-codebook">
-     One-stage (prototypes
-     <span class="math notranslate nohighlight">
-      \(=\)
-     </span>
-     codebook)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#two-stage-prototypes-neq-codebook">
-     Two-stage (prototypes
-     <span class="math notranslate nohighlight">
-      \(\neq\)
-     </span>
-     codebook)
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#two-stage-distributed-encoders">
    Two-stage Distributed Encoders
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#observations">
+   Observations
   </a>
  </li>
 </ul>
@@ -197,8 +182,6 @@
                 
   <div class="section" id="distributed-source-coding-for-machine-learning">
 <h1>Distributed Source Coding for Machine Learning<a class="headerlink" href="#distributed-source-coding-for-machine-learning" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="compare-one-and-two-stage-encoders">
-<h2>Compare one and two stage encoders<a class="headerlink" href="#compare-one-and-two-stage-encoders" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dsc4ml.encoders</span> <span class="kn">import</span> <span class="n">LocalEncoder</span><span class="p">,</span> <span class="n">DistributedEncoder</span>
@@ -232,13 +215,21 @@
     <span class="k">return</span> <span class="n">A</span><span class="p">[</span><span class="n">i_sample</span><span class="p">]</span>
 
 
-<span class="k">def</span> <span class="nf">total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">calc_total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">curry</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
         <span class="n">w</span> <span class="o">=</span> <span class="n">make_normal_unit_vector</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">])</span>
-        <span class="n">mse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">A</span> <span class="o">-</span> <span class="n">B</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
-        <span class="n">zero_one</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">A</span> <span class="o">@</span> <span class="n">w</span><span class="p">)</span> <span class="o">!=</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">B</span> <span class="o">@</span> <span class="n">w</span><span class="p">))</span>
+        <span class="n">mse</span> <span class="o">=</span> <span class="n">calc_mse_loss</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+        <span class="n">zero_one</span> <span class="o">=</span> <span class="n">calc_zero_one_loss</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
         <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">γ</span><span class="p">)</span><span class="o">*</span><span class="n">mse</span> <span class="o">+</span> <span class="n">γ</span><span class="o">*</span><span class="n">zero_one</span>
     <span class="k">return</span> <span class="n">curry</span>
+
+
+<span class="k">def</span> <span class="nf">calc_zero_one_loss</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">A</span> <span class="o">@</span> <span class="n">w</span><span class="p">)</span> <span class="o">!=</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">B</span> <span class="o">@</span> <span class="n">w</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">calc_mse_loss</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">A</span> <span class="o">-</span> <span class="n">B</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">make_normal_unit_vector</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;(d,)&#39;</span><span class="p">:</span>
@@ -251,102 +242,24 @@
     <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="n">X</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">X</span><span class="o">.</span><span class="n">max</span><span class="p">()]</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
 
+
 <span class="n">w</span> <span class="o">=</span> <span class="n">make_normal_unit_vector</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="one-stage-prototypes-codebook">
-<h3>One-stage (prototypes <span class="math notranslate nohighlight">\(=\)</span> codebook)<a class="headerlink" href="#one-stage-prototypes-codebook" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="two-stage-non-distributed-encoders">
+<h2>Two-stage Non-distributed Encoders<a class="headerlink" href="#two-stage-non-distributed-encoders" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">γ</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">γ</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
     <span class="n">npr</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-    <span class="n">X</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">ρ</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
-    <span class="n">codebook</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
-    <span class="n">protos</span> <span class="o">=</span> <span class="n">codebook</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
-    <span class="n">q_indices</span> <span class="o">=</span> <span class="n">DA</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
-
-    <span class="n">enc</span> <span class="o">=</span> <span class="n">LocalEncoder</span><span class="p">(</span><span class="n">protos</span><span class="p">,</span> <span class="n">q_indices</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">dec</span> <span class="o">=</span> <span class="n">FusionDecoder</span><span class="p">(</span><span class="n">codebook</span><span class="p">)</span>
-
-    <span class="n">losses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-    <span class="n">Z</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">ρ</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">dec</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">γ</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
-        <span class="n">enc</span> <span class="o">=</span> <span class="p">(</span><span class="n">LocalEncoder</span><span class="p">(</span><span class="n">dec</span><span class="o">.</span><span class="n">codebook</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">),</span> <span class="n">q_indices</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-               <span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">)))</span>
-        <span class="n">losses</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;Train&#39;</span><span class="p">:</span> <span class="n">total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">)(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
-                       <span class="s1">&#39;Test&#39;</span><span class="p">:</span> <span class="n">total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">)(</span><span class="n">Z</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">Z</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()})</span>
-
-    <span class="n">losses</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">losses</span><span class="p">)</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">enc</span><span class="o">.</span><span class="n">protos</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">enc</span><span class="p">(</span><span class="n">enc</span><span class="o">.</span><span class="n">protos</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="s1">&#39;n&#39;</span><span class="p">)),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">dec</span><span class="o">.</span><span class="n">codebook</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">enc</span><span class="p">(</span><span class="n">dec</span><span class="o">.</span><span class="n">codebook</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
-    <span class="n">plot_decision_boundary</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="n">losses</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total loss ($\gamma = </span><span class="si">{</span><span class="n">γ</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">$)&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/content_3_0.png" src="_images/content_3_0.png" />
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>codebook:	&lt;xarray.DataArray (m: 2, d: 2)&gt;
-		array([[ 1.8212688 ,  0.57708012],
-		       [ 0.39033074, -0.70323124]])
-		Coordinates:
-		  * m        (m) int64 0 1
-		Dimensions without coordinates: d
-
-</pre></div>
-</div>
-<img alt="_images/content_3_2.png" src="_images/content_3_2.png" />
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>codebook:	&lt;xarray.DataArray (m: 2, d: 2)&gt;
-		array([[ 1.8212688 ,  0.57708012],
-		       [ 0.39033074, -0.70323124]])
-		Coordinates:
-		  * m        (m) int64 0 1
-		Dimensions without coordinates: d
-
-</pre></div>
-</div>
-<img alt="_images/content_3_4.png" src="_images/content_3_4.png" />
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>codebook:	&lt;xarray.DataArray (m: 2, d: 2)&gt;
-		array([[ 1.8212688 ,  0.57708012],
-		       [ 0.39033074, -0.70323124]])
-		Coordinates:
-		  * m        (m) int64 0 1
-		Dimensions without coordinates: d
-
-</pre></div>
-</div>
-<img alt="_images/content_3_6.png" src="_images/content_3_6.png" />
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>codebook:	&lt;xarray.DataArray (m: 2, d: 2)&gt;
-		array([[0.55602195, 0.55719474],
-		       [3.9198087 , 1.5537263 ]])
-		Dimensions without coordinates: m, d
-
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="two-stage-prototypes-neq-codebook">
-<h3>Two-stage (prototypes <span class="math notranslate nohighlight">\(\neq\)</span> codebook)<a class="headerlink" href="#two-stage-prototypes-neq-codebook" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">γ</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]:</span>
-    <span class="n">npr</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">ρ</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <span class="n">sep</span> <span class="o">=</span> <span class="mf">0.2</span>
 
     <span class="n">p</span> <span class="o">=</span> <span class="mi">16</span>
-    <span class="n">X</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="n">ρ</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="n">ρ</span><span class="p">,</span> <span class="n">sep</span><span class="p">)</span>
     <span class="n">protos</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
     <span class="n">q_indices</span> <span class="o">=</span> <span class="n">DA</span><span class="p">(</span><span class="n">npr</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">p</span><span class="p">),</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
     <span class="n">codebook</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
@@ -355,71 +268,74 @@
     <span class="n">dec</span> <span class="o">=</span> <span class="n">FusionDecoder</span><span class="p">(</span><span class="n">codebook</span><span class="p">)</span>
 
     <span class="n">losses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-    <span class="n">Z</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="n">ρ</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+    <span class="n">Z</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="n">ρ</span><span class="p">,</span> <span class="n">sep</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
         <span class="n">dec</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">γ</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
-        <span class="n">enc</span> <span class="o">=</span> <span class="n">enc</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">))</span>
-        <span class="n">losses</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;Train&#39;</span><span class="p">:</span> <span class="n">total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">)(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
-                       <span class="s1">&#39;Test&#39;</span><span class="p">:</span> <span class="n">total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">)(</span><span class="n">Z</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">Z</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()})</span>
+        <span class="n">enc</span> <span class="o">=</span> <span class="n">enc</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">calc_total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">))</span>
 
-    <span class="n">losses</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">losses</span><span class="p">)</span>
+        <span class="n">losses</span> <span class="o">+=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;train&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;total&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">)(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+             <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">},</span>
 
-    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">enc</span><span class="o">.</span><span class="n">protos</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">enc</span><span class="p">(</span><span class="n">enc</span><span class="o">.</span><span class="n">protos</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="s1">&#39;n&#39;</span><span class="p">)),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">dec</span><span class="o">.</span><span class="n">codebook</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">enc</span><span class="p">(</span><span class="n">dec</span><span class="o">.</span><span class="n">codebook</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+            <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;total&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">)(</span><span class="n">Z</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">Z</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+             <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">},</span>
+
+            <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;train&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;mse&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_mse_loss</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+             <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">},</span>
+
+            <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;mse&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_mse_loss</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">Z</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+             <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">},</span>
+
+            <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;train&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;zero_one&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_zero_one_loss</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+             <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">},</span>
+
+            <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;zero_one&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_zero_one_loss</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">Z</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+             <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">},</span>
+        <span class="p">]</span>
+
+    <span class="n">losses</span> <span class="o">=</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">losses</span><span class="p">)</span>
+                <span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;loss_type&#39;</span><span class="p">,</span> <span class="s1">&#39;dataset&#39;</span><span class="p">],</span> <span class="s1">&#39;value&#39;</span><span class="p">))</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">enc</span><span class="o">.</span><span class="n">protos</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">enc</span><span class="o">.</span><span class="n">protos</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="s1">&#39;n&#39;</span><span class="p">)))</span> <span class="o">@</span> <span class="n">w</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">dec</span><span class="o">.</span><span class="n">codebook</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">dec</span><span class="o">.</span><span class="n">codebook</span> <span class="o">@</span> <span class="n">w</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">))</span> <span class="o">@</span> <span class="n">w</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
     <span class="n">plot_decision_boundary</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="n">losses</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total loss ($\gamma = </span><span class="si">{</span><span class="n">γ</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">$)&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>
+
+    <span class="p">(</span><span class="n">losses</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span>
+     <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">,</span>
+           <span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+           <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Total loss ($\gamma = </span><span class="si">{</span><span class="n">γ</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">$)&#39;</span><span class="p">))</span>
+    <span class="p">(</span><span class="n">losses</span><span class="p">[</span><span class="s1">&#39;mse&#39;</span><span class="p">]</span>
+     <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">,</span>
+           <span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+           <span class="n">title</span><span class="o">=</span><span class="s1">&#39;MSE loss&#39;</span><span class="p">))</span>
+    <span class="p">(</span><span class="n">losses</span><span class="p">[</span><span class="s1">&#39;zero_one&#39;</span><span class="p">]</span>
+     <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">,</span>
+           <span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+           <span class="n">title</span><span class="o">=</span><span class="s1">&#39;0-1 loss&#39;</span><span class="p">))</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/content_5_0.png" src="_images/content_5_0.png" />
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>codebook:	&lt;xarray.DataArray (m: 2, d: 2)&gt;
-		array([[ 1.67307337,  1.01986645],
-		       [ 0.90427932, -0.65067256]])
-		Coordinates:
-		  * m        (m) int64 0 1
-		Dimensions without coordinates: d
-
-</pre></div>
-</div>
-<img alt="_images/content_5_2.png" src="_images/content_5_2.png" />
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>codebook:	&lt;xarray.DataArray (m: 2, d: 2)&gt;
-		array([[ 1.67307337,  1.01986645],
-		       [ 0.90427932, -0.65067256]])
-		Coordinates:
-		  * m        (m) int64 0 1
-		Dimensions without coordinates: d
-
-</pre></div>
-</div>
-<img alt="_images/content_5_4.png" src="_images/content_5_4.png" />
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>codebook:	&lt;xarray.DataArray (m: 2, d: 2)&gt;
-		array([[ 1.67307337,  1.01986645],
-		       [ 0.90427932, -0.65067256]])
-		Coordinates:
-		  * m        (m) int64 0 1
-		Dimensions without coordinates: d
-
-</pre></div>
-</div>
-<img alt="_images/content_5_6.png" src="_images/content_5_6.png" />
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>codebook:	&lt;xarray.DataArray (m: 2, d: 2)&gt;
-		array([[0.59745239, 0.59898566],
-		       [0.41245156, 0.41160826]])
-		Coordinates:
-		  * m        (m) int64 0 1
-		Dimensions without coordinates: d
-
-</pre></div>
-</div>
-</div>
+<img alt="_images/content_3_0.png" src="_images/content_3_0.png" />
+<img alt="_images/content_3_1.png" src="_images/content_3_1.png" />
+<img alt="_images/content_3_2.png" src="_images/content_3_2.png" />
+<img alt="_images/content_3_3.png" src="_images/content_3_3.png" />
 </div>
 </div>
 </div>
@@ -428,15 +344,18 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npr</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">γ</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">γ</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
 
     <span class="c1"># Untreated corner cases (both will break the code):</span>
     <span class="c1"># - If p is too large, there will be proto-regions without points.</span>
     <span class="c1"># - If rate_exp is too large, some integer will be proto-region-less</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
     <span class="n">rate_exp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 
-    <span class="n">X</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">1_000</span><span class="p">,</span> <span class="n">ρ</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+    <span class="n">ρ</span> <span class="o">=</span> <span class="mf">0.3</span>
+    <span class="n">sep</span> <span class="o">=</span> <span class="mf">0.2</span>
+
+    <span class="n">X</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">1_000</span><span class="p">,</span> <span class="n">ρ</span><span class="p">,</span> <span class="n">sep</span><span class="p">)</span>
     <span class="n">encoders</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">LocalEncoder</span><span class="p">(</span><span class="n">DA</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
                      <span class="n">DA</span><span class="p">(</span><span class="n">npr</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">rate_exp</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">),</span>
@@ -451,81 +370,85 @@
     <span class="n">dec</span> <span class="o">=</span> <span class="n">FusionDecoder</span><span class="o">.</span><span class="n">init_from_encoder</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">γ</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
 
     <span class="n">losses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-    <span class="n">Z</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">1_000</span><span class="p">,</span> <span class="n">ρ</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">Z</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">1_000</span><span class="p">,</span> <span class="n">ρ</span><span class="p">,</span> <span class="n">sep</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
         <span class="n">dec</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">γ</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
-        <span class="n">enc</span> <span class="o">=</span> <span class="n">enc</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">))</span>
-        <span class="n">losses</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;Train&#39;</span><span class="p">:</span> <span class="n">total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">)(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
-                       <span class="s1">&#39;Test&#39;</span><span class="p">:</span> <span class="n">total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">)(</span><span class="n">Z</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">Z</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()})</span>
+        <span class="n">enc</span> <span class="o">=</span> <span class="n">enc</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">calc_total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">))</span>
 
-    <span class="n">losses</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">losses</span><span class="p">)</span>
+        <span class="n">losses</span> <span class="o">+=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;train&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;total&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">)(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+             <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">},</span>
 
-    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">dec</span><span class="o">.</span><span class="n">codebook</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">enc</span><span class="p">(</span><span class="n">dec</span><span class="o">.</span><span class="n">codebook</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+            <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;total&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">)(</span><span class="n">Z</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">Z</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+             <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">},</span>
+
+            <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;train&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;mse&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_mse_loss</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+             <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">},</span>
+
+            <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;mse&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_mse_loss</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">Z</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+             <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">},</span>
+
+            <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;train&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;zero_one&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_zero_one_loss</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+             <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">},</span>
+
+            <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;zero_one&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_zero_one_loss</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">Z</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
+             <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">},</span>
+        <span class="p">]</span>
+
+    <span class="n">losses</span> <span class="o">=</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">losses</span><span class="p">)</span>
+                <span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;loss_type&#39;</span><span class="p">,</span> <span class="s1">&#39;dataset&#39;</span><span class="p">],</span> <span class="s1">&#39;value&#39;</span><span class="p">))</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">dec</span><span class="o">.</span><span class="n">codebook</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">dec</span><span class="o">.</span><span class="n">codebook</span> <span class="o">@</span> <span class="n">w</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">))</span> <span class="o">@</span> <span class="n">w</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">enc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">boundaries</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">enc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">boundaries</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
     <span class="n">plot_decision_boundary</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="n">losses</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total loss ($\gamma = </span><span class="si">{</span><span class="n">γ</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">$)&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>
+
+    <span class="p">(</span><span class="n">losses</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span>
+     <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">,</span>
+           <span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+           <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Total loss ($\gamma = </span><span class="si">{</span><span class="n">γ</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">$)&#39;</span><span class="p">))</span>
+    <span class="p">(</span><span class="n">losses</span><span class="p">[</span><span class="s1">&#39;mse&#39;</span><span class="p">]</span>
+     <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">,</span>
+           <span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+           <span class="n">title</span><span class="o">=</span><span class="s1">&#39;MSE loss&#39;</span><span class="p">))</span>
+    <span class="p">(</span><span class="n">losses</span><span class="p">[</span><span class="s1">&#39;zero_one&#39;</span><span class="p">]</span>
+     <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">,</span>
+           <span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+           <span class="n">title</span><span class="o">=</span><span class="s1">&#39;0-1 loss&#39;</span><span class="p">))</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/content_7_0.png" src="_images/content_7_0.png" />
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>codebook:	&lt;xarray.DataArray (m: 4, d: 2)&gt;
-		array([[ 0.21736597,  1.0308472 ],
-		       [ 0.24298412, -0.85079636],
-		       [ 2.07082415,  1.08186354],
-		       [ 1.74375284, -0.38147161]])
-		Coordinates:
-		  * m        (m) int64 0 1 2 3
-		Dimensions without coordinates: d
-
-</pre></div>
-</div>
-<img alt="_images/content_7_2.png" src="_images/content_7_2.png" />
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>codebook:	&lt;xarray.DataArray (m: 4, d: 2)&gt;
-		array([[ 2.07576746,  1.1663549 ],
-		       [ 1.71164341, -0.40923185],
-		       [ 0.64286496,  0.64202896],
-		       [ 0.13761787, -0.83744681]])
-		Coordinates:
-		  * m        (m) int64 0 1 2 3
-		Dimensions without coordinates: d
-
-</pre></div>
-</div>
-<img alt="_images/content_7_4.png" src="_images/content_7_4.png" />
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>codebook:	&lt;xarray.DataArray (m: 4, d: 2)&gt;
-		array([[ 0.10356623, -1.66040634],
-		       [ 0.51762154, -0.0075808 ],
-		       [ 0.15077377,  0.15414907],
-		       [ 2.08407913,  0.42695849]])
-		Coordinates:
-		  * m        (m) int64 0 1 2 3
-		Dimensions without coordinates: d
-
-</pre></div>
-</div>
-<img alt="_images/content_7_6.png" src="_images/content_7_6.png" />
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>codebook:	&lt;xarray.DataArray (m: 4, d: 2)&gt;
-		array([[ 0.78079055,  0.78198462],
-		       [-0.53589137, -0.53369717],
-		       [-0.5592145 , -0.56021814],
-		       [-1.41703841, -1.41607794]])
-		Coordinates:
-		  * m        (m) int64 0 1 2 3
-		Dimensions without coordinates: d
-
-</pre></div>
+<img alt="_images/content_5_0.png" src="_images/content_5_0.png" />
+<img alt="_images/content_5_1.png" src="_images/content_5_1.png" />
+<img alt="_images/content_5_2.png" src="_images/content_5_2.png" />
+<img alt="_images/content_5_3.png" src="_images/content_5_3.png" />
 </div>
 </div>
 </div>
+<div class="section" id="observations">
+<h2>Observations<a class="headerlink" href="#observations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Optimizing the 0-1 loss directly will most likely place the codebook on the decision boundary.</p></li>
+<li><p>MSE and 0-1 loss have different scales, therefore the total loss is sensitive to <span class="math notranslate nohighlight">\(\gamma\)</span> only in specific ranges.</p></li>
+<li><p>MSE and 0-1 loss are not orthogonal.</p></li>
+</ul>
 <div class="toctree-wrapper compound">
 </div>
 </div>
