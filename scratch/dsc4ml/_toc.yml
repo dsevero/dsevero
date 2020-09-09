@@ -1,9 +1,8 @@
-file: content
+file: two-stage
 sections:
-- file: .pytest_cache/README
+- file: wyner-ziv
 - file: dsc4ml/decoders
   sections:
   - file: dsc4ml/core
   - file: dsc4ml/encoders
   - file: dsc4ml/algorithms
-  - file: dsc4ml/.pytest_cache/README
