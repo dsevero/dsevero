@@ -1,7 +1,7 @@
 \documentclass[margin, line]{res}  
 \usepackage{helvet}
 \usepackage{hyperref}
-\usepackage[date=year, style=authoryear]{biblatex}
+\usepackage[date=year, maxnames=3, minnames=3, style=authoryear, bibstyle=musuos]{biblatex}
 \addbibresource{cv.bib}
 
 \textheight=700pt
@@ -41,10 +41,12 @@ Graduated with the highest GPA ever obtained (at the time) for my major. Elected
 \textbf{Science Without Borders Scholarship} \hfill 2013\\
 Awarded a full scholarship that covered tuition, transportation, necessary materials and living costs to study 2 academic semesters at the University of Toronto.
 
-\section{UNPUBLISHED RESEARCH}
-\nocite{severo_2019}
-\nocite{severo2019ward2icu}
-\printbibliography[heading=none]
+\section{PUBLICATIONS}
+\nocite{*}
+\printbibliography[heading=none, keyword=publication]
+
+\section{PREPRINTS}
+\printbibliography[heading=none, keyword=preprint]
 
 \newpage
 \section{TEACHING EXPERIENCE}
