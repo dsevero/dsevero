@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/nbclient/client.py", line 1077, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/nbclient/client.py", line 526, in async_execute
+    await self.async_execute_cell(
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/nbclient/client.py", line 822, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/nbclient/client.py", line 730, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import xarray as xr
+import numpy as np
+import numpy.random as npr
+import matplotlib.pyplot as plt
+import pandas as pd
+
+plt.style.use('seaborn-darkgrid')
+plt.rcParams['figure.figsize'] = [16, 6]
+plt.rcParams['font.size'] = 14
+plt.rcParams['image.cmap'] = 'Dark2'
+
+DA = xr.DataArray
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mTypeError[0m                                 Traceback (most recent call last)
+[0;32m~/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/IPython/core/async_helpers.py[0m in [0;36m_pseudo_sync_runner[0;34m(coro)[0m
+[1;32m     66[0m     """
+[1;32m     67[0m     [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 68[0;31m         [0mcoro[0m[0;34m.[0m[0msend[0m[0;34m([0m[0;32mNone[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     69[0m     [0;32mexcept[0m [0mStopIteration[0m [0;32mas[0m [0mexc[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     70[0m         [0;32mreturn[0m [0mexc[0m[0;34m.[0m[0mvalue[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/miniconda3/envs/dsc4ml/lib/python3.8/asyncio/coroutines.py[0m in [0;36mcoro[0;34m(*args, **kw)[0m
+[1;32m    122[0m         [0;34m@[0m[0mfunctools[0m[0;34m.[0m[0mwraps[0m[0;34m([0m[0mfunc[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    123[0m         [0;32mdef[0m [0mcoro[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkw[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 124[0;31m             [0mres[0m [0;34m=[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkw[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    125[0m             if (base_futures.isfuture(res) or inspect.isgenerator(res) or
+[1;32m    126[0m                     isinstance(res, CoroWrapper)):
+
+[0;31mTypeError[0m: run_cell_async() got an unexpected keyword argument 'transformed_cell'
+TypeError: run_cell_async() got an unexpected keyword argument 'transformed_cell'
+

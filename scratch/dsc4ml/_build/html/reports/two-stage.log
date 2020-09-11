@@ -1,0 +1,93 @@
+Traceback (most recent call last):
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/jupyter_cache/executors/basic.py", line 162, in execute
+    executenb(
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/nbclient/client.py", line 1077, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/nbclient/client.py", line 526, in async_execute
+    await self.async_execute_cell(
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/nbclient/client.py", line 822, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/dsevero/miniconda3/envs/dsc4ml/lib/python3.8/site-packages/nbclient/client.py", line 730, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from dsc4ml.encoders import LocalEncoder, DistributedEncoder
+from dsc4ml.decoders import FusionDecoder
+import xarray as xr
+import numpy as np
+import numpy.random as npr
+import matplotlib.pyplot as plt
+import pandas as pd
+
+plt.style.use('seaborn-darkgrid')
+plt.rcParams['figure.figsize'] = [16, 6]
+plt.rcParams['font.size'] = 14
+plt.rcParams['image.cmap'] = 'Dark2'
+
+DA = xr.DataArray
+
+def generate_2d_dataset(n, ρ=0.0, sep=0.0):
+    μ = [1, 0]
+    Σ = [[1, ρ],
+         [ρ, 1]]
+    w = make_normal_unit_vector(2)
+    X = DA(npr.multivariate_normal(μ, Σ, size=n), dims=['n', 'd'])
+    y = np.sign(X @ w)
+    X += sep*y*w
+    return X, y
+
+
+def sample(A, dim, size):
+    i_sample = npr.randint(A[dim].size, size=size)
+    return A[i_sample]
+
+
+def calc_total_loss(γ):
+    def curry(A, B):
+        w = make_normal_unit_vector(A.sizes['d'])
+        mse = calc_mse_loss(A, B)
+        zero_one = calc_zero_one_loss(A, B)
+        return (1-γ)*mse + γ*zero_one
+    return curry
+
+
+def calc_zero_one_loss(A, B):
+    return np.sign(A @ w) != np.sign(B @ w)
+
+
+def calc_mse_loss(A, B):
+    return np.power(A - B, 2).sum('d')
+
+
+def make_normal_unit_vector(d) -> '(d,)':
+    w = np.append(-1, np.ones(d-1))
+    w = w/np.sqrt(w @ w)
+    return xr.DataArray(w, dims='d')
+
+
+def plot_decision_boundary(X):
+    p = [X.min(), X.max()]
+    plt.plot(p, p, '--', alpha=0.25)
+
+
+w = make_normal_unit_vector(2)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+[0;32m<ipython-input-1-1cb6e1391d0b>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0;32mfrom[0m [0mdsc4ml[0m[0;34m.[0m[0mencoders[0m [0;32mimport[0m [0mLocalEncoder[0m[0;34m,[0m [0mDistributedEncoder[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0;32mfrom[0m [0mdsc4ml[0m[0;34m.[0m[0mdecoders[0m [0;32mimport[0m [0mFusionDecoder[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;32mimport[0m [0mxarray[0m [0;32mas[0m [0mxr[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;32mimport[0m [0mnumpy[0m[0;34m.[0m[0mrandom[0m [0;32mas[0m [0mnpr[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mModuleNotFoundError[0m: No module named 'dsc4ml'
+ModuleNotFoundError: No module named 'dsc4ml'
+

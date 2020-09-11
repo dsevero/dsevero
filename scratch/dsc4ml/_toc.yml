@@ -1,6 +1,7 @@
 file: two-stage
 sections:
 - file: wyner-ziv
+- file: wyner-ziv
 - file: dsc4ml/decoders
   sections:
   - file: dsc4ml/core

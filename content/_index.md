@@ -19,20 +19,36 @@ Originally, I am from Florianópolis, Brazil but I've lived in New Jersey, Orlan
 - **21/Oct/2019** Preprint of [Ward2ICU](https://arxiv.org/abs/1910.00752) posted on arXiv.
 - **02/Oct/2019** This page was created!
 
+# Publications
+{{< details "Predicting Multiple ICD-10 Codes from Brazilian-Portuguese Clinical Notes (BRACIS 2020)" >}}
+Arthur D Reys, Danilo Silva, **Daniel Severo**, Saulo Pedro, Marcia M Sá, Guilherme AC Salgado
+
+https://arxiv.org/abs/2008.01515
+
+ICD coding from electronic clinical records is a manual, time-consuming and expensive process. Code assignment is, however, an important task for billing purposes and database organization. While many works have studied the problem of automated ICD coding from free text using machine learning techniques, most use records in the English language, especially from the MIMIC-III public dataset. This work presents results for a dataset with Brazilian Portuguese clinical notes. We develop and optimize a Logistic Regression model, a Convolutional Neural Network (CNN), a Gated Recurrent Unit Neural Network and a CNN with Attention (CNN-Att) for prediction of diagnosis ICD codes. We also report our results for the MIMIC-III dataset, which outperform previous work among models of the same families, as well as the state of the art. Compared to MIMIC-III, the Brazilian Portuguese dataset contains far fewer words per document, when only discharge summaries are used. We experiment concatenating additional documents available in this dataset, achieving a great boost in performance. The CNN-Att model achieves the best results on both datasets, with micro-averaged F1 score of 0.537 on MIMIC-III and 0.485 on our dataset with additional documents.
+{{< /details >}}
+
+
 # Preprints
-{{< details "Severo, D. \"Proof of Novelty\"" >}}
-[figshare preprint 10324883](https://doi.org/10.6084/m9.figshare.10324883.v1)
+{{< details "Proof of Novelty" >}}
+Daniel Severo
+
+https://doi.org/10.6084/m9.figshare.10324883.v1
 
 We propose a design for securing novelty of archived content in distributed ledgers, called Proof of Novelty. What constitutes as novel is decided through a consensus mechanism together with a similarity function, which is selected according to the content type (e.g. full-motion videos, textual documents). Scalability is guaranteed by forming a validation committee with cryptographic sortition, which use statistical hypothesis testing to decide on the probability of a content being novel or not. The system can trade-off computational with statistical performance by manipulating parameters. We discuss the usage of this design to secure the novelty of full-motion videos and end with a proposal of future lines of research that can extend the systems capabilities.
 {{< /details >}}
-{{< details "Severo, D., et al. \"Ward2ICU: A Vital Signs Dataset of Inpatients from the General Ward.\" ." >}}
-[arXiv preprint arXiv&#58;1910.00752 (2019)](https://arxiv.org/abs/1910.00752)
+{{< details "Ward2ICU: A Vital Signs Dataset of Inpatients from the General Ward" >}}
+**Daniel Severo**, Flávio Amaro, Estevam R Hruschka Jr, André Soares de Moura Costa
+
+https://arxiv.org/abs/1910.00752
 
 We present a proxy dataset of vital signs with class labels indicating patient transitions from the ward to intensive care units called Ward2ICU. Patient privacy is protected using a Wasserstein Generative Adversarial Network to implicitly learn an approximation of the data distribution, allowing us to sample synthetic data. The quality of data generation is assessed directly on the binary classification task by comparing specificity and sensitivity of an LSTM classifier on proxy and original datasets. We initialize a discussion of unintentionally disclosing commercial sensitive information and propose a solution for a special case through class label balancing
 
 {{< /details >}}
-{{< details "Severo D. \"A Report on the Ziggurat Method\"" >}}
-[figshare preprint 10324868](https://doi.org/10.6084/m9.figshare.10324868.v1)
+{{< details "A Report on the Ziggurat Method" >}}
+Daniel Severo
+
+https://doi.org/10.6084/m9.figshare.10324868.v1
 
 This report outlines, as well as provides a mathematical proof of functionality, of a highly efficient pseudo-random number generator: The Ziggurat Method. A simple ready-to-use code has been provided by previous authors. We contribute to this with a speed test on a modern Intel processor, as well as a Python script that generates all the necessary information to implement a specific version of the algorithm.
 {{< /details >}}
