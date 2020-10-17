@@ -14,7 +14,8 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -183,11 +184,6 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Two-stage Distributed Encoders
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#observations">
    Observations
   </a>
@@ -204,7 +200,7 @@
                 
   <div class="section" id="two-stage-codecs">
 <h1>Two-stage Codecs<a class="headerlink" href="#two-stage-codecs" title="Permalink to this headline">¶</a></h1>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dsc4ml.encoders</span> <span class="kn">import</span> <span class="n">LocalEncoder</span><span class="p">,</span> <span class="n">DistributedEncoder</span>
 <span class="kn">from</span> <span class="nn">dsc4ml.decoders</span> <span class="kn">import</span> <span class="n">FusionDecoder</span>
@@ -272,7 +268,7 @@
 </div>
 <div class="section" id="two-stage-non-distributed-encoders">
 <h2>Two-stage Non-distributed Encoders<a class="headerlink" href="#two-stage-non-distributed-encoders" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">γ</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
     <span class="n">npr</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -363,21 +359,21 @@
 </div>
 <div class="section" id="two-stage-distributed-encoders">
 <h2>Two-stage Distributed Encoders<a class="headerlink" href="#two-stage-distributed-encoders" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">npr</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">γ</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">γ</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
 
     <span class="c1"># Untreated corner cases (both will break the code):</span>
     <span class="c1"># - If p is too large, there will be proto-regions without points.</span>
     <span class="c1"># - If rate_exp is too large, some integer will be proto-region-less</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
-    <span class="n">rate_exp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+    <span class="n">rate_exp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 
-    <span class="n">ρ</span> <span class="o">=</span> <span class="mf">0.3</span>
+    <span class="n">ρ</span> <span class="o">=</span> <span class="mf">0.4</span>
     <span class="n">sep</span> <span class="o">=</span> <span class="mf">0.2</span>
 
-    <span class="n">X</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">1_000</span><span class="p">,</span> <span class="n">ρ</span><span class="p">,</span> <span class="n">sep</span><span class="p">)</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="n">ρ</span><span class="p">,</span> <span class="n">sep</span><span class="p">)</span>
     <span class="n">encoders</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">LocalEncoder</span><span class="p">(</span><span class="n">DA</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
                      <span class="n">DA</span><span class="p">(</span><span class="n">npr</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">rate_exp</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">),</span>
@@ -392,7 +388,7 @@
     <span class="n">dec</span> <span class="o">=</span> <span class="n">FusionDecoder</span><span class="o">.</span><span class="n">init_from_encoder</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">γ</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
 
     <span class="n">losses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-    <span class="n">Z</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">1_000</span><span class="p">,</span> <span class="n">ρ</span><span class="p">,</span> <span class="n">sep</span><span class="p">)</span>
+    <span class="n">Z</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="n">ρ</span><span class="p">,</span> <span class="n">sep</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
         <span class="n">dec</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">γ</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
         <span class="n">enc</span> <span class="o">=</span> <span class="n">enc</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">calc_total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">))</span>
@@ -461,125 +457,12 @@
 <img alt="_images/two-stage_5_1.png" src="_images/two-stage_5_1.png" />
 <img alt="_images/two-stage_5_2.png" src="_images/two-stage_5_2.png" />
 <img alt="_images/two-stage_5_3.png" src="_images/two-stage_5_3.png" />
-</div>
-</div>
-</div>
-<div class="section" id="id1">
-<h2>Two-stage Distributed Encoders<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">npr</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">ρ</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">γ</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
-
-        <span class="c1"># Untreated corner cases (both will break the code):</span>
-        <span class="c1"># - If p is too large, there will be proto-regions without points.</span>
-        <span class="c1"># - If rate_exp is too large, some integer will be proto-region-less</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
-        <span class="n">rate_exp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-
-        <span class="n">sep</span> <span class="o">=</span> <span class="mf">0.2</span>
-
-        <span class="n">X</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">1_000</span><span class="p">,</span> <span class="n">ρ</span><span class="p">,</span> <span class="n">sep</span><span class="p">)</span>
-        <span class="n">encoders</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="n">LocalEncoder</span><span class="p">(</span><span class="n">DA</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
-                         <span class="n">DA</span><span class="p">(</span><span class="n">npr</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">rate_exp</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">),</span>
-                         <span class="n">rate_exp</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
-
-            <span class="n">LocalEncoder</span><span class="p">(</span><span class="n">DA</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
-                         <span class="n">DA</span><span class="p">(</span><span class="n">npr</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">rate_exp</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">dims</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">),</span>
-                         <span class="n">rate_exp</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-        <span class="p">]</span>
-
-        <span class="n">enc</span> <span class="o">=</span> <span class="n">DistributedEncoder</span><span class="p">(</span><span class="n">encoders</span><span class="p">)</span>
-        <span class="n">dec</span> <span class="o">=</span> <span class="n">FusionDecoder</span><span class="o">.</span><span class="n">init_from_encoder</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">γ</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
-
-        <span class="n">losses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-        <span class="n">Z</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">generate_2d_dataset</span><span class="p">(</span><span class="mi">1_000</span><span class="p">,</span> <span class="n">ρ</span><span class="p">,</span> <span class="n">sep</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
-            <span class="n">dec</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">enc</span><span class="p">,</span> <span class="n">γ</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
-            <span class="n">enc</span> <span class="o">=</span> <span class="n">enc</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">calc_total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">))</span>
-
-            <span class="n">losses</span> <span class="o">+=</span> <span class="p">[</span>
-                <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;train&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;total&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">)(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
-                 <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span>
-                 <span class="s1">&#39;ρ&#39;</span><span class="p">:</span> <span class="n">ρ</span><span class="p">,</span>
-                 <span class="s1">&#39;γ&#39;</span><span class="p">:</span> <span class="n">γ</span><span class="p">},</span>
-
-                <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;total&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_total_loss</span><span class="p">(</span><span class="n">γ</span><span class="p">)(</span><span class="n">Z</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">Z</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
-                 <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span>
-                 <span class="s1">&#39;ρ&#39;</span><span class="p">:</span> <span class="n">ρ</span><span class="p">,</span>
-                 <span class="s1">&#39;γ&#39;</span><span class="p">:</span> <span class="n">γ</span><span class="p">},</span>
-
-                <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;train&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;mse&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_mse_loss</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
-                 <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span>
-                 <span class="s1">&#39;ρ&#39;</span><span class="p">:</span> <span class="n">ρ</span><span class="p">,</span>
-                 <span class="s1">&#39;γ&#39;</span><span class="p">:</span> <span class="n">γ</span><span class="p">},</span>
-
-                <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;mse&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_mse_loss</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">Z</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
-                 <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span>
-                 <span class="s1">&#39;ρ&#39;</span><span class="p">:</span> <span class="n">ρ</span><span class="p">,</span>
-                 <span class="s1">&#39;γ&#39;</span><span class="p">:</span> <span class="n">γ</span><span class="p">},</span>
-
-                <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;train&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;zero_one&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_zero_one_loss</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
-                 <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span>
-                 <span class="s1">&#39;ρ&#39;</span><span class="p">:</span> <span class="n">ρ</span><span class="p">,</span>
-                 <span class="s1">&#39;γ&#39;</span><span class="p">:</span> <span class="n">γ</span><span class="p">},</span>
-
-                <span class="p">{</span><span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;loss_type&#39;</span><span class="p">:</span> <span class="s1">&#39;zero_one&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">calc_zero_one_loss</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">Z</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span>
-                 <span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span>
-                 <span class="s1">&#39;ρ&#39;</span><span class="p">:</span> <span class="n">ρ</span><span class="p">,</span>
-                 <span class="s1">&#39;γ&#39;</span><span class="p">:</span> <span class="n">γ</span><span class="p">},</span>
-            <span class="p">]</span>
-
-        <span class="n">losses</span> <span class="o">=</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">losses</span><span class="p">)</span>
-                    <span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;loss_type&#39;</span><span class="p">,</span> <span class="s1">&#39;dataset&#39;</span><span class="p">],</span> <span class="s1">&#39;value&#39;</span><span class="p">))</span>
-
-        <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">dec</span><span class="o">.</span><span class="n">codebook</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">dec</span><span class="o">.</span><span class="n">codebook</span> <span class="o">@</span> <span class="n">w</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">dec</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="n">X</span><span class="p">))</span> <span class="o">@</span> <span class="n">w</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">enc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">boundaries</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">enc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">boundaries</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-        <span class="n">plot_decision_boundary</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-        <span class="p">(</span><span class="n">losses</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span>
-         <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">,</span>
-               <span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-               <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Total loss ($\gamma = </span><span class="si">{</span><span class="n">γ</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">$)&#39;</span><span class="p">))</span>
-        <span class="p">(</span><span class="n">losses</span><span class="p">[</span><span class="s1">&#39;mse&#39;</span><span class="p">]</span>
-         <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">,</span>
-               <span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
-               <span class="n">title</span><span class="o">=</span><span class="s1">&#39;MSE loss&#39;</span><span class="p">))</span>
-        <span class="p">(</span><span class="n">losses</span><span class="p">[</span><span class="s1">&#39;zero_one&#39;</span><span class="p">]</span>
-         <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">,</span>
-               <span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
-               <span class="n">title</span><span class="o">=</span><span class="s1">&#39;0-1 loss&#39;</span><span class="p">))</span>
-
-        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/two-stage_7_0.png" src="_images/two-stage_7_0.png" />
-<img alt="_images/two-stage_7_1.png" src="_images/two-stage_7_1.png" />
-<img alt="_images/two-stage_7_2.png" src="_images/two-stage_7_2.png" />
-<img alt="_images/two-stage_7_3.png" src="_images/two-stage_7_3.png" />
-<img alt="_images/two-stage_7_4.png" src="_images/two-stage_7_4.png" />
-<img alt="_images/two-stage_7_5.png" src="_images/two-stage_7_5.png" />
-<img alt="_images/two-stage_7_6.png" src="_images/two-stage_7_6.png" />
-<img alt="_images/two-stage_7_7.png" src="_images/two-stage_7_7.png" />
+<img alt="_images/two-stage_5_4.png" src="_images/two-stage_5_4.png" />
+<img alt="_images/two-stage_5_5.png" src="_images/two-stage_5_5.png" />
+<img alt="_images/two-stage_5_6.png" src="_images/two-stage_5_6.png" />
+<img alt="_images/two-stage_5_7.png" src="_images/two-stage_5_7.png" />
+<img alt="_images/two-stage_5_8.png" src="_images/two-stage_5_8.png" />
+<img alt="_images/two-stage_5_9.png" src="_images/two-stage_5_9.png" />
 </div>
 </div>
 </div>

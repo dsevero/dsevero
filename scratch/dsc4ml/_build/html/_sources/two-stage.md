@@ -17,6 +17,8 @@ Two-stage Codecs
 ==============================================
 
 ```{code-cell} python
+:tags: [hide-input]
+
 from dsc4ml.encoders import LocalEncoder, DistributedEncoder
 from dsc4ml.decoders import FusionDecoder
 import xarray as xr
@@ -81,6 +83,7 @@ w = make_normal_unit_vector(2)
 
 ## Two-stage Non-distributed Encoders
 ```{code-cell} python
+:tags: [hide-input]
 for γ in [0, 1]:
     npr.seed(0)
 
@@ -161,19 +164,21 @@ for γ in [0, 1]:
 
 ## Two-stage Distributed Encoders
 ```{code-cell} python
+:tags: [hide-input]
+
 npr.seed(0)
-for γ in [0, 1]:
+for γ in [0, 0.25, 0.5, 0.75, 1]:
 
     # Untreated corner cases (both will break the code):
     # - If p is too large, there will be proto-regions without points.
     # - If rate_exp is too large, some integer will be proto-region-less
-    p = [20, 20]
-    rate_exp = [2, 2]
+    p = [5, 10]
+    rate_exp = [2, 3]
 
-    ρ = 0.3
+    ρ = 0.4
     sep = 0.2
 
-    X, _ = generate_2d_dataset(1_000, ρ, sep)
+    X, _ = generate_2d_dataset(300, ρ, sep)
     encoders = [
         LocalEncoder(DA(np.linspace(-1.5, 1.5, p[0]), dims='p').expand_dims(d=1),
                      DA(npr.randint(rate_exp[0], size=p[0]), dims='p'),
@@ -188,7 +193,7 @@ for γ in [0, 1]:
     dec = FusionDecoder.init_from_encoder(X, enc, γ, w)
 
     losses = list()
-    Z, _ = generate_2d_dataset(1_000, ρ, sep)
+    Z, _ = generate_2d_dataset(300, ρ, sep)
     for i in range(30):
         dec = dec.optimize(X, enc, γ, w)
         enc = enc.optimize(X, dec, calc_total_loss(γ))
@@ -249,109 +254,6 @@ for γ in [0, 1]:
            title='0-1 loss'))
 
     plt.show()
-```
-## Two-stage Distributed Encoders
-```{code-cell} python
-npr.seed(0)
-for ρ in [0, 0.5]:
-    for γ in [0, 1]:
-
-        # Untreated corner cases (both will break the code):
-        # - If p is too large, there will be proto-regions without points.
-        # - If rate_exp is too large, some integer will be proto-region-less
-        p = [10, 15]
-        rate_exp = [2, 2]
-
-        sep = 0.2
-
-        X, _ = generate_2d_dataset(1_000, ρ, sep)
-        encoders = [
-            LocalEncoder(DA(np.linspace(-1.5, 1.5, p[0]), dims='p').expand_dims(d=1),
-                         DA(npr.randint(rate_exp[0], size=p[0]), dims='p'),
-                         rate_exp[0]),
-
-            LocalEncoder(DA(np.linspace(-1.5, 1.5, p[1]), dims='p').expand_dims(d=1),
-                         DA(npr.randint(rate_exp[1], size=p[1]), dims='p'),
-                         rate_exp[1])
-        ]
-
-        enc = DistributedEncoder(encoders)
-        dec = FusionDecoder.init_from_encoder(X, enc, γ, w)
-
-        losses = list()
-        Z, _ = generate_2d_dataset(1_000, ρ, sep)
-        for i in range(30):
-            dec = dec.optimize(X, enc, γ, w)
-            enc = enc.optimize(X, dec, calc_total_loss(γ))
-
-            losses += [
-                {'dataset': 'train',
-                 'loss_type': 'total',
-                 'value': calc_total_loss(γ)(X, dec(enc(X))).mean().item(),
-                 'i': i,
-                 'ρ': ρ,
-                 'γ': γ},
-
-                {'dataset': 'test',
-                 'loss_type': 'total',
-                 'value': calc_total_loss(γ)(Z, dec(enc(Z))).mean().item(),
-                 'i': i,
-                 'ρ': ρ,
-                 'γ': γ},
-
-                {'dataset': 'train',
-                 'loss_type': 'mse',
-                 'value': calc_mse_loss(X, dec(enc(X))).mean().item(),
-                 'i': i,
-                 'ρ': ρ,
-                 'γ': γ},
-
-                {'dataset': 'test',
-                 'loss_type': 'mse',
-                 'value': calc_mse_loss(Z, dec(enc(Z))).mean().item(),
-                 'i': i,
-                 'ρ': ρ,
-                 'γ': γ},
-
-                {'dataset': 'train',
-                 'loss_type': 'zero_one',
-                 'value': calc_zero_one_loss(X, dec(enc(X))).mean().item(),
-                 'i': i,
-                 'ρ': ρ,
-                 'γ': γ},
-
-                {'dataset': 'test',
-                 'loss_type': 'zero_one',
-                 'value': calc_zero_one_loss(Z, dec(enc(Z))).mean().item(),
-                 'i': i,
-                 'ρ': ρ,
-                 'γ': γ},
-            ]
-
-        losses = (pd.DataFrame(losses)
-                    .pivot('i', ['loss_type', 'dataset'], 'value'))
-
-        plt.scatter(*dec.codebook.T, c=np.sign(dec.codebook @ w), marker='^', s=100)
-        plt.scatter(*X.T, c=np.sign(dec(enc(X)) @ w), alpha=0.15)
-        plt.xticks(enc[0].boundaries.round(2), '')
-        plt.yticks(enc[1].boundaries.round(2), '')
-        plot_decision_boundary(X)
-        plt.show()
-
-        (losses['total']
-         .plot(style='o--',
-               ax=plt.subplot(1, 3, 1),
-               title=f'Total loss ($\gamma = {γ:.2f}$)'))
-        (losses['mse']
-         .plot(style='o--',
-               ax=plt.subplot(1, 3, 2),
-               title='MSE loss'))
-        (losses['zero_one']
-         .plot(style='o--',
-               ax=plt.subplot(1, 3, 3),
-               title='0-1 loss'))
-
-        plt.show()
 ```
 
 ## Observations

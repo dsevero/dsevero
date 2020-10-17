@@ -17,6 +17,8 @@ Wyner-Ziv Quantization for Classification
 ==============================================
 
 ```{code-cell} python
+:tags: [hide-input]
+
 import xarray as xr
 import numpy as np
 import numpy.random as npr
@@ -29,11 +31,6 @@ plt.rcParams['font.size'] = 14
 plt.rcParams['image.cmap'] = 'Dark2'
 
 DA = xr.DataArray
-```
-
-## No side-information
-
-```{code-cell} python
 ρ = 0.8
 μ = [0, 0]
 σx = 1

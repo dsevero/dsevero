@@ -13,9 +13,6 @@ plt.rcParams['font.size'] = 14
 plt.rcParams['image.cmap'] = 'Dark2'
 
 DA = xr.DataArray
-
-## No side-information
-
 ρ = 0.8
 μ = [0, 0]
 σx = 1

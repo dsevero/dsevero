@@ -3,21 +3,21 @@ title: About me
 type: docs
 ---
 <img src="http://2.gravatar.com/avatar/5f4137714834378cbeb267932bb101c3?s=200" style="border-radius: 15%; float: left; padding-right: 15px ">
-I'm a graduate student at the <a href="https://www.ece.utoronto.ca/">University of Toronto</a> researching Statistical/Computational/Machine Learning and Information Theory with my advisor <a href="https://www.ece.utoronto.ca/people/khisti-a/">Ashish Khisti</a>. I have a B.Sc. in Electronics Engineering from the Federal University of Santa Catarina (Brazil) where I was advised by <a href="http://danilosilva.sites.ufsc.br/">Danilo Silva</a>. Previously, I was an engineer at <a href="https://research.3778.care/">37.78</a> working with Machine Learning for healthcare.
+I'm a graduate student at the <a href="https://www.ece.utoronto.ca/">University of Toronto</a> and <a href="https://vectorinstitute.ai/">Vector Institute for Artificial Intelligence</a> researching Machine Learning and Information Theory with my advisors <a href="https://www.ece.utoronto.ca/people/khisti-a/">Ashish Khisti</a> and <a href="http://www.alireza.ai/">Alireza Makhzani</a>. I have a B.Sc. in Electronics Engineering from the Federal University of Santa Catarina (Brazil) where I was advised by <a href="http://danilosilva.sites.ufsc.br/">Danilo Silva</a>. Previously, I was an engineer at <a href="https://research.3778.care/">37.78</a> working with Machine Learning for healthcare.
 
 Originally, I am from Florianópolis, Brazil but I've lived in New Jersey, Orlando, Toronto and São Paulo as well as other smaller cities in the south of Brazil. I enjoy reading, playing american football and <a href="https://www.kerbalspaceprogram.com/">KSP</a>.
-
 
 ---
 # News
 {{< hint info >}}
-**14/May/2020** I am a Vector Scholarship in Artificial Intelligence Recipient 2020-21!
+**16/Oct/2020** I've joined the Vector Institute as a graduate student researcher.
 {{< /hint >}}
-- **27/Feb/2020** Starting graduate studies at University of Toronto in Fall/2020!
-- **03/Dec/2019** Proof of Novelty was awarded by [Blockchain@UBC](https://blockchain.ubc.ca/news/virtual-design-challenge-authenticating-and-protecting-full-motion-videos)!
+- **14/May/2020** I am a Vector Scholarship in Artificial Intelligence Recipient 2020-21.
+- **27/Feb/2020** Starting graduate studies at University of Toronto in Fall/2020.
+- **03/Dec/2019** Proof of Novelty was awarded by [Blockchain@UBC](https://blockchain.ubc.ca/news/virtual-design-challenge-authenticating-and-protecting-full-motion-videos).
 - **15/Nov/2019** Finished writing [Proof of Novelty](https://github.com/dsevero/Proof-of-Novelty).
 - **21/Oct/2019** Preprint of [Ward2ICU](https://arxiv.org/abs/1910.00752) posted on arXiv.
-- **02/Oct/2019** This page was created!
+- **02/Oct/2019** This page was created.
 
 # Publications
 {{< details "Predicting Multiple ICD-10 Codes from Brazilian-Portuguese Clinical Notes (BRACIS 2020)" >}}
