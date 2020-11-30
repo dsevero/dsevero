@@ -1,4 +1,4 @@
-I'm a graduate student at the University of Toronto studying Machine/Computational/Statistical Learning and Information Theory.
+I'm a graduate student at the University of Toronto and Vector Institute for Artificial Intelligence researching Machine Learning and Information Theory with my advisors Ashish Khisti and Alireza Makhzani. I have a B.Sc. in Electronics Engineering from the Federal University of Santa Catarina (Brazil) where I was advised by Danilo Silva. Previously, I was an engineer at 37.78 working with Machine Learning for healthcare.
 
 Originally, I am from Florianópolis, Brazil but I've lived in New Jersey, Orlando, Toronto and São Paulo as well as other smaller cities in the south of Brazil. I enjoy reading, playing american football.
 
