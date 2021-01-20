@@ -5,6 +5,8 @@ type: docs
 <img src="http://2.gravatar.com/avatar/5f4137714834378cbeb267932bb101c3?s=200" style="border-radius: 15%; float: left; padding-right: 15px ">
 I'm a graduate student at the <a href="https://www.ece.utoronto.ca/">University of Toronto</a> and <a href="https://vectorinstitute.ai/">Vector Institute for Artificial Intelligence</a> researching Machine Learning and Information Theory with my advisors <a href="https://www.ece.utoronto.ca/people/khisti-a/">Ashish Khisti</a> and <a href="http://www.alireza.ai/">Alireza Makhzani</a>. I have a B.Sc. in Electronics Engineering from the Federal University of Santa Catarina (Brazil) where I was advised by <a href="http://danilosilva.sites.ufsc.br/">Danilo Silva</a>. Previously, I was an engineer at <a href="https://research.3778.care/">37.78</a> working with Machine Learning for healthcare.
 
+My research interests include the Minimum Description Length (MDL) Principle and its connections to machine learning and data compression. I am Currently working on lossless compression through bits-back coding and deep latent variable models.
+
 Originally, I am from Florianópolis, Brazil but I've lived in New Jersey, Orlando, Toronto and São Paulo as well as other smaller cities in the south of Brazil. I enjoy reading, playing american football and <a href="https://www.kerbalspaceprogram.com/">KSP</a>.
 
 ---

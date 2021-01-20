@@ -1,0 +1,215 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{reys2020predicting}{misc}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=44eca1f85041c4572ad8633a31e8375a}{%
+           family={Reys},
+           familyi={R\bibinitperiod},
+           given={Arthur\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dc9960098e51e93ad386266fc0bd4600}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Danilo},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e06a68e310680243359481c2b05733d2}{%
+           family={Severo},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=864a462e7cc360794afb9fbb6e11c63e}{%
+           family={Pedro},
+           familyi={P\bibinitperiod},
+           given={Saulo},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e5ae1c47604ddb464ceb6e6475f1c30}{%
+           family={Souza\bibnamedelimb e\bibnamedelima Sá},
+           familyi={S\bibinitperiod\bibinitdelim e\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Marcia\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=fe616fc93ad23a31487a0c827afe7940}{%
+           family={Salgado},
+           familyi={S\bibinitperiod},
+           given={Guilherme\bibnamedelimb A.\bibnamedelimi C.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fbf77bfe3452c6f585651d41a98fd883}
+      \strng{fullhash}{fd2233494cbc2d89ee9cb4469298a7eb}
+      \strng{bibnamehash}{fbf77bfe3452c6f585651d41a98fd883}
+      \strng{authorbibnamehash}{fbf77bfe3452c6f585651d41a98fd883}
+      \strng{authornamehash}{fbf77bfe3452c6f585651d41a98fd883}
+      \strng{authorfullhash}{fd2233494cbc2d89ee9cb4469298a7eb}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{note}{Accepted at BRACIS}
+      \field{title}{Predicting Multiple ICD-10 Codes from Brazilian-Portuguese Clinical Notes}
+      \field{year}{2020}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2008.01515
+      \endverb
+      \keyw{publication}
+    \endentry
+    \entry{severo_2020}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e06a68e310680243359481c2b05733d2}{%
+           family={Severo},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {figshare}%
+      }
+      \strng{namehash}{e06a68e310680243359481c2b05733d2}
+      \strng{fullhash}{e06a68e310680243359481c2b05733d2}
+      \strng{bibnamehash}{e06a68e310680243359481c2b05733d2}
+      \strng{authorbibnamehash}{e06a68e310680243359481c2b05733d2}
+      \strng{authornamehash}{e06a68e310680243359481c2b05733d2}
+      \strng{authorfullhash}{e06a68e310680243359481c2b05733d2}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{title}{A Report on the Ziggurat Method}
+      \field{year}{2020}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.6084/m9.figshare.10324868.v1
+      \endverb
+      \keyw{preprint}
+    \endentry
+    \entry{severo_2019}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e06a68e310680243359481c2b05733d2}{%
+           family={Severo},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {figshare}%
+      }
+      \strng{namehash}{e06a68e310680243359481c2b05733d2}
+      \strng{fullhash}{e06a68e310680243359481c2b05733d2}
+      \strng{bibnamehash}{e06a68e310680243359481c2b05733d2}
+      \strng{authorbibnamehash}{e06a68e310680243359481c2b05733d2}
+      \strng{authornamehash}{e06a68e310680243359481c2b05733d2}
+      \strng{authorfullhash}{e06a68e310680243359481c2b05733d2}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Proof of Novelty}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.6084/m9.figshare.10324883.v1
+      \endverb
+      \verb{urlraw}
+      \verb https://figshare.com/articles/preprint/Proof_of_Novelty/10324883/1
+      \endverb
+      \verb{url}
+      \verb https://figshare.com/articles/preprint/Proof_of_Novelty/10324883/1
+      \endverb
+    \endentry
+    \entry{severo2019ward2icu}{misc}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=e06a68e310680243359481c2b05733d2}{%
+           family={Severo},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=41786a27e504f9ea2d29bbf742713766}{%
+           family={Amaro},
+           familyi={A\bibinitperiod},
+           given={Flávio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3220d84d10a5b678104d6710044994d5}{%
+           family={Jr},
+           familyi={J\bibinitperiod},
+           given={Estevam\bibnamedelimb R.\bibnamedelimi Hruschka},
+           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83d0e6a5e7c582ff75a85ad743f35089}{%
+           family={Moura\bibnamedelima Costa},
+           familyi={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={André\bibnamedelima Soares},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{cc05d42a0f972481e030b28603b33112}
+      \strng{fullhash}{231f9bc9178951dc6664a39c8885b61d}
+      \strng{bibnamehash}{cc05d42a0f972481e030b28603b33112}
+      \strng{authorbibnamehash}{cc05d42a0f972481e030b28603b33112}
+      \strng{authornamehash}{cc05d42a0f972481e030b28603b33112}
+      \strng{authorfullhash}{231f9bc9178951dc6664a39c8885b61d}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Ward2ICU: A Vital Signs Dataset of Inpatients from the General Ward}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{eprint}
+      \verb 1910.00752
+      \endverb
+      \keyw{preprint}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

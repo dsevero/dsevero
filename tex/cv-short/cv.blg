@@ -1,0 +1,20 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'cv.blg'
+[59] biber:322> INFO - === Wed Jan 20, 2021, 16:11:41
+[69] Biber.pm:415> INFO - Reading 'cv.bcf'
+[116] Biber.pm:940> INFO - Using all citekeys in bib section 0
+[126] Biber.pm:4256> INFO - Processing section 0
+[126] Utils.pm:75> INFO - Globbing data source 'cv.bib'
+[126] Utils.pm:91> INFO - Globbed data source 'cv.bib' to cv.bib
+[133] Biber.pm:4455> INFO - Looking for bibtex format file 'cv.bib' for section 0
+[134] bibtex.pm:1653> INFO - LaTeX decoding ...
+[139] bibtex.pm:1471> INFO - Found BibTeX data source 'cv.bib'
+[160] Utils.pm:293> WARN - month field 'Mar' in entry 'severo_2020' is not an integer - this will probably not sort properly.
+[162] Utils.pm:293> WARN - month field 'Nov' in entry 'severo_2019' is not an integer - this will probably not sort properly.
+[179] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[179] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[179] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[179] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[185] bbl.pm:652> INFO - Writing 'cv.bbl' with encoding 'UTF-8'
+[188] bbl.pm:755> INFO - Output to cv.bbl
+[188] Biber.pm:128> INFO - WARNINGS: 2
