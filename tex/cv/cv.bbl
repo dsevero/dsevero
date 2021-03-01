@@ -84,6 +84,79 @@
       \endverb
       \keyw{publication}
     \endentry
+    \entry{ruan2021improving}{misc}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=fceaf229cf188994010286ce8f5a0907}{%
+           family={Ruan},
+           familyi={R\bibinitperiod},
+           given={Yangjun},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8068a264a33665b6cd18af834e2133ac}{%
+           family={Ullrich},
+           familyi={U\bibinitperiod},
+           given={Karen},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e06a68e310680243359481c2b05733d2}{%
+           family={Severo},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=20701ee7297351388549dce5655f6fc2}{%
+           family={Townsend},
+           familyi={T\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=922c7e884c925a6b6dfdd7313b67d370}{%
+           family={Khisti},
+           familyi={K\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aca5faad8b57b96b59c12fc59d0b6eb4}{%
+           family={Doucet},
+           familyi={D\bibinitperiod},
+           given={Arnaud},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d8b4e8b7224f41ba985f7dbc8896258}{%
+           family={Makhzani},
+           familyi={M\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c3126321fcb4553dfda5ae96da928ce}{%
+           family={Maddison},
+           familyi={M\bibinitperiod},
+           given={Chris\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8e4018108fc28b40ef74ddfd7e30e1ee}
+      \strng{fullhash}{9b72e35697fe84aefcd177b2fa1f0931}
+      \strng{bibnamehash}{8e4018108fc28b40ef74ddfd7e30e1ee}
+      \strng{authorbibnamehash}{8e4018108fc28b40ef74ddfd7e30e1ee}
+      \strng{authornamehash}{8e4018108fc28b40ef74ddfd7e30e1ee}
+      \strng{authorfullhash}{9b72e35697fe84aefcd177b2fa1f0931}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2102.11086
+      \endverb
+      \keyw{preprint}
+    \endentry
     \entry{severo_2020}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=e06a68e310680243359481c2b05733d2}{%
