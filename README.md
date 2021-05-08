@@ -2,15 +2,12 @@ Graduate student at the University of Toronto, researcher at the Vector Institut
 
 I'm interested in lossless data compression, information theory, and AI.
 
-For more information, please see my website at https://dsevero.com
-
-You can follow me on Twitter!https://twitter.com/_dsevero
-
-For my research, please see my [Google Scholar](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en) profile.
-
-[Click here for a full CV](https://dsevero.com/cv.pdf)
+[[google scholar]](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en)
+[[website]](https://dsevero.com)
+[[twitter]](https://twitter.com/_dsevero)
+[[CV]](https://dsevero.com/cv.pdf)
 
 # Featured gists
-- [A tutorial on bits-back with Huffman coding](https://gist.github.com/dsevero/693677754798e21f539e4e11a3103576)
+- [A tutorial on bits-back with Huffman coding](https://gist.github.com/dsevero/693677754798e21f539e4e11a3103576), 2021
 - [Vectorized Run-Length Encoding](https://gist.github.com/dsevero/693677754798e21f539e4e11a3103576), 2021
 - [Persisting lru_cache to disk while using hashable pandas objects for parallel experiments](https://gist.github.com/dsevero/252a5f280600c6b1118ed42826d188a9), 2019
