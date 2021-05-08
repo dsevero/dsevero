@@ -12,16 +12,17 @@ Originally, I am from Florianópolis, Brazil but I've lived in New Jersey, Orlan
 ---
 
 # Publications
+- **Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding**\
+Yangjun Ruan\*, Karen Ullrich\*, **Daniel Severo**\*, James Townsend, Ashish Khisti, Arnaud Doucet, Alireza Makhzani, Chris J. Maddison\
+ICML, 2021, <span style="color:red">**Long talk**</span>\
+[[arXiv]](https://arxiv.org/abs/2102.11086)
+
 - **Predicting Multiple ICD-10 Codes from Brazilian-Portuguese Clinical Notes**\
 Arthur D Reys, Danilo Silva, **Daniel Severo**, Saulo Pedro, Marcia M Sá, Guilherme AC Salgado\
-BRACIS, 2020\
+BRACIS 2020\
 [[arXiv]](https://arxiv.org/abs/2008.01515)
 
 # Preprints
-- **Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding**\
-Yangjun Ruan\*, Karen Ullrich\*, **Daniel Severo**\*, James Townsend, Ashish Khisti, Arnaud Doucet, Alireza Makhzani, Chris J Maddison\
-[[arXiv]](https://arxiv.org/abs/2102.11086)
-
 - **Ward2ICU: A Vital Signs Dataset of Inpatients from the General Ward**\
 **Daniel Severo**, Flávio Amaro, Estevam R Hruschka Jr, André Soares de Moura Costa\
 [[arXiv]](https://arxiv.org/abs/1910.00752)\
