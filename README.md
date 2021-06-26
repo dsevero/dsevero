@@ -13,4 +13,4 @@ I'm interested in lossless data compression, information theory, and AI.
 - [Persisting lru_cache to disk while using hashable pandas objects for parallel experiments](https://gist.github.com/dsevero/252a5f280600c6b1118ed42826d188a9), 2020
 
 # Recommended readings (not my authorship)
-- [Darts, Dice, and Coins: Sampling from a Discrete Distribution](https://www.keithschwarz.com/darts-dice-coins/) by Keith Schwarz
+- [Darts, Dice, and Coins: Sampling from a Discrete Distribution](https://www.keithschwarz.com/darts-dice-coins/) by Keith Schwarz, 2011
