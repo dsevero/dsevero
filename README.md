@@ -1,25 +1,17 @@
-I'm a graduate student at the University of Toronto and Vector Institute for Artificial Intelligence researching Machine Learning and Information Theory with my advisors Ashish Khisti and Alireza Makhzani. I have a B.Sc. in Electronics Engineering from the Federal University of Santa Catarina (Brazil) where I was advised by Danilo Silva. Previously, I was an engineer at 37.78 working with Machine Learning for healthcare.
+Graduate student at the University of Toronto, researcher at the Vector Institute, and intern at Facebook AI Research (FAIR).
 
-Originally, I am from Florianópolis, Brazil but I've lived in New Jersey, Orlando, Toronto and São Paulo as well as other smaller cities in the south of Brazil. I enjoy reading, playing american football.
+I'm interested in lossless data compression, information theory, and AI.
 
-For my research, please see my [Google Scholar](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en) profile.
+[[google scholar]](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en)
+[[website]](https://dsevero.com)
+[[twitter]](https://twitter.com/_dsevero)
+[[CV]](https://dsevero.com/cv.pdf)
 
-[Click here for a full CV](https://dsevero.com/cv.pdf)
+# Featured gists
+- [Asymmetric Numeral Systems (ANS) codec in pure Python](https://gist.github.com/dsevero/7e02d96e079ce44b89ff33d7a1ce1738), 2021
+- [A tutorial on bits-back with Huffman coding](https://gist.github.com/dsevero/8e7c38b44953964d3b9873b6bd96d9b2), 2021
+- [Vectorized Run-Length Encoding](https://gist.github.com/dsevero/693677754798e21f539e4e11a3103576), 2021
+- [Persisting lru_cache to disk while using hashable pandas objects for parallel experiments](https://gist.github.com/dsevero/252a5f280600c6b1118ed42826d188a9), 2020
 
-# Education
-- University of Toronto, MASc Electrical and Computer Engineering (in progress)
-- Federal University of Santa Catarina, BSc Electronics Engineering (with honors, 99th percentile)
-
-# Awards
-- [Vector Scholarship in Artificial Intelligence Recipient 2020-21](https://vectorinstitute.ai/aimasters)
-- [NSERC Applied Research Rapid Response to COVID-19 Grant 2020](https://www.nserc-crsng.gc.ca/Innovate-Innover/CCI-COVID_eng.asp)
-- [Virtual Design Challenge Winner 2019](https://blockchain.ubc.ca/virtual-design-challenge-authenticating-and-protecting-full-motion-videos)
-- [Science Without Borders Scholarship 2013](http://www.cienciasemfronteiras.gov.br/web/csf-eng/)
-
-# Writings
-- [Persisting lru_cache to disk while using hashable pandas objects for parallel experiments](https://gist.github.com/dsevero/252a5f280600c6b1118ed42826d188a9)
-
-# Talks and Media
-- [Two ECE grad students receive Vector Institute Scholarships in AI.](https://www.ece.utoronto.ca/news/two-ece-grad-students-receive-vector-institute-scholarships-in-ai/)
-- Commit 77338d2 [Pursuing a Career in Data Science](https://anchor.fm/codenationdev/episodes/77338d2---Seguindo-carreira-em-Data-Science-eal947) (pt-BR)
-- Hipsters \#106 [Cool Data Science Cases](https://hipsters.tech/casos-bacanas-de-data-science-hipsters-106/) (pt-BR)
+# Recommended readings (not my authorship)
+- [Darts, Dice, and Coins: Sampling from a Discrete Distribution](https://www.keithschwarz.com/darts-dice-coins/) by Keith Schwarz, 2011
