@@ -17,22 +17,27 @@ Currently interning at [Facebook AI Research (FAIR)](https://ai.facebook.com/) f
 # Publications
 - **RCAQ: Regularized Classification-Aware Quantization**\
 **Daniel Severo**, Elad Domanovitz, Ashish Khisti\
-BSC, 2021
+BSC, 2021\
+[arXiv] [[code]](https://github.com/dsevero/rcaq)
 
 - **Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding**\
 Yangjun Ruan\*, Karen Ullrich\*, **Daniel Severo**\*, James Townsend, Ashish Khisti, Arnaud Doucet, Alireza Makhzani, Chris J. Maddison\
 ICML, 2021, <span style="color:red">**Long talk**</span>\
-[[arXiv]](https://arxiv.org/abs/2102.11086)
+[[arXiv]](https://arxiv.org/abs/2102.11086) [[code]](https://github.com/ryoungj/mcbits)
 
 - **Predicting Multiple ICD-10 Codes from Brazilian-Portuguese Clinical Notes**\
 Arthur D Reys, Danilo Silva, **Daniel Severo**, Saulo Pedro, Marcia M Sá, Guilherme AC Salgado\
 BRACIS 2020\
-[[arXiv]](https://arxiv.org/abs/2008.01515)
+[[arXiv]](https://arxiv.org/abs/2008.01515) [[code]](https://github.com/3778/icd-prediction-mimic)
 
 # Preprints
+- **Compressing Multisets with Large Alphabets**\
+**Daniel Severo**\*, James Townsend\*, Ashish Khisti, Alireza Makhzani, Karen Ullrich\
+[[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression)
+
 - **Ward2ICU: A Vital Signs Dataset of Inpatients from the General Ward**\
 **Daniel Severo**, Flávio Amaro, Estevam R Hruschka Jr, André Soares de Moura Costa\
-[[arXiv]](https://arxiv.org/abs/1910.00752)\
+[[arXiv]](https://arxiv.org/abs/1910.00752) [[code]](https://github.com/3778/Ward2ICU)\
 \
 \* Equal contribution
 
