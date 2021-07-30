@@ -18,7 +18,7 @@ Currently interning at [Facebook AI Research (FAIR)](https://ai.facebook.com/) f
 - **Compressing Multisets with Large Alphabets**\
 **Daniel Severo**\*, James Townsend\*, Ashish Khisti, Alireza Makhzani, Karen Ullrich\
 Preprint\
-[[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression)
+[[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet]](https://twitter.com/_dsevero/status/1419661190750425102)
 
 - **RCAQ: Regularized Classification-Aware Quantization**\
 **Daniel Severo**, Elad Domanovitz, Ashish Khisti\
@@ -28,7 +28,7 @@ BSC, 2021\
 - **Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding**\
 Yangjun Ruan\*, Karen Ullrich\*, **Daniel Severo**\*, James Townsend, Ashish Khisti, Arnaud Doucet, Alireza Makhzani, Chris J. Maddison\
 ICML, 2021, <span style="color:red">**Long talk**</span>\
-[[arXiv]](https://arxiv.org/abs/2102.11086) [[code]](https://github.com/ryoungj/mcbits)
+[[arXiv]](https://arxiv.org/abs/2102.11086) [[code]](https://github.com/ryoungj/mcbits) [[tweet]](https://twitter.com/cjmaddison/status/1392873765240020994)
 
 - **Predicting Multiple ICD-10 Codes from Brazilian-Portuguese Clinical Notes**\
 Arthur D Reys, Danilo Silva, **Daniel Severo**, Saulo Pedro, Marcia M Sá, Guilherme AC Salgado\
