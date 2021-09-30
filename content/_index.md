@@ -3,11 +3,13 @@ title: About me
 type: docs
 ---
 <img src="http://2.gravatar.com/avatar/5f4137714834378cbeb267932bb101c3?s=200" style="border-radius: 15%; float: left; padding-right: 15px ">
-I'm a graduate student at the <a href="https://www.ece.utoronto.ca/">University of Toronto</a> and <a href="https://vectorinstitute.ai/">Vector Institute for Artificial Intelligence</a>. My research interests are lossless data compression, information theory, and AI.
+I'm a Ph.D. student at the <a href="https://www.ece.utoronto.ca/">University of Toronto</a> and <a href="https://vectorinstitute.ai/">Vector Institute for Artificial Intelligence</a>. 
 
-Originally, I am from Florianópolis (Brazil) but I've lived in New Jersey, Orlando, Toronto, São Paulo, as well as other smaller cities in the south of Brazil.
+My research interests are lossless data compression, information theory, and AI. Data sources usually have some type of structure, such as graphs and sets. This means we can compress them better by taking this structure into account during compression. Unfortunately, existing methods that do this are either sub-optimal (don't achieve the Shannon bound) or computationally intractable. I’m interested in building computationally efficient compression algorithms that can be used with deep generative models on structured data, as well as their connections to bayesian methods.
 
-Currently interning at [Facebook AI Research (FAIR)](https://ai.facebook.com/) for the summer.
+Originally, I am from Florianópolis (Brazil) but I've lived in New Jersey, Orlando, Toronto (now), São Paulo, as well as other smaller cities in the south of Brazil.
+
+Previously, I interned at [Facebook AI Research (FAIR)](https://ai.facebook.com/) with [Karen Ullrich](https://karenullrich.info/) in the summer of 2021.
 
 ---
 
@@ -18,7 +20,7 @@ Currently interning at [Facebook AI Research (FAIR)](https://ai.facebook.com/) f
 - **Compressing Multisets with Large Alphabets**\
 **Daniel Severo**\*, James Townsend\*, Ashish Khisti, Alireza Makhzani, Karen Ullrich\
 Preprint\
-[[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet]](https://twitter.com/_dsevero/status/1419661190750425102)
+[[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet 1]](https://twitter.com/_dsevero/status/1419661190750425102) [[tweet 2]](https://twitter.com/_dsevero/status/1425521776457551872)
 
 - **RCAQ: Regularized Classification-Aware Quantization**\
 **Daniel Severo**, Elad Domanovitz, Ashish Khisti\
@@ -28,7 +30,7 @@ BSC, 2021\
 - **Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding**\
 Yangjun Ruan\*, Karen Ullrich\*, **Daniel Severo**\*, James Townsend, Ashish Khisti, Arnaud Doucet, Alireza Makhzani, Chris J. Maddison\
 ICML, 2021, <span style="color:red">**Long talk**</span>\
-[[arXiv]](https://arxiv.org/abs/2102.11086) [[code]](https://github.com/ryoungj/mcbits) [[tweet]](https://twitter.com/cjmaddison/status/1392873765240020994)
+[[arXiv]](https://arxiv.org/abs/2102.11086) [[code]](https://github.com/ryoungj/mcbits) [[tweet]](https://twitter.com/cjmaddison/status/1392873765240020994) [[video]](https://slideslive.com/38958684/improving-lossless-compression-rates-via-monte-carlo-bitsback-coding?ref=speaker-25566-latest&locale=en)
 
 - **Predicting Multiple ICD-10 Codes from Brazilian-Portuguese Clinical Notes**\
 Arthur D Reys, Danilo Silva, **Daniel Severo**, Saulo Pedro, Marcia M Sá, Guilherme AC Salgado\
