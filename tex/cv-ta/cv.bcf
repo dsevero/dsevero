@@ -111,15 +111,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minbibnames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>mincitenames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minsortnames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minitems</bcf:key>
@@ -2183,8 +2183,9 @@
     <bcf:datasource type="file" datatype="bibtex">cv.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" nocite="1">severo_2019</bcf:citekey>
-    <bcf:citekey order="2" nocite="1">severo2019ward2icu</bcf:citekey>
+    <bcf:citekey order="1" nocite="1">Severo2021-cf</bcf:citekey>
+    <bcf:citekey order="2" nocite="1">Ruan2021-xb</bcf:citekey>
+    <bcf:citekey order="3" nocite="1">Reys2020-su</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

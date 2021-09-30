@@ -69,15 +69,13 @@
       \strng{authorfullhash}{fd2233494cbc2d89ee9cb4469298a7eb}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CL}
       \field{eprinttype}{arXiv}
-      \field{note}{Accepted at BRACIS}
+      \field{note}{Accepted at BRACIS 2020}
       \field{title}{Predicting Multiple ICD-10 Codes from Brazilian-Portuguese Clinical Notes}
-      \field{year}{2020}
       \true{nocite}
       \verb{eprint}
       \verb 2008.01515
@@ -86,20 +84,20 @@
     \endentry
     \entry{ruan2021improving}{misc}{}
       \name{author}{8}{}{%
-        {{un=0,uniquepart=base,hash=fceaf229cf188994010286ce8f5a0907}{%
-           family={Ruan},
+        {{un=0,uniquepart=base,hash=7a12f50e8ba4f896f7cbb679236d7ea1}{%
+           family={Ruan*},
            familyi={R\bibinitperiod},
            given={Yangjun},
            giveni={Y\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=8068a264a33665b6cd18af834e2133ac}{%
-           family={Ullrich},
+        {{un=0,uniquepart=base,hash=e6f5efc30c9402a87e7e1695844c83ec}{%
+           family={Ullrich*},
            familyi={U\bibinitperiod},
            given={Karen},
            giveni={K\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=e06a68e310680243359481c2b05733d2}{%
-           family={Severo},
+        {{un=0,uniquepart=base,hash=4ef096b8f4d8db9ab19273caec9c6db5}{%
+           family={Severo*},
            familyi={S\bibinitperiod},
            given={Daniel},
            giveni={D\bibinitperiod},
@@ -135,100 +133,26 @@
            giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{8e4018108fc28b40ef74ddfd7e30e1ee}
-      \strng{fullhash}{9b72e35697fe84aefcd177b2fa1f0931}
-      \strng{bibnamehash}{8e4018108fc28b40ef74ddfd7e30e1ee}
-      \strng{authorbibnamehash}{8e4018108fc28b40ef74ddfd7e30e1ee}
-      \strng{authornamehash}{8e4018108fc28b40ef74ddfd7e30e1ee}
-      \strng{authorfullhash}{9b72e35697fe84aefcd177b2fa1f0931}
+      \strng{namehash}{f3d0817410e13a6cbfd5cdadf957c9a3}
+      \strng{fullhash}{1c4a1c692544270b8a52ad38468492d0}
+      \strng{bibnamehash}{f3d0817410e13a6cbfd5cdadf957c9a3}
+      \strng{authorbibnamehash}{f3d0817410e13a6cbfd5cdadf957c9a3}
+      \strng{authornamehash}{f3d0817410e13a6cbfd5cdadf957c9a3}
+      \strng{authorfullhash}{1c4a1c692544270b8a52ad38468492d0}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
       \field{eprinttype}{arXiv}
+      \field{note}{Accepted at ICML 2021 as a long talk}
       \field{title}{Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding}
-      \field{year}{2021}
       \true{nocite}
       \verb{eprint}
       \verb 2102.11086
       \endverb
-      \keyw{preprint}
-    \endentry
-    \entry{severo_2020}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e06a68e310680243359481c2b05733d2}{%
-           family={Severo},
-           familyi={S\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {figshare}%
-      }
-      \strng{namehash}{e06a68e310680243359481c2b05733d2}
-      \strng{fullhash}{e06a68e310680243359481c2b05733d2}
-      \strng{bibnamehash}{e06a68e310680243359481c2b05733d2}
-      \strng{authorbibnamehash}{e06a68e310680243359481c2b05733d2}
-      \strng{authornamehash}{e06a68e310680243359481c2b05733d2}
-      \strng{authorfullhash}{e06a68e310680243359481c2b05733d2}
-      \field{extraname}{1}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{3}
-      \field{title}{A Report on the Ziggurat Method}
-      \field{year}{2020}
-      \true{nocite}
-      \verb{doi}
-      \verb 10.6084/m9.figshare.10324868.v1
-      \endverb
-      \keyw{preprint}
-    \endentry
-    \entry{severo_2019}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e06a68e310680243359481c2b05733d2}{%
-           family={Severo},
-           familyi={S\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {figshare}%
-      }
-      \strng{namehash}{e06a68e310680243359481c2b05733d2}
-      \strng{fullhash}{e06a68e310680243359481c2b05733d2}
-      \strng{bibnamehash}{e06a68e310680243359481c2b05733d2}
-      \strng{authorbibnamehash}{e06a68e310680243359481c2b05733d2}
-      \strng{authornamehash}{e06a68e310680243359481c2b05733d2}
-      \strng{authorfullhash}{e06a68e310680243359481c2b05733d2}
-      \field{extraname}{2}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{11}
-      \field{title}{Proof of Novelty}
-      \field{year}{2019}
-      \true{nocite}
-      \verb{doi}
-      \verb 10.6084/m9.figshare.10324883.v1
-      \endverb
-      \verb{urlraw}
-      \verb https://figshare.com/articles/preprint/Proof_of_Novelty/10324883/1
-      \endverb
-      \verb{url}
-      \verb https://figshare.com/articles/preprint/Proof_of_Novelty/10324883/1
-      \endverb
+      \keyw{publication}
     \endentry
     \entry{severo2019ward2icu}{misc}{}
       \name{author}{4}{}{%
@@ -279,6 +203,103 @@
       \true{nocite}
       \verb{eprint}
       \verb 1910.00752
+      \endverb
+      \keyw{preprint}
+    \endentry
+    \entry{severo2021regularized}{misc}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e06a68e310680243359481c2b05733d2}{%
+           family={Severo},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=062c4689ef2a4cdde9ee473494914533}{%
+           family={Domanovitz},
+           familyi={D\bibinitperiod},
+           given={Elad},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=922c7e884c925a6b6dfdd7313b67d370}{%
+           family={Khisti},
+           familyi={K\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{24367ef180a829b68085814af924cc9c}
+      \strng{fullhash}{24367ef180a829b68085814af924cc9c}
+      \strng{bibnamehash}{24367ef180a829b68085814af924cc9c}
+      \strng{authorbibnamehash}{24367ef180a829b68085814af924cc9c}
+      \strng{authornamehash}{24367ef180a829b68085814af924cc9c}
+      \strng{authorfullhash}{24367ef180a829b68085814af924cc9c}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{note}{Accepted at BSC 2021}
+      \field{title}{Regularized Classification-Aware Quantization}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2107.09716
+      \endverb
+      \keyw{publication}
+    \endentry
+    \entry{severo2021compressing}{misc}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=4ef096b8f4d8db9ab19273caec9c6db5}{%
+           family={Severo*},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a3940042627faf8553cea2a16ec835a}{%
+           family={Townsend*},
+           familyi={T\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=922c7e884c925a6b6dfdd7313b67d370}{%
+           family={Khisti},
+           familyi={K\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d8b4e8b7224f41ba985f7dbc8896258}{%
+           family={Makhzani},
+           familyi={M\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8068a264a33665b6cd18af834e2133ac}{%
+           family={Ullrich},
+           familyi={U\bibinitperiod},
+           given={Karen},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ca9b449d87e05afc004b528f10944885}
+      \strng{fullhash}{f5da9443d7def12d1a71f0b448c6d99c}
+      \strng{bibnamehash}{ca9b449d87e05afc004b528f10944885}
+      \strng{authorbibnamehash}{ca9b449d87e05afc004b528f10944885}
+      \strng{authornamehash}{ca9b449d87e05afc004b528f10944885}
+      \strng{authorfullhash}{f5da9443d7def12d1a71f0b448c6d99c}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.IT}
+      \field{eprinttype}{arXiv}
+      \field{title}{Compressing Multisets with Large Alphabets}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2107.09202
       \endverb
       \keyw{preprint}
     \endentry

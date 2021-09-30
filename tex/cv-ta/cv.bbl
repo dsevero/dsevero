@@ -19,94 +19,177 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
-    \entry{severo_2019}{misc}{}
-      \name{author}{1}{}{%
+    \entry{Reys2020-su}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=5605cbae3b0871e77966273efa631920}{%
+           family={Reys},
+           familyi={R\bibinitperiod},
+           given={Arthur\bibnamedelima D*},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ef10fffb3c276d56cd508492a325fb8}{%
+           family={Silva*},
+           familyi={S\bibinitperiod},
+           given={Danilo},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
         {{un=0,uniquepart=base,hash=e06a68e310680243359481c2b05733d2}{%
            family={Severo},
            familyi={S\bibinitperiod},
            given={Daniel},
            giveni={D\bibinitperiod},
            givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {figshare}%
-      }
-      \strng{namehash}{e06a68e310680243359481c2b05733d2}
-      \strng{fullhash}{e06a68e310680243359481c2b05733d2}
-      \strng{bibnamehash}{e06a68e310680243359481c2b05733d2}
-      \strng{authorbibnamehash}{e06a68e310680243359481c2b05733d2}
-      \strng{authornamehash}{e06a68e310680243359481c2b05733d2}
-      \strng{authorfullhash}{e06a68e310680243359481c2b05733d2}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{11}
-      \field{title}{Proof of Novelty}
-      \field{year}{2019}
-      \true{nocite}
-      \verb{doi}
-      \verb 10.6084/m9.figshare.10324883.v1
-      \endverb
-      \verb{urlraw}
-      \verb https://figshare.com/articles/preprint/Proof_of_Novelty/10324883/1
-      \endverb
-      \verb{url}
-      \verb https://figshare.com/articles/preprint/Proof_of_Novelty/10324883/1
-      \endverb
-    \endentry
-    \entry{severo2019ward2icu}{misc}{}
-      \name{author}{4}{ul=1}{%
-        {{un=0,uniquepart=base,hash=e06a68e310680243359481c2b05733d2}{%
-           family={Severo},
-           familyi={S\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod},
+        {{un=0,uniquepart=base,hash=864a462e7cc360794afb9fbb6e11c63e}{%
+           family={Pedro},
+           familyi={P\bibinitperiod},
+           given={Saulo},
+           giveni={S\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=41786a27e504f9ea2d29bbf742713766}{%
-           family={Amaro},
-           familyi={A\bibinitperiod},
-           given={Flávio},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=3220d84d10a5b678104d6710044994d5}{%
-           family={Jr},
-           familyi={J\bibinitperiod},
-           given={Estevam\bibnamedelimb R.\bibnamedelimi Hruschka},
-           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=83d0e6a5e7c582ff75a85ad743f35089}{%
-           family={Moura\bibnamedelima Costa},
-           familyi={M\bibinitperiod\bibinitdelim C\bibinitperiod},
-           given={André\bibnamedelima Soares},
-           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+        {{un=0,uniquepart=base,hash=55d542cb9f36defc03c17cba0a80f635}{%
+           family={Sousa\bibnamedelimb e\bibnamedelima S{á}},
+           familyi={S\bibinitperiod\bibinitdelim e\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Marcia\bibnamedelima M},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
            givenun=0,
            prefix={de},
            prefixi={d\bibinitperiod},
            prefixun=0}}%
+        {{un=0,uniquepart=base,hash=fe616fc93ad23a31487a0c827afe7940}{%
+           family={Salgado},
+           familyi={S\bibinitperiod},
+           given={Guilherme\bibnamedelimb A\bibnamedelima C},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{0bf1306b3fa3f69f664e13209d04b7f4}
-      \strng{fullhash}{231f9bc9178951dc6664a39c8885b61d}
-      \strng{bibnamehash}{0bf1306b3fa3f69f664e13209d04b7f4}
-      \strng{authorbibnamehash}{0bf1306b3fa3f69f664e13209d04b7f4}
-      \strng{authornamehash}{0bf1306b3fa3f69f664e13209d04b7f4}
-      \strng{authorfullhash}{231f9bc9178951dc6664a39c8885b61d}
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{0629cb5b7d21feeaa28e52e0bb223282}
+      \strng{fullhash}{c44751f771566681ccdbc4cd130f406d}
+      \strng{bibnamehash}{0629cb5b7d21feeaa28e52e0bb223282}
+      \strng{authorbibnamehash}{0629cb5b7d21feeaa28e52e0bb223282}
+      \strng{authornamehash}{0629cb5b7d21feeaa28e52e0bb223282}
+      \strng{authorfullhash}{c44751f771566681ccdbc4cd130f406d}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{ICD coding from electronic clinical records is a manual, time-consuming and expensive process. Code assignment is, however, an important task for billing purposes and database organization. While many works have studied the problem of automated ICD coding from free text using machine learning techniques, most use records in the English language, especially from the MIMIC-III public dataset. This work presents results for a dataset with Brazilian Portuguese clinical notes. We develop and optimize a Logistic Regression model, a Convolutional Neural Network (CNN), a Gated Recurrent Unit Neural Network and a CNN with Attention (CNN-Att) for prediction of diagnosis ICD codes. We also report our results for the MIMIC-III dataset, which outperform previous work among models of the same families, as well as the state of the art. Compared to MIMIC-III, the Brazilian Portuguese dataset contains far fewer words per document, when only discharge summaries are used. We experiment concatenating additional documents available in this dataset, achieving a great boost in performance. The CNN-Att model achieves the best results on both datasets, with micro-averaged F1 score of 0.537 on MIMIC-III and 0.485 on our dataset with additional documents.}
+      \field{booktitle}{Intelligent Systems}
+      \field{title}{Predicting Multiple {ICD-10} Codes from {Brazilian-Portuguese} Clinical Notes}
+      \field{year}{2020}
+      \true{nocite}
+      \field{pages}{566\bibrangedash 580}
+      \range{pages}{15}
+    \endentry
+    \entry{Ruan2021-xb}{inproceedings}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=09bb794f32c6414d02bb3575be58fa6f}{%
+           family={Ruan},
+           familyi={R\bibinitperiod},
+           given={Yangjun*},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e6f5efc30c9402a87e7e1695844c83ec}{%
+           family={Ullrich*},
+           familyi={U\bibinitperiod},
+           given={Karen},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ef096b8f4d8db9ab19273caec9c6db5}{%
+           family={Severo*},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=20701ee7297351388549dce5655f6fc2}{%
+           family={Townsend},
+           familyi={T\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=922c7e884c925a6b6dfdd7313b67d370}{%
+           family={Khisti},
+           familyi={K\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aca5faad8b57b96b59c12fc59d0b6eb4}{%
+           family={Doucet},
+           familyi={D\bibinitperiod},
+           given={Arnaud},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d8b4e8b7224f41ba985f7dbc8896258}{%
+           family={Makhzani},
+           familyi={M\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c3126321fcb4553dfda5ae96da928ce}{%
+           family={Maddison},
+           familyi={M\bibinitperiod},
+           given={Chris\bibnamedelima J},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d8270b5126ee70c8b32b2b4f6f56e1c0}
+      \strng{fullhash}{d3796e9158a831e4f77d414a4915f3c7}
+      \strng{bibnamehash}{d8270b5126ee70c8b32b2b4f6f56e1c0}
+      \strng{authorbibnamehash}{d8270b5126ee70c8b32b2b4f6f56e1c0}
+      \strng{authornamehash}{d8270b5126ee70c8b32b2b4f6f56e1c0}
+      \strng{authorfullhash}{d3796e9158a831e4f77d414a4915f3c7}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Latent variable models have been successfully applied in lossless compression with the bits-back coding algorithm. However, bits-back suffers from an increase in the bitrate equal to the KL divergence between the approximate posterior and the true posterior. In this paper, we show how to remove this gap asymptotically by deriving bits-back coding algorithms from tighter variational bounds. The key idea is to exploit extended space representations of Monte Carlo estimators of the marginal likelihood. Naively applied, our schemes would require more initial bits than the standard bits-back coder, but we show how to drastically reduce this additional cost with couplings in the latent space. When parallel architectures can be exploited, our coders can achieve better rates than bits-back with little additional cost. We demonstrate improved lossless compression rates in a variety of settings, including entropy coding for lossy compression.}
+      \field{booktitle}{International Conference on Machine Learning ({ICML})}
+      \field{title}{Improving Lossless Compression Rates via Monte Carlo {Bits-Back} Coding}
+      \field{year}{2021}
+      \true{nocite}
+    \endentry
+    \entry{Severo2021-cf}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e06a68e310680243359481c2b05733d2}{%
+           family={Severo},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=062c4689ef2a4cdde9ee473494914533}{%
+           family={Domanovitz},
+           familyi={D\bibinitperiod},
+           given={Elad},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=922c7e884c925a6b6dfdd7313b67d370}{%
+           family={Khisti},
+           familyi={K\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{24367ef180a829b68085814af924cc9c}
+      \strng{fullhash}{24367ef180a829b68085814af924cc9c}
+      \strng{bibnamehash}{24367ef180a829b68085814af924cc9c}
+      \strng{authorbibnamehash}{24367ef180a829b68085814af924cc9c}
+      \strng{authornamehash}{24367ef180a829b68085814af924cc9c}
+      \strng{authorfullhash}{24367ef180a829b68085814af924cc9c}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprintclass}{cs.LG}
-      \field{eprinttype}{arXiv}
-      \field{title}{Ward2ICU: A Vital Signs Dataset of Inpatients from the General Ward}
-      \field{year}{2019}
+      \field{booktitle}{Biennial Symposium on Communications ({BSC})}
+      \field{title}{{RCAQ}: Regularized {Classification-Aware} Quantization}
+      \field{year}{2021}
       \true{nocite}
-      \verb{eprint}
-      \verb 1910.00752
-      \endverb
     \endentry
   \enddatalist
 \endrefsection

@@ -1,34 +1,57 @@
 \documentclass[margin, line]{res}
 \usepackage{helvet}
 \usepackage{hyperref}
-\usepackage[date=year, style=authoryear]{biblatex}
+\usepackage[date=year, style=authoryear, minnames=3]{biblatex}
 \addbibresource{cv.bib}
 
 \textheight=700pt
 \newsectionwidth{1.5in}
 
 \begin{document}
-\name{Daniel de Souza Severo}
+\name{Daniel Severo}
 \address{\textbf{For more information}: \url{https://dsevero.com}}
 \begin{resume}
 \section{SHORT BIO}
-Graduate student with 5 terms of experience TAing, 3 years as a Data Scientist in Brazil, and 2 years as a Machine Learning Engineer implementing solutions in PyTorch for healthcare applications. Contributed to open-source projects such as Dask and Dask-ML.
+Graduate student with 5 terms of experience TAing, 3 years as a Data Scientist in Brazil, and 2 years as a Machine Learning Engineer implementing solutions in PyTorch for healthcare applications. Vector Institute scholarship recipient. Research intern at Facebook AI Research (FAIR) working on lossless data compression.
 
 \section{EDUCATION}
 \textbf{University of Toronto}\\
 {\sl Electrical \& Computer Engineering}\\
-Master of Applied Science (M.A.Sc.)\hfill Starting Fall 2020\\
+Doctor of Philosophy (M.A.Sc. to Ph.D. transfer)\hfill Started Fall 2020\\
 Undergraduate Exchange Program (1 year)\hfill 2013 - 2014
 
 \textbf{Federal University of Santa Catarina}, Brazil\hfill 2010 - 2015 \\
 {\sl Bachelor of Science in Electronics Engineering}\\
 First Class Honours, 99th percentile.
 
+\section{TEACHING EXPERIENCE}
+\textbf{Federal University of Santa Catarina}\\
+{\sl Teaching Assistant}\\
+\begin{itemize}
+    \item \textbf{Communications Theory} \hfill Fall and Winter 2015\\
+Amplitude and frequency modulations; multiplexing; noise in communication systems; pulse modulation; analog-to-digital conversion; digital transmission in baseband and passband.
+    \item \textbf{Introduction to Electronics} \hfill Fall and Winter 2013\\
+Operational amplifiers; diodes; the bipolar junction transistor; field effect transistors; optoelectronic components.
+    \item \textbf{Single-Variable Calculus} \hfill Fall 2010\\
+Real-valued functions; limits; continuity; derivatives and applications; definite and indefinite integrals; integration techniques; improper integrals.
+\end{itemize}
+
+\textbf{CERTI Foundation} \hfill 2010 - 2013\\
+{\sl Intern Programming Instructor}\\
+Responsible for the technical training of new and current interns. Created a training course in LabVIEW programming that is still in use as of 2021.
+
+\section{PUBLICATIONS}
+\nocite{Severo2021-cf}
+\nocite{Ruan2021-xb}
+\nocite{Reys2020-su}
+\printbibliography[heading=none]
+* Equal contribution
+
 \section{AWARDS}
 \textbf{Vector Scholarship in Artificial Intelligence Recipient 2020-21} \hfill 2020\\
 The Vector Scholarship in AI supports the recruitment of top students to AI-related master’s programs in Ontario and is valued at \$17,500.\\
 \url{https://vectorinstitute.ai/aimasters}
-
+\newpage
 \textbf{NSERC Applied Research Rapid Response to COVID-19 Grant}\hfill 2020\\
 Our project titled "Canadian Hospital Simulator For Management of COVID19 Cases and Contact Tracing" was awarded \$75,000.00.\\
 \url{https://www.nserc-crsng.gc.ca/Innovate-Innover/CCI-COVID_eng.asp}
@@ -43,97 +66,28 @@ Graduated with the highest GPA ever obtained (at the time) for my major. Elected
 \textbf{Science Without Borders Scholarship} \hfill 2013\\
 Awarded a full scholarship that covered tuition, transportation, necessary materials and living costs to study 2 academic semesters at the University of Toronto.
 
-\section{TEACHING EXPERIENCE}
-\textbf{Federal University of Santa Catarina}\\
-{\sl Teaching Assistant}\\
-Assisted professors by ministering tutorials, preparing lecture materials and helped students individually at regular office hours.
-
-\begin{itemize}
-    \item \textbf{Communications Theory} \hfill Fall and Winter 2015\\
-Amplitude and frequency modulations; multiplexing; noise in communication systems; pulse modulation; analog-to-digital conversion; digital transmission in baseband and passband.
-    \item \textbf{Introduction to Electronics} \hfill Fall and Winter 2013\\
-Operational amplifiers; diodes; the bipolar junction transistor; field effect transistors; optoelectronic components.
-    \item \textbf{Single-Variable Calculus} \hfill Fall 2010\\
-Real-valued functions; limits; continuity; derivatives and applications; definite and indefinite integrals; integration techniques; improper integrals.
-\end{itemize}
-
-\textbf{CERTI Foundation} \hfill 2010 - 2013\\
-{\sl Intern Programming Instructor}\\
-Responsible for the technical training of new and current interns. Created a training course in LabVIEW programming that is still in use as of 2020.
-
-\section{UNPUBLISHED RESEARCH}
-\nocite{severo_2019}
-\nocite{severo2019ward2icu}
-\printbibliography[heading=none]
-
-\section{PROFESSIONAL SERVICE}
-\textbf{NeurIPS 2019: Conference on Neural Information Processing Systems}\\
-Reviewer for the Machine Learning for Health (ML4H) workshop.
-
-\section{OPEN SOURCE CONTRIBUTIONS}
-\textbf{Dask: Scalable analytics in Python}\\
-\url{https://github.com/dask/dask/pulls?q=author:dsevero}
-
-\textbf{Dask-ML: Scalable Machine Learn with Dask}\\
-\url{https://github.com/dask/dask-ml/pulls?q=author:dsevero}
-
-\textbf{Ward2ICU: A Vital Signs Dataset of Inpatients from the General Ward}\\
-\url{https://github.com/3778/Ward2ICU}
-
 \section{PROFESSIONAL EXPERIENCE}
-\textbf{Independent Contractor} \hfill 2018 - Current\\
-{\sl Machine Learning Engineer \& Researcher}\\
-\begin{small}
-    Developed a Fast Healthcare Interoperability Resources DataLake for running high volume machine learning models; Feature engineering and mathematical modeling for clustering algorithms used to segment patients into similar health groups; Ranked patients by future spendings using financial data achieving a precision at n=1,000 of 50\% from a 15,000 total; Predicted patient LoS (Length of Stay) with regression techniques and hospital sensor data; Modified CoSimRank to create a similarity measure between developers and companies using Stack OverFlow data using Neo4j and Python.
-\end{small}
+
+\textbf{Facebook AI Research (FAIR)} \hfill Summer 2021\\
+{\sl Research Intern}
+
+\textbf{Independent Contractor} \hfill 2018 - 2021\\
+{\sl Machine Learning Engineer \& Researcher}
 
 \textbf{Linx Impulse} \hfill 2016 - 2018\\
-{\sl Head of Data Science}\\
-\begin{small}
-    Developed recommendation algorithms for E-commerce customers; Provided ad-hoc big data analyses to find insights from our data; Designed and monitored competitive A/B experiments devised to validate our systems performance in the face of competition; Internal A/B testing tool using the SciPy and Jupyter stack; Bandit algorithms for online optimization
-\end{small}
+{\sl Head of Data Science}
+
+\textbf{CERTI Foundation} \hfill 2015 - 2016\\
+{\sl Research Engineer}
 
 \textbf{Wavetech Technology Solutions} \hfill 2015\\
-{\sl Embedded Systems Engineering Intern.}\\
-\begin{small}
-    Worked on microcontroller programming in C/C++ for cochlear implants.
-\end{small}
+{\sl Engineering Intern}
 
-\textbf{CERTI Foundation} \hfill 2010 - 2013 (Intern.)\\
-\begin{small}
-    Implemented signal processing routines (filter design 
-\end{small}
-\hfill 2015 - 2016 (R. Eng)\\ 
-\begin{small}
-    and realization) in C; Programmed back-end and front-end Python software for Raspberry Pi; Embedded eLua on a platform previously developed by CERTI.
-\end{small}
+\textbf{CERTI Foundation} \hfill 2010 - 2013\\
+{\sl Engineering Intern}
 
 \textbf{WEG Industries}  \hfill Summers 2011 and 2012\\
-{\sl Electrical Engineering Intern.}\\
-\begin{small}
-    Software upgrade, in LabVIEW, of an automatic calibrator of multimeters in order to account for different input frequencies; Conception and implementation of a hardware and software (LabVIEW) system that acquires, processes and stores data of specific parameters of electric motors.
-\end{small}
-
-\section{REFERENCES}
-\textbf{Prof. Ashish Khisti} \hfill University of Toronto\\
-{\sl Professor and Canada Research Chair (Tier II)}\\
-{\sl Department of Electrical \& Computer Engineering}\\
-\url{https://www.comm.utoronto.ca/~akhisti/}
-
-\textbf{Prof. Frank R. Kschischang} \hfill University of Toronto\\
-{\sl Distinguished Professor of Digital Communication}\\
-{\sl Department of Electrical \& Computer Engineering}\\
-\url{https://www.comm.utoronto.ca/frank/}
-
-\textbf{Prof. Danilo Silva} \hfill Federal University of Santa Catarina\\
-{\sl Associate Professor}\\
-{\sl Department of Electrical and Electronic Engineering}\\
-\url{http://danilosilva.sites.ufsc.br/index.html}
-
-\textbf{Prof. Chen Feng} \hfill The University of British Columbia\\
-{\sl Assistant Professor}\\
-{\sl School of Engineering}\\
-\url{https://people.ok.ubc.ca/cfeng01/index.html}
+{\sl Engineering Intern}
 
 
 \begin{format}

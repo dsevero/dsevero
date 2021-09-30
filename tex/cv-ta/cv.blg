@@ -1,19 +1,17 @@
-[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
-[0] Config.pm:307> INFO - Logfile is 'cv.blg'
-[54] biber:322> INFO - === Mon Jul  6, 2020, 11:20:52
-[64] Biber.pm:415> INFO - Reading 'cv.bcf'
-[111] Biber.pm:943> INFO - Found 2 citekeys in bib section 0
-[120] Biber.pm:4256> INFO - Processing section 0
-[121] Utils.pm:75> INFO - Globbing data source 'cv.bib'
-[121] Utils.pm:91> INFO - Globbed data source 'cv.bib' to cv.bib
-[128] Biber.pm:4455> INFO - Looking for bibtex format file 'cv.bib' for section 0
-[128] bibtex.pm:1653> INFO - LaTeX decoding ...
-[132] bibtex.pm:1471> INFO - Found BibTeX data source 'cv.bib'
-[147] Utils.pm:293> WARN - month field 'Nov' in entry 'severo_2019' is not an integer - this will probably not sort properly.
-[159] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[159] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[159] Biber.pm:4084> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[159] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[164] bbl.pm:652> INFO - Writing 'cv.bbl' with encoding 'UTF-8'
-[165] bbl.pm:755> INFO - Output to cv.bbl
-[165] Biber.pm:128> INFO - WARNINGS: 1
+[1] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[1] Config.pm:307> INFO - Logfile is 'cv.blg'
+[111] biber:322> INFO - === Sun Jun 20, 2021, 14:10:20
+[132] Biber.pm:415> INFO - Reading 'cv.bcf'
+[229] Biber.pm:943> INFO - Found 3 citekeys in bib section 0
+[248] Biber.pm:4256> INFO - Processing section 0
+[248] Utils.pm:75> INFO - Globbing data source 'cv.bib'
+[248] Utils.pm:91> INFO - Globbed data source 'cv.bib' to cv.bib
+[262] Biber.pm:4455> INFO - Looking for bibtex format file 'cv.bib' for section 0
+[264] bibtex.pm:1653> INFO - LaTeX decoding ...
+[280] bibtex.pm:1471> INFO - Found BibTeX data source 'cv.bib'
+[361] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[362] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[362] Biber.pm:4084> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[362] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[368] bbl.pm:652> INFO - Writing 'cv.bbl' with encoding 'UTF-8'
+[376] bbl.pm:755> INFO - Output to cv.bbl
