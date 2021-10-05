@@ -13,6 +13,7 @@ Previously, I interned at [Facebook AI Research (FAIR)](https://ai.facebook.com/
 
 ---
 
+[[CV]](https://dsevero.com/cv.pdf)
 [[Twitter]](https://twitter.com/_dsevero)
 [[Google Scholar]](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en)
 
