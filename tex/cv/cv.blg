@@ -1,17 +1,17 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'cv.blg'
-[55] biber:322> INFO - === Thu Sep 30, 2021, 15:11:58
-[65] Biber.pm:415> INFO - Reading 'cv.bcf'
-[112] Biber.pm:940> INFO - Using all citekeys in bib section 0
-[121] Biber.pm:4256> INFO - Processing section 0
-[122] Utils.pm:75> INFO - Globbing data source 'cv.bib'
-[122] Utils.pm:91> INFO - Globbed data source 'cv.bib' to cv.bib
-[129] Biber.pm:4455> INFO - Looking for bibtex format file 'cv.bib' for section 0
-[130] bibtex.pm:1653> INFO - LaTeX decoding ...
-[135] bibtex.pm:1471> INFO - Found BibTeX data source 'cv.bib'
-[190] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[190] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[190] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[190] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[195] bbl.pm:652> INFO - Writing 'cv.bbl' with encoding 'UTF-8'
-[199] bbl.pm:755> INFO - Output to cv.bbl
+[56] biber:322> INFO - === Thu Oct 21, 2021, 15:44:41
+[66] Biber.pm:415> INFO - Reading 'cv.bcf'
+[118] Biber.pm:940> INFO - Using all citekeys in bib section 0
+[130] Biber.pm:4256> INFO - Processing section 0
+[130] Utils.pm:75> INFO - Globbing data source 'cv.bib'
+[130] Utils.pm:91> INFO - Globbed data source 'cv.bib' to cv.bib
+[138] Biber.pm:4455> INFO - Looking for bibtex format file 'cv.bib' for section 0
+[139] bibtex.pm:1653> INFO - LaTeX decoding ...
+[145] bibtex.pm:1471> INFO - Found BibTeX data source 'cv.bib'
+[210] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[210] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[210] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[210] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[217] bbl.pm:652> INFO - Writing 'cv.bbl' with encoding 'UTF-8'
+[223] bbl.pm:755> INFO - Output to cv.bbl

@@ -18,9 +18,10 @@ Previously, I interned at [Facebook AI Research (FAIR)](https://ai.facebook.com/
 [[Google Scholar]](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en)
 
 # Publications and Preprints
-- **Compressing Multisets with Large Alphabets**\
+- **Compressing Multisets with Large Alphabets**, also presented as\
+**Your Dataset is a Multiset and You Should Compress it Like One**\
 **Daniel Severo**\*, James Townsend\*, Ashish Khisti, Alireza Makhzani, Karen Ullrich\
-Preprint\
+<span style="color:red">**Talk**</span> at DGM Workshop @ NeurIPS, 2021\
 [[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet 1]](https://twitter.com/_dsevero/status/1419661190750425102) [[tweet 2]](https://twitter.com/_dsevero/status/1425521776457551872)
 
 - **RCAQ: Regularized Classification-Aware Quantization**\
@@ -30,7 +31,7 @@ BSC, 2021\
 
 - **Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding**\
 Yangjun Ruan\*, Karen Ullrich\*, **Daniel Severo**\*, James Townsend, Ashish Khisti, Arnaud Doucet, Alireza Makhzani, Chris J. Maddison\
-ICML, 2021, <span style="color:red">**Long talk**</span>\
+<span style="color:red">**Long talk**</span> at ICML, 2021\
 [[arXiv]](https://arxiv.org/abs/2102.11086) [[code]](https://github.com/ryoungj/mcbits) [[tweet]](https://twitter.com/cjmaddison/status/1392873765240020994) [[video]](https://slideslive.com/38958684/improving-lossless-compression-rates-via-monte-carlo-bitsback-coding?ref=speaker-25566-latest&locale=en)
 
 - **Predicting Multiple ICD-10 Codes from Brazilian-Portuguese Clinical Notes**\

@@ -146,7 +146,7 @@
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
       \field{eprinttype}{arXiv}
-      \field{note}{Accepted at ICML 2021 as a long talk}
+      \field{note}{Accepted as a Long Talk at ICML 2021}
       \field{title}{Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding}
       \true{nocite}
       \verb{eprint}
@@ -287,8 +287,10 @@
       \strng{authorbibnamehash}{ca9b449d87e05afc004b528f10944885}
       \strng{authornamehash}{ca9b449d87e05afc004b528f10944885}
       \strng{authorfullhash}{f5da9443d7def12d1a71f0b448c6d99c}
+      \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
@@ -302,6 +304,59 @@
       \verb 2107.09202
       \endverb
       \keyw{preprint}
+    \endentry
+    \entry{severo2021your}{misc}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=4ef096b8f4d8db9ab19273caec9c6db5}{%
+           family={Severo*},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a3940042627faf8553cea2a16ec835a}{%
+           family={Townsend*},
+           familyi={T\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=922c7e884c925a6b6dfdd7313b67d370}{%
+           family={Khisti},
+           familyi={K\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d8b4e8b7224f41ba985f7dbc8896258}{%
+           family={Makhzani},
+           familyi={M\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8068a264a33665b6cd18af834e2133ac}{%
+           family={Ullrich},
+           familyi={U\bibinitperiod},
+           given={Karen},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ca9b449d87e05afc004b528f10944885}
+      \strng{fullhash}{f5da9443d7def12d1a71f0b448c6d99c}
+      \strng{bibnamehash}{ca9b449d87e05afc004b528f10944885}
+      \strng{authorbibnamehash}{ca9b449d87e05afc004b528f10944885}
+      \strng{authornamehash}{ca9b449d87e05afc004b528f10944885}
+      \strng{authorfullhash}{f5da9443d7def12d1a71f0b448c6d99c}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accepted as a Talk in Deep Generative Models and Downstream Applications Workshop @ NeurIPS 2021}
+      \field{title}{Your Dataset is a Multiset and You Should Compress it Like One}
+      \field{year}{2021}
+      \true{nocite}
+      \keyw{publication}
     \endentry
   \enddatalist
 \endrefsection
