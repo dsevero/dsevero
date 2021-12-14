@@ -11,18 +11,20 @@ Originally, I am from Florianópolis (Brazil) but I've lived in New Jersey, Orla
 
 Previously, I interned at [Facebook AI Research (FAIR)](https://ai.facebook.com/) with [Karen Ullrich](https://karenullrich.info/) in the summer of 2021.
 
+I spend more time than I should on [Twitter](https://twitter.com/_dsevero).
+
+Check out my [CV](https://dsevero.com/cv.pdf) (last updated: Nov/2021).
+
 ---
 
-[[CV]](https://dsevero.com/cv.pdf)
-[[Twitter]](https://twitter.com/_dsevero)
-[[Google Scholar]](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en)
 
-# Publications and Preprints
-- **Compressing Multisets with Large Alphabets**, also presented as\
-**Your Dataset is a Multiset and You Should Compress it Like One**\
+# Selected Publications and Preprints
+For a complete list, please see my [Google Scholar](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en) profile.
+- **Compressing Multisets with Large Alphabets** [[arXiv]](https://arxiv.org/abs/2107.09202), also presented as\
+**Your Dataset is a Multiset and You Should Compress it Like One** [[OpenReview]](https://openreview.net/forum?id=vjrsNCu8Km)\
 **Daniel Severo**\*, James Townsend\*, Ashish Khisti, Alireza Makhzani, Karen Ullrich\
-<span style="color:red">**Talk**</span> at DGM Workshop @ NeurIPS, 2021\
-[[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet 1]](https://twitter.com/_dsevero/status/1419661190750425102) [[tweet 2]](https://twitter.com/_dsevero/status/1425521776457551872)
+<span style="color:red">**Best Paper Award**</span> at DGM Workshop @ NeurIPS, 2021\
+ [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet 1]](https://twitter.com/_dsevero/status/1419661190750425102) [[tweet 2]](https://twitter.com/_dsevero/status/1425521776457551872)
 
 - **RCAQ: Regularized Classification-Aware Quantization**\
 **Daniel Severo**, Elad Domanovitz, Ashish Khisti\
@@ -38,11 +40,7 @@ Yangjun Ruan\*, Karen Ullrich\*, **Daniel Severo**\*, James Townsend, Ashish Khi
 Arthur D Reys, Danilo Silva, **Daniel Severo**, Saulo Pedro, Marcia M Sá, Guilherme AC Salgado\
 BRACIS 2020\
 [[arXiv]](https://arxiv.org/abs/2008.01515) [[code]](https://github.com/3778/icd-prediction-mimic)
-
-- **Ward2ICU: A Vital Signs Dataset of Inpatients from the General Ward**\
-**Daniel Severo**, Flávio Amaro, Estevam R Hruschka Jr, André Soares de Moura Costa\
-Preprint\
-[[arXiv]](https://arxiv.org/abs/1910.00752) [[code]](https://github.com/3778/Ward2ICU)\
+\
 \
 \* Equal contribution
 
