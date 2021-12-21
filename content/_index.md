@@ -17,6 +17,9 @@ Check out my [CV](https://dsevero.com/cv.pdf) (last updated: Nov/2021).
 
 ---
 
+{{< hint warning >}}
+I'm accepting invitations to speak at conferences, workshops, and academic events in general.
+{{< /hint >}}
 
 # Selected Publications and Preprints
 For a complete list, please see my [Google Scholar](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en) profile.
