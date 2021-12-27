@@ -23,11 +23,16 @@ I'm accepting invitations to speak at conferences, workshops, and academic event
 
 # Selected Publications and Preprints
 For a complete list, please see my [Google Scholar](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en) profile.
-- **Compressing Multisets with Large Alphabets** [[arXiv]](https://arxiv.org/abs/2107.09202), also presented as\
-**Your Dataset is a Multiset and You Should Compress it Like One** [[OpenReview]](https://openreview.net/forum?id=vjrsNCu8Km)\
+- **Compressing Multisets with Large Alphabets** \
 **Daniel Severo**\*, James Townsend\*, Ashish Khisti, Alireza Makhzani, Karen Ullrich\
+Data Compression Conference (DCC), 2022\
+[[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet 1]](https://twitter.com/_dsevero/status/1419661190750425102) [[tweet 2]](https://twitter.com/_dsevero/status/1425521776457551872)
+\
+\
+This paper was also presented as\
+**Your Dataset is a Multiset and You Should Compress it Like One** \
 <span style="color:red">**Best Paper Award**</span> at DGM Workshop @ NeurIPS, 2021\
- [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet 1]](https://twitter.com/_dsevero/status/1419661190750425102) [[tweet 2]](https://twitter.com/_dsevero/status/1425521776457551872)
+[[OpenReview]](https://openreview.net/forum?id=vjrsNCu8Km)
 
 - **RCAQ: Regularized Classification-Aware Quantization**\
 **Daniel Severo**, Elad Domanovitz, Ashish Khisti\
