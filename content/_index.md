@@ -17,6 +17,9 @@ Check out my [CV](https://dsevero.com/cv.pdf) (last updated: Nov/2021).
 
 ---
 
+{{< hint info >}}
+I've joined [Google Brain](https://research.google/teams/brain/) as a Student Researcher with [Lucas Theis](http://theis.io/) and [Johannes Ballé](https://balle.io/).
+{{< /hint >}}
 {{< hint warning >}}
 I'm accepting invitations to speak at conferences, workshops, and academic events in general.
 {{< /hint >}}
