@@ -26,30 +26,35 @@ I'm accepting invitations to speak at conferences, workshops, and academic event
 
 # Selected Publications and Preprints
 For a complete list, please see my [Google Scholar](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en) profile.
+- **Data-driven Optimization for Zero-delay Lossy Source Coding with Side-Information**\
+Elad Domanovitz, Daniel Severo, Ashish Khisti, Wei Yu\
+International Conference on Acoustics, Speech, & Signal Processing (ICASSP), 2022
+
+
 - **Compressing Multisets with Large Alphabets** \
-**Daniel Severo**\*, James Townsend\*, Ashish Khisti, Alireza Makhzani, Karen Ullrich\
+Daniel Severo\*, James Townsend\*, Ashish Khisti, Alireza Makhzani, Karen Ullrich\
 Data Compression Conference (DCC), 2022\
 [[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet 1]](https://twitter.com/_dsevero/status/1419661190750425102) [[tweet 2]](https://twitter.com/_dsevero/status/1425521776457551872)
 \
 \
 This paper was also presented as\
 **Your Dataset is a Multiset and You Should Compress it Like One** \
-<span style="color:red">**Best Paper Award**</span> at DGM Workshop @ NeurIPS, 2021\
+<span style="color:red">**Best Paper Award**</span> at NeurIPS Workshop on DGMs, 2021\
 [[OpenReview]](https://openreview.net/forum?id=vjrsNCu8Km)
 
 - **RCAQ: Regularized Classification-Aware Quantization**\
-**Daniel Severo**, Elad Domanovitz, Ashish Khisti\
-BSC, 2021\
+Daniel Severo, Elad Domanovitz, Ashish Khisti\
+Biennial Symposium on Communications (BSC), 2021\
 [[arXiv]](https://arxiv.org/abs/2107.09716) [[code]](https://github.com/dsevero/rcaq)
 
 - **Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding**\
-Yangjun Ruan\*, Karen Ullrich\*, **Daniel Severo**\*, James Townsend, Ashish Khisti, Arnaud Doucet, Alireza Makhzani, Chris J. Maddison\
-<span style="color:red">**Long talk**</span> at ICML, 2021\
+Yangjun Ruan\*, Karen Ullrich\*, Daniel Severo\*, James Townsend, Ashish Khisti, Arnaud Doucet, Alireza Makhzani, Chris J. Maddison\
+<span style="color:red">**Long talk**</span> at International Conference on Machine Learning (ICML), 2021\
 [[arXiv]](https://arxiv.org/abs/2102.11086) [[code]](https://github.com/ryoungj/mcbits) [[tweet]](https://twitter.com/cjmaddison/status/1392873765240020994) [[video]](https://slideslive.com/38958684/improving-lossless-compression-rates-via-monte-carlo-bitsback-coding?ref=speaker-25566-latest&locale=en)
 
 - **Predicting Multiple ICD-10 Codes from Brazilian-Portuguese Clinical Notes**\
-Arthur D Reys, Danilo Silva, **Daniel Severo**, Saulo Pedro, Marcia M Sá, Guilherme AC Salgado\
-BRACIS 2020\
+Arthur D Reys, Danilo Silva, Daniel Severo, Saulo Pedro, Marcia M Sá, Guilherme AC Salgado\
+Brazilian Conference on Intelligent Systems (BRACIS), 2020\
 [[arXiv]](https://arxiv.org/abs/2008.01515) [[code]](https://github.com/3778/icd-prediction-mimic)
 \
 \
