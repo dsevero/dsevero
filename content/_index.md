@@ -34,7 +34,7 @@ International Conference on Acoustics, Speech, & Signal Processing (ICASSP), 202
 - **Compressing Multisets with Large Alphabets** \
 Daniel Severo\*, James Townsend\*, Ashish Khisti, Alireza Makhzani, Karen Ullrich\
 Data Compression Conference (DCC), 2022\
-[[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet 1]](https://twitter.com/_dsevero/status/1419661190750425102) [[tweet 2]](https://twitter.com/_dsevero/status/1425521776457551872)
+[[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet 1]](https://twitter.com/_dsevero/status/1419661190750425102) [[tweet 2]](https://twitter.com/_dsevero/status/1425521776457551872) [[slides]](https://dsevero.com/severo-townsend-dcc22-multisets.pdf)
 \
 \
 This paper was also presented as\
