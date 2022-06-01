@@ -1,4 +1,5 @@
-Graduate student at the University of Toronto, researcher at the Vector Institute, and intern at Facebook AI Research (FAIR).
+Graduate student at the University of Toronto and Vector Insitute.
+Student researcher at Google AI.
 
 I'm interested in lossless data compression, information theory, and AI.
 
