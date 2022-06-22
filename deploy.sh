@@ -1,4 +1,5 @@
 #!/bin/sh
+#set -x
 
 # If a command fails then the deploy stops
 set -e
