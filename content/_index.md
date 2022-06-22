@@ -13,7 +13,7 @@ Previously, I interned at [Facebook AI Research (FAIR)](https://ai.facebook.com/
 
 I spend more time than I should on [Twitter](https://twitter.com/_dsevero).
 
-Check out my [CV](https://dsevero.com/cv.pdf) (last updated: Nov/2021).
+Check out my [CV](https://dsevero.com/cv.pdf) (last updated: June/2022).
 
 ---
 
