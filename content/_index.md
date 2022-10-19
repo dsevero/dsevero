@@ -26,10 +26,16 @@ I'm accepting invitations to speak at conferences, workshops, and academic event
 
 # Selected Publications and Preprints
 For a complete list, please see my [Google Scholar](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en) profile.
+
+- **Action Matching: A Variational Method for Learning Stochastic Dynamics from Samples**\
+Kirill Neklyudov, Daniel Severo, Alireza Makhzani\
+Preprint, 2022\
+[[arXiv]](https://arxiv.org/abs/2210.06662)
+
 - **Data-driven Optimization for Zero-delay Lossy Source Coding with Side-Information**\
 Elad Domanovitz, Daniel Severo, Ashish Khisti, Wei Yu\
-International Conference on Acoustics, Speech, & Signal Processing (ICASSP), 2022
-
+International Conference on Acoustics, Speech, & Signal Processing (ICASSP), 2022\
+[[IEEE Xplore]](https://ieeexplore.ieee.org/document/9747823)
 
 - **Compressing Multisets with Large Alphabets** \
 Daniel Severo\*, James Townsend\*, Ashish Khisti, Alireza Makhzani, Karen Ullrich\
