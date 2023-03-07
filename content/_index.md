@@ -10,16 +10,14 @@ My research interests are lossless data compression, information theory, and AI.
 Originally, I am from Florianópolis (Brazil) but I've lived in New Jersey, Orlando, Toronto (now), São Paulo, as well as other smaller cities in the south of Brazil.
 
 Previously, I interned at [Facebook AI Research (FAIR)](https://ai.facebook.com/) with [Karen Ullrich](https://karenullrich.info/) in the summer of 2021.
+I spent a year at [Google AI](https://ai.google/) with [Lucas Theis](http://theis.io/) and [Johannes Ballé](https://balle.io/) as a Student Researcher.
 
 I spend more time than I should on [Twitter](https://twitter.com/_dsevero).
 
-Check out my [CV](https://dsevero.com/cv.pdf) (last updated: June/2022).
+Check out my [CV](https://dsevero.com/cv.pdf) (last updated: March/2023).
 
 ---
 
-{{< hint info >}}
-I've joined [Google AI](https://research.google) as a Student Researcher with [Lucas Theis](http://theis.io/) and [Johannes Ballé](https://balle.io/).
-{{< /hint >}}
 {{< hint warning >}}
 I'm accepting invitations to speak at conferences, workshops, and academic events in general.
 {{< /hint >}}
@@ -27,20 +25,20 @@ I'm accepting invitations to speak at conferences, workshops, and academic event
 # Selected Publications and Preprints
 For a complete list, please see my [Google Scholar](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en) profile.
 
-- **Action Matching: A Variational Method for Learning Stochastic Dynamics from Samples**\
-Kirill Neklyudov, Daniel Severo, Alireza Makhzani\
-Preprint, 2022\
-[[arXiv]](https://arxiv.org/abs/2210.06662)
+- **Action Matching: Learning Stochastic Dynamics from Samples**\
+Kirill Neklyudov, Rob Brekelmans, Daniel Severo, Alireza Makhzani\
+Preprint, 2023\
+[[arXiv]](https://arxiv.org/abs/2210.06662) [[video]](https://www.youtube.com/watch?v=35uEI5ryDRQ&t=1s)
 
 - **Data-driven Optimization for Zero-delay Lossy Source Coding with Side-Information**\
 Elad Domanovitz, Daniel Severo, Ashish Khisti, Wei Yu\
 International Conference on Acoustics, Speech, & Signal Processing (ICASSP), 2022\
 [[IEEE Xplore]](https://ieeexplore.ieee.org/document/9747823)
 
-- **Compressing Multisets with Large Alphabets** \
+- **Compressing Multisets with Large Alphabets using Bits-Back Coding** \
 Daniel Severo\*, James Townsend\*, Ashish Khisti, Alireza Makhzani, Karen Ullrich\
-Data Compression Conference (DCC), 2022\
-[[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet 1]](https://twitter.com/_dsevero/status/1419661190750425102) [[tweet 2]](https://twitter.com/_dsevero/status/1425521776457551872) [[slides]](https://dsevero.com/severo-townsend-dcc22-multisets.pdf)
+IEEE Journal on Selected Areas in Information Theory, 2023\
+[[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet 1]](https://twitter.com/_dsevero/status/1419661190750425102) [[tweet 2]](https://twitter.com/_dsevero/status/1425521776457551872) [[slides]](https://dsevero.com/severo-townsend-dcc22-multisets.pdf) [[video]](https://youtube.com/watch?v=Gwf9_t-JjsQ)
 \
 \
 This paper was also presented as\
