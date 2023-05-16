@@ -2,7 +2,7 @@
 title: About me
 type: docs
 ---
-<img src="https://media.licdn.com/dms/image/D5603AQFhJL49zxieKw/profile-displayphoto-shrink_400_400/0/1678153315718?e=1683763200&v=beta&t=4gHk-eXO6raSZ8QuRdk5747cwI4btXZAVKu6lEqFQko" style="border-radius: 15%; float: left; padding-right: 15px" height="35%" width="35%">
+<img src="https://pt.gravatar.com/userimage/15577563/38e9687aa5f0ef079938dd6aba330805.png?size=400" style="border-radius: 15%; float: left; padding-right: 15px" height="35%" width="35%">
 I'm a Ph.D. candidate at the <a href="https://www.ece.utoronto.ca/">University of Toronto</a> and <a href="https://vectorinstitute.ai/">Vector Institute for Artificial Intelligence</a>. 
 
 My research interests are lossless data compression, information theory, and AI. Data sources usually have some type of structure, such as graphs and sets. This means we can compress them better by taking this structure into account during compression. Unfortunately, existing methods that do this are either sub-optimal (don't achieve the Shannon bound) or computationally intractable. I’m interested in building computationally efficient compression algorithms that can be used with deep generative models on structured data, as well as their connections to bayesian methods.
