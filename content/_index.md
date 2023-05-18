@@ -77,13 +77,13 @@ For a complete list, please see my [Google Scholar](https://scholar.google.com/c
 
 ---
 <figure>
-  <img src="wyner-thumbnail-2.png" style="float: left; margin-right: 30px; width: 180px;">
+  <img src="wyner-thumbnail-2.png" style="float: left; margin-right: 40px; width: 170px;">
   <figcaption>
-    <br>
     <b>Data-driven Optimization for Zero-delay Lossy Source Coding with Side-Information</b><br>
     Elad Domanovitz, <u>Daniel Severo</u>, Ashish Khisti, Wei Yu<br>
     International Conference on Acoustics, Speech, & Signal Processing (ICASSP), 2022<br>
     <a href="https://ieeexplore.ieee.org/document/9747823"><img src="https://img.shields.io/badge/IEEE-blue.svg?style=flat"></a>
+    <br>
     <br>
   </figcaption>
 </figure>
