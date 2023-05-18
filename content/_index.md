@@ -2,7 +2,8 @@
 title: About me
 type: docs
 ---
-<img src="https://pt.gravatar.com/userimage/15577563/38e9687aa5f0ef079938dd6aba330805.png?size=400" style="border-radius: 15%; float: left; padding-right: 15px" height="35%" width="35%">
+<img src="https://pt.gravatar.com/userimage/15577563/38e9687aa5f0ef079938dd6aba330805.png?size=300" style="border-radius: 15%; float: left; padding-right: 15px" width="250">
+<div style="text-align: justify">
 I'm a Ph.D. candidate at the <a href="https://www.ece.utoronto.ca/">University of Toronto</a> and <a href="https://vectorinstitute.ai/">Vector Institute for Artificial Intelligence</a>. 
 
 My research interests are lossless data compression, information theory, and AI. Data sources usually have some type of structure, such as graphs and sets. This means we can compress them better by taking this structure into account during compression. Unfortunately, existing methods that do this are either sub-optimal (don't achieve the Shannon bound) or computationally intractable. I’m interested in building computationally efficient compression algorithms that can be used with deep generative models on structured data, as well as their connections to bayesian methods.
@@ -10,61 +11,123 @@ My research interests are lossless data compression, information theory, and AI.
 Originally, I am from Florianópolis (Brazil) but I've lived in New Jersey, Orlando, Toronto (now), São Paulo, as well as other smaller cities in the south of Brazil.
 
 Previously, I interned at [Facebook AI Research (FAIR)](https://ai.facebook.com/) with [Karen Ullrich](https://karenullrich.info/) in the summer of 2021.
+
 I spent 2022 at [Google AI](https://ai.google/) with [Lucas Theis](http://theis.io/) and [Johannes Ballé](https://balle.io/) as a Student Researcher.
 
 I spend more time than I should on [Twitter](https://twitter.com/_dsevero).
 
 Check out my [CV](https://dsevero.com/cv.pdf) (last updated: March/2023).
+</div>
 
 ---
 
-{{< hint warning >}}
-I'm accepting invitations to speak at conferences, workshops, and academic events in general.
-{{< /hint >}}
+# Latest News
+**April/2023** - [Random Edge Coding](https://arxiv.org/abs/2305.09705) and [Action Matching](https://arxiv.org/abs/2210.06662) were accepted to ICML 2023
+
+**March/2023** - Check out our [ICML 2023 Workshop on Neural Compression and Information Theory](https://neuralcompression.github.io/workshop23)
+
+**February/2023** - I was selected as a finalist for the Meta Research PhD Fellowship, 2023. [Congrats to all the winners](https://research.facebook.com/blog/2023/4/announcing-the-2023-meta-research-phd-fellowship-award-winners/)!
 
 # Selected Publications and Preprints
 For a complete list, please see my [Google Scholar](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en) profile.
 
-- **Action Matching: Learning Stochastic Dynamics from Samples**\
-Kirill Neklyudov, Rob Brekelmans, Daniel Severo, Alireza Makhzani\
-Preprint, 2023\
-[[arXiv]](https://arxiv.org/abs/2210.06662) [[video]](https://www.youtube.com/watch?v=35uEI5ryDRQ&t=1s)
+<figure>
+  <img src="rec.svg" style="float: left; margin-right: 10px; width: 200px;">
+  <figcaption>
+    <br>
+    <b>Random Edge Coding: One-Shot Bits-Back Coding of Large Labeled Graphs</b><br>
+    <u>Daniel Severo</u>, James Townsend, Ashish Khisti, Alireza Makhzani<br>
+    International Conference on Machine Learning (ICML), 2023 <br>
+    <a href="https://arxiv.org/abs/2305.09705"><img src="https://img.shields.io/badge/arXiv-b31b1b.svg?style=flat"></a>
+    <a href="https://github.com/dsevero/Random-Edge-Coding"><img src="https://img.shields.io/badge/code-grey.svg?logo=github&style=flat"></a>
+    <br>
+  </figcaption>
+</figure>
 
-- **Data-driven Optimization for Zero-delay Lossy Source Coding with Side-Information**\
-Elad Domanovitz, Daniel Severo, Ashish Khisti, Wei Yu\
-International Conference on Acoustics, Speech, & Signal Processing (ICASSP), 2022\
-[[IEEE Xplore]](https://ieeexplore.ieee.org/document/9747823)
+---
+<figure>
+  <img src="am-thumbnail.png" style="float: left; margin-right: 10px; width: 200px;">
+  <figcaption>
+    <br>
+    <b>Action Matching: Learning Stochastic Dynamics from Samples</b><br>
+    Kirill Neklyudov, Rob Brekelmans, <u>Daniel Severo</u>, Alireza Makhzani<br>
+    International Conference on Machine Learning (ICML), 2023 <br>
+    <a href="https://arxiv.org/abs/2210.06662"><img src="https://img.shields.io/badge/arXiv-b31b1b.svg?style=flat"></a>
+    <a href="https://github.com/necludov/jam"><img src="https://img.shields.io/badge/code-grey.svg?logo=github&style=flat"></a>
+    <a href="https://www.youtube.com/watch?v=35uEI5ryDRQ"><img src="https://img.shields.io/badge/video-0A75AD.svg?logo=youtube&style=flat"></a>
+    <br>
+  </figcaption>
+</figure>
 
-- **Compressing Multisets with Large Alphabets using Bits-Back Coding** \
-Daniel Severo\*, James Townsend\*, Ashish Khisti, Alireza Makhzani, Karen Ullrich\
-IEEE Journal on Selected Areas in Information Theory, 2023\
-[[arXiv]](https://arxiv.org/abs/2107.09202) [[code]](https://github.com/facebookresearch/multiset-compression) [[tweet 1]](https://twitter.com/_dsevero/status/1419661190750425102) [[tweet 2]](https://twitter.com/_dsevero/status/1425521776457551872) [[slides]](https://dsevero.com/severo-townsend-dcc22-multisets.pdf) [[video]](https://youtube.com/watch?v=Gwf9_t-JjsQ)
-\
-\
-This paper was also presented as\
-**Your Dataset is a Multiset and You Should Compress it Like One** \
-<span style="color:red">**Best Paper Award**</span> at NeurIPS Workshop on DGMs, 2021\
-[[OpenReview]](https://openreview.net/forum?id=vjrsNCu8Km)
+---
+<figure>
+  <img src="bbms-thumbnail-pop.png" style="float: left; margin-left: 30px; margin-right: 50px; width: 130px;">
+  <figcaption>
+    <b>Compressing Multisets with Large Alphabets using Bits-Back Coding</b><br>
+    <u>Daniel Severo</u>, James Townsend, Ashish Khisti, Alireza Makhzani, Karen Ullrich<br>
+    IEEE Journal on Selected Areas in Information Theory, 2023<br>
+    <span style="color:red"><b>Best Paper Award</b></span> at NeurIPS Workshop on DGMs, 2021<br>
+    <a href="https://arxiv.org/abs/2107.09202"><img src="https://img.shields.io/badge/arXiv-b31b1b.svg?style=flat"></a>
+    <a href="https://github.com/facebookresearch/multiset-compression"><img src="https://img.shields.io/badge/code-grey.svg?logo=github&style=flat"></a>
+    <a href="https://youtube.com/watch?v=Gwf9_t-JjsQ"><img src="https://img.shields.io/badge/video-0A75AD.svg?logo=youtube&style=flat"></a>
+    <a href="https://dsevero.com/severo-townsend-dcc22-multisets.pdf"><img src="https://img.shields.io/badge/slides-065535.svg?logo=latex&style=flat"></a>
+    <br>
+  </figcaption>
+</figure>
 
-- **RCAQ: Regularized Classification-Aware Quantization**\
-Daniel Severo, Elad Domanovitz, Ashish Khisti\
-Biennial Symposium on Communications (BSC), 2021\
-[[arXiv]](https://arxiv.org/abs/2107.09716) [[code]](https://github.com/dsevero/rcaq)
+---
+<figure>
+  <img src="wyner-thumbnail-2.png" style="float: left; margin-right: 30px; width: 180px;">
+  <figcaption>
+    <br>
+    <b>Data-driven Optimization for Zero-delay Lossy Source Coding with Side-Information</b><br>
+    Elad Domanovitz, <u>Daniel Severo</u>, Ashish Khisti, Wei Yu<br>
+    International Conference on Acoustics, Speech, & Signal Processing (ICASSP), 2022<br>
+    <a href="https://ieeexplore.ieee.org/document/9747823"><img src="https://img.shields.io/badge/IEEE-blue.svg?style=flat"></a>
+    <br>
+  </figcaption>
+</figure>
 
-- **Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding**\
-Yangjun Ruan\*, Karen Ullrich\*, Daniel Severo\*, James Townsend, Ashish Khisti, Arnaud Doucet, Alireza Makhzani, Chris J. Maddison\
-<span style="color:red">**Long talk**</span> at International Conference on Machine Learning (ICML), 2021\
-[[arXiv]](https://arxiv.org/abs/2102.11086) [[code]](https://github.com/ryoungj/mcbits) [[tweet]](https://twitter.com/cjmaddison/status/1392873765240020994) [[video]](https://slideslive.com/38958684/improving-lossless-compression-rates-via-monte-carlo-bitsback-coding?ref=speaker-25566-latest&locale=en)
+---
+<figure>
+  <img src="rcaq-thumbnail-2.png" style="float: left; margin-right: 40px; width: 170px;">
+  <figcaption>
+    <br>
+    <b>RCAQ: Regularized Classification-Aware Quantization</b><br>
+    <u>Daniel Severo</u>, Elad Domanovitz, Ashish Khisti<br>
+    Biennial Symposium on Communications (BSC), 2021<br>
+    <a href="https://arxiv.org/abs/2107.09716"><img src="https://img.shields.io/badge/arXiv-b31b1b.svg?style=flat"></a>
+    <a href="https://github.com/dsevero/rcaq"><img src="https://img.shields.io/badge/code-grey.svg?logo=github&style=flat"></a>
+    <br>
+  </figcaption>
+</figure>
 
-- **Predicting Multiple ICD-10 Codes from Brazilian-Portuguese Clinical Notes**\
-Arthur D Reys, Danilo Silva, Daniel Severo, Saulo Pedro, Marcia M Sá, Guilherme AC Salgado\
-Brazilian Conference on Intelligent Systems (BRACIS), 2020\
-[[arXiv]](https://arxiv.org/abs/2008.01515) [[code]](https://github.com/3778/icd-prediction-mimic)
-\
+---
+<figure>
+  <img src="mcbits-thumbnail-2.png" style="float: left; margin-right: 30px; width: 180px;">
+  <figcaption>
+    <b>Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding</b><br>
+    Yangjun Ruan*, Karen Ullrich*, <u>Daniel Severo*</u>, James Townsend, Ashish Khisti, Arnaud Doucet, Alireza Makhzani, Chris J. Maddison<br>
+    <span style="color:red"><b>Long talk</b></span> at International Conference on Machine Learning (ICML), 2021<br>
+    <a href="https://arxiv.org/abs/2102.11086"><img src="https://img.shields.io/badge/arXiv-b31b1b.svg?style=flat"></a>
+    <a href="https://github.com/ryoungj/mcbits"><img src="https://img.shields.io/badge/code-grey.svg?logo=github&style=flat"></a>
+    <a href="https://slideslive.com/38958684/improving-lossless-compression-rates-via-monte-carlo-bitsback-coding?ref=speaker-25566-latest&locale=e"><img src="https://img.shields.io/badge/video-0A75AD.svg?logo=slides&style=flat"></a>
+    <br>
+  </figcaption>
+</figure>
+
 \
 \* Equal contribution
 
 # Awards
+{{< details "Finalist for the Meta Research PhD Fellowship, 2023" >}}
+The Meta Research PhD Fellowship program awards PhD candidates conducting research on the cusp of emerging topics across computer science, engineering, and behavioral science. To support their commitment to furthering research in some of Meta’s key interest areas, Fellows receive full coverage of tuition and university fees for up to two academic years, as well as a $42,000 stipend.
+
+Over 3200 applicants, **62 finalists (top 2%)**, and 17 award winners (top 0.5%).
+
+https://research.facebook.com/blog/2023/4/announcing-the-2023-meta-research-phd-fellowship-award-winners/
+{{< /details >}}
+
 {{< details "Vector Scholarship in Artificial Intelligence Recipient, 2020-21" >}}
 The Vector Scholarship in Artificial Intelligence supports the recruitment of top students to AI-related master’s programs in Ontario. Valued at $17,500 for one year of full-time study at an Ontario university, these merit-based entrance awards recognize exceptional candidates pursuing a master’s program recognized by the Vector Institute or who are following an individualized study path that is demonstrably AI-focused.
 
