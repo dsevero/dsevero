@@ -2,26 +2,48 @@
 title: About me
 type: docs
 ---
-<img src="https://pt.gravatar.com/userimage/15577563/38e9687aa5f0ef079938dd6aba330805.png?size=300" style="border-radius: 15%; float: left; padding-right: 15px" width="250">
-<div style="text-align: justify">
-I'm a Ph.D. candidate at the <a href="https://www.ece.utoronto.ca/">University of Toronto</a> and <a href="https://vectorinstitute.ai/">Vector Institute for Artificial Intelligence</a>. 
 
-My research interests are lossless data compression, information theory, and AI. Data sources usually have some type of structure, such as graphs and sets. This means we can compress them better by taking this structure into account during compression. Unfortunately, existing methods that do this are either sub-optimal (don't achieve the Shannon bound) or computationally intractable. I’m interested in building computationally efficient compression algorithms that can be used with deep generative models on structured data, as well as their connections to bayesian methods.
+<table style="border-collapse: collapse; width: 100%; border: none">
+  <tr>
+    <td style="width: 20%; vertical-align: top; padding-right: 20px; border: none">
+    <img src="me.jpeg" style="border-radius: 15%; float: left; padding-right: 15px" width="250">
+    </td>
+    <td style="width: 50%; vertical-align: top; border: none">
+      <p style="font-size: 20px;">
+        Ph.D. Candidate<br>
+        Department of Electrical and Computer Engineering<br>
+        University of Toronto<br>
+        Vector Institute for Artificial Intelligence<br>
+        <p style="font-size: 14;">
+            <a href="https://dsevero.com/cv.pdf"> CV (last updated: October/2023) </a> |
+            <a href="https://twitter.com/_dsevero"> Twitter </a> |
+            <a href="https://scholar.google.com/citations?user=5bQjLz4AAAAJ"> Google Scholar </a> |
+            <a href="https://github.com/dsevero"> GitHub </a>
+        </p>
+     </p>
+    </td>
+  </tr>
+</table>
+
+
+# Research
+My research interests are generative modelling, information theory, and compression under computational and memory constraints.
+Data sources usually have some type of structure, such as graphs and sets.
+This means we can model and compress them better by taking this structure into account.
+Unfortunately, existing methods that do this are either sub-optimal (don't achieve the Shannon bound) or computationally intractable.
+I’m interested in building computationally efficient compression algorithms that can be used with deep generative models on structured data, as well as their connections to bayesian methods.
 
 Originally, I am from Florianópolis (Brazil) but I've lived in New Jersey, Orlando, Toronto (now), São Paulo, as well as other smaller cities in the south of Brazil.
 
-Previously, I interned at [Facebook AI Research (FAIR)](https://ai.facebook.com/) with [Karen Ullrich](https://karenullrich.info/) in the summer of 2021.
+Previously, I've interned at the [Fundamental AI Research (FAIR) lab](https://ai.facebook.com/) at Meta with [Karen Ullrich](https://karenullrich.info/) in the summer of 2021.
 
 I spent 2022 at [Google AI](https://ai.google/) with [Lucas Theis](http://theis.io/) and [Johannes Ballé](https://balle.io/) as a Student Researcher.
-
-I spend more time than I should on [Twitter](https://twitter.com/_dsevero).
-
-Check out my [CV](https://dsevero.com/cv.pdf) (last updated: March/2023).
-</div>
 
 ---
 
 # Latest News
+**August/2023** - I started a second internship at FAIR (Meta AI) in information theory and generative modelling with [Matthew Muckley](https://mmuckley.github.io/)
+
 **April/2023** - [Random Edge Coding](https://arxiv.org/abs/2305.09705) and [Action Matching](https://arxiv.org/abs/2210.06662) were accepted to ICML 2023
 
 **March/2023** - Check out our [ICML 2023 Workshop on Neural Compression and Information Theory](https://neuralcompression.github.io/workshop23)
@@ -30,6 +52,21 @@ Check out my [CV](https://dsevero.com/cv.pdf) (last updated: March/2023).
 
 # Selected Publications and Preprints
 For a complete list, please see my [Google Scholar](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en) profile.
+
+
+<figure>
+  <img src="lasi-thumbnail.png" style="float: left; margin-right: 10px; width: 200px;">
+  <figcaption>
+    <b>The Unreasonable Effectiveness of Linear Prediction as a Perceptual Metric</b><br>
+    <u>Daniel Severo</u>, Lucas Theis, Johannes Ballé<br>
+    Preprint, 2023 <br>
+    <a href="https://arxiv.org/abs/2310.05986"><img src="https://img.shields.io/badge/arXiv-b31b1b.svg?style=flat"></a>
+    <a href="https://github.com/dsevero/Linear-Autoregressive-Similarity-Index"><img src="https://img.shields.io/badge/code-grey.svg?logo=github&style=flat"></a>
+    <br>
+  </figcaption>
+</figure>
+
+---
 
 <figure>
   <img src="rec.svg" style="float: left; margin-right: 10px; width: 200px;">
