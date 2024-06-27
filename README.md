@@ -1,9 +1,8 @@
-Research Engineer at the Fundamental AI Research (FAIR) Labs at Meta.
+Research Engineer at Meta - Fundamental AI Research (FAIR) Labs.
 
 I'm interested in information theory, machine learning, and AI.
 
 [[google scholar]](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en)
-[[website]](https://dsevero.com)
 [[twitter]](https://twitter.com/_dsevero)
 [[CV]](https://dsevero.com/cv.pdf)
 
@@ -20,7 +19,17 @@ Previously, I've interned at the [Fundamental AI Research (FAIR) lab](https://ai
 
 I spent 2022 at [Google AI](https://ai.google/) with [Lucas Theis](http://theis.io/) and [Johannes Ballé](https://balle.io/) as a Student Researcher.
 
-# Featured gists
+# Latest News
+**April 2024** - I've moved to Montréal to start as a Research Engineer at FAIR Labs!
+
+**March 2024** - [The Unreasonable Effectiveness of Linear Prediction as a Perceptual Metri](https://arxiv.org/abs/2310.05986) and [Entropy Coding of Unordered Data Structures](https://openreview.net/pdf?id=PggJ9CbEN7) were accepted to ICLR 2024.
+
+**August 2023** - I started a second internship at FAIR (Meta AI) in information theory and generative modelling with [Matthew Muckley](https://mmuckley.github.io/).
+
+**April 2023** - [Random Edge Coding](https://arxiv.org/abs/2305.09705) and [Action Matching](https://arxiv.org/abs/2210.06662) were accepted to ICML 2023.
+
+# Tutorials and Workshops
+- [ICML 2023 Workshop on Neural Compression and Information Theory](https://neuralcompression.github.io/workshop23), 2023
 - [Asymmetric Numeral Systems (ANS) codec in pure Python](https://gist.github.com/dsevero/7e02d96e079ce44b89ff33d7a1ce1738), 2021
 - [A tutorial on bits-back with Huffman coding](https://gist.github.com/dsevero/8e7c38b44953964d3b9873b6bd96d9b2), 2021
 - [Vectorized Run-Length Encoding](https://gist.github.com/dsevero/693677754798e21f539e4e11a3103576), 2021
