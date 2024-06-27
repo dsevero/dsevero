@@ -1,10 +1,16 @@
-Research Engineer at Meta - Fundamental AI Research (FAIR) Labs.
+
+**Research Engineer**
+
+**Meta - Fundamental AI Research (FAIR) Labs**
 
 I'm interested in information theory, machine learning, and AI.
 
-[[google scholar]](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en)
-[[twitter]](https://twitter.com/_dsevero)
-[[CV]](https://dsevero.com/cv.pdf)
+[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)
+](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en)
+[![X (Twitter)](https://img.shields.io/badge/X-000000.svg?style=for-the-badge&logo=X&logoColor=white)
+](https://twitter.com/_dsevero)
+[![CV](https://img.shields.io/badge/CV-009900?style=for-the-badge&logoColor=white)](https://dsevero.com/cv.pdf)
+
 
 # Research
 My research interests are generative modelling, information theory, and compression under computational and memory constraints.
