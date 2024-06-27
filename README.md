@@ -9,7 +9,7 @@ I'm interested in information theory, machine learning, and AI.
 ](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en)
 [![X (Twitter)](https://img.shields.io/badge/X-000000.svg?style=for-the-badge&logo=X&logoColor=white)
 ](https://twitter.com/_dsevero)
-[![CV](https://img.shields.io/badge/CV-009900?style=for-the-badge&logoColor=white)](https://dsevero.com/cv.pdf)
+[![CV](https://img.shields.io/badge/CV%20&#40;last%20updated%20October%202023&#41;-009900?style=for-the-badge&logoColor=white)](https://dsevero.com/cv.pdf)
 
 
 # Research
