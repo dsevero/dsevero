@@ -3,7 +3,8 @@
 
 **Meta - Fundamental AI Research (FAIR) Labs**
 
-I'm interested in information theory, machine learning, and AI.
+Originally, I am from Florianópolis (Brazil) but I've lived in New Jersey, Orlando, Toronto (now), São Paulo, as well as other smaller cities in the south of Brazil.
+I spent 2022 at [Google AI](https://ai.google/) with [Lucas Theis](http://theis.io/) and [Johannes Ballé](https://balle.io/) as a Student Researcher.
 
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)
 ](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en)
@@ -12,16 +13,18 @@ I'm interested in information theory, machine learning, and AI.
 [![CV](https://img.shields.io/badge/CV%20&#40;last%20updated%20October%202023&#41;-009900?style=for-the-badge&logoColor=white)](https://dsevero.com/cv.pdf)
 
 
-# Research
-My research interests are generative modelling, information theory, and compression under computational and memory constraints.
-Data sources usually have some type of structure, such as graphs and sets.
-This means we can model and compress them better by taking this structure into account.
-Unfortunately, existing methods that do this are either sub-optimal (don't achieve the Shannon bound) or computationally intractable.
-I’m interested in building computationally efficient compression algorithms that can be used with deep generative models on structured data, as well as their connections to bayesian methods.
+# Research Interests
+I'm interested in information theory, machine learning, and AI.
 
-Originally, I am from Florianópolis (Brazil) but I've lived in New Jersey, Orlando, Toronto (now), São Paulo, as well as other smaller cities in the south of Brazil.
+### Compression of non-sequential data
+Lossless compression algorithms typically preserve the ordering in which data points are compressed.
+However, there are data types where order is not meaningful, such as collections of files, rows in a database, nodes in a graph, and, notably, datasets in machine learning applications.
 
-I spent 2022 at [Google AI](https://ai.google/) with [Lucas Theis](http://theis.io/) and [Johannes Ballé](https://balle.io/) as a Student Researcher.
+Compressing with traditional algorithms is possible if we pick an order for the elements and communicate the corresponding ordered sequence.
+However, unless the order information is somehow removed during the encoding process, this procedure will be sub-optimal, because the order contains information and therefore more bits are used to represent the source than are truly necessary.
+
+In previous works, we gave a formal definition for non-sequential objects as random sets of equivalent sequences, which we call _Combinatorial Random Variables_ (CRVs), as well as a general class of computatioanlly efficient algorithms that achieve the optimal compression rate of CRVs: _Random Permutation Codes_ (RPCs).
+Specialized RPCs are given for the case of multisets ([Random Order Coding](https://arxiv.org/abs/2107.09202)), graphs ([Random Edge Coding](https://arxiv.org/abs/2305.09705)), and partitions/clusterings (under review), providing new algorithms for compression of databases, social networks, and web data in the JSON file format.
 
 # Latest News
 **April 2024** - I've moved to Montréal to start as a Research Engineer at FAIR Labs!
