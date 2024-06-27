@@ -21,8 +21,6 @@ I’m interested in building computationally efficient compression algorithms th
 
 Originally, I am from Florianópolis (Brazil) but I've lived in New Jersey, Orlando, Toronto (now), São Paulo, as well as other smaller cities in the south of Brazil.
 
-Previously, I've interned at the [Fundamental AI Research (FAIR) lab](https://ai.facebook.com/) at Meta with [Karen Ullrich](https://karenullrich.info/) in the summer of 2021.
-
 I spent 2022 at [Google AI](https://ai.google/) with [Lucas Theis](http://theis.io/) and [Johannes Ballé](https://balle.io/) as a Student Researcher.
 
 # Latest News
