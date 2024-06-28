@@ -26,6 +26,8 @@ However, unless the order information is somehow removed during the encoding pro
 In previous works, we gave a formal definition for non-sequential objects as random sets of equivalent sequences, which we call _Combinatorial Random Variables_ (CRVs), as well as a general class of computatioanlly efficient algorithms that achieve the optimal compression rate of CRVs: _Random Permutation Codes_ (RPCs).
 Specialized RPCs are given for the case of multisets ([Random Order Coding](https://arxiv.org/abs/2107.09202)), graphs ([Random Edge Coding](https://arxiv.org/abs/2305.09705)), and partitions/clusterings (under review), providing new algorithms for compression of databases, social networks, and web data in the JSON file format.
 
+Currently, I'm interested in the application of RPCs to reduce the memory footprint of vector databases.
+
 # Latest News
 **April 2024** - I've moved to Montréal to start as a Research Engineer at FAIR Labs!
 
