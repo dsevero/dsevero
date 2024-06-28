@@ -29,7 +29,7 @@ Specialized RPCs are given for the case of multisets ([Random Order Coding](http
 # Latest News
 **April 2024** - I've moved to Montréal to start as a Research Engineer at FAIR Labs!
 
-**March 2024** - [The Unreasonable Effectiveness of Linear Prediction as a Perceptual Metri](https://arxiv.org/abs/2310.05986) and [Entropy Coding of Unordered Data Structures](https://openreview.net/pdf?id=PggJ9CbEN7) were accepted to ICLR 2024.
+**March 2024** - [LASI](https://arxiv.org/abs/2310.05986) and [Shuffle Coding](https://openreview.net/pdf?id=PggJ9CbEN7) were accepted to ICLR 2024.
 
 **August 2023** - I started a second internship at FAIR (Meta AI) in information theory and generative modelling with [Matthew Muckley](https://mmuckley.github.io/).
 
