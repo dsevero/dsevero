@@ -6,6 +6,11 @@
 Originally, I am from Florianópolis (Brazil) but I've lived in New Jersey, Orlando, Toronto (now), São Paulo, as well as other smaller cities in the south of Brazil.
 I spent 2022 at [Google AI](https://ai.google/) with [Lucas Theis](http://theis.io/) and [Johannes Ballé](https://balle.io/) as a Student Researcher.
 
+I obtained a Ph.D. from the **University of Toronto** in Information Theory and A.I.
+My thesis studies, and proposes algorithms for, lossless compression of combinatorial objects such as graphs, multisets, and partitions.
+
+Thesis: [Random Permutation Codes: Lossless Source Coding of Non-Sequential Data](https://arxiv.org/abs/2411.14879)
+
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)
 ](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en)
 [![X (Twitter)](https://img.shields.io/badge/X-000000.svg?style=for-the-badge&logo=X&logoColor=white)
