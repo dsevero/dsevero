@@ -17,6 +17,8 @@ Thesis: [Random Permutation Codes: Lossless Source Coding of Non-Sequential Data
 ](https://twitter.com/_dsevero)
 [![CV](https://img.shields.io/badge/CV%20&#40;last%20updated%20October%202023&#41;-009900?style=for-the-badge&logoColor=white)](https://github.com/dsevero/dsevero/blob/master/static/cv.pdf)
 
+[Slides from DCC 2025 (click here)](https://nbviewer.org/github/dsevero/dsevero/blob/master/static/DCC2025%20-%20PCircuits.pdf) / [(mirror)](static/DCC2025%20-%20PCircuits.pdf)
+
 # Research Interests
 I'm interested in information theory, machine learning, and AI.
 
