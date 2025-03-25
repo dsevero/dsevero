@@ -17,8 +17,6 @@ Thesis: [Random Permutation Codes: Lossless Source Coding of Non-Sequential Data
 ](https://twitter.com/_dsevero)
 [![CV](https://img.shields.io/badge/CV%20&#40;last%20updated%20October%202023&#41;-009900?style=for-the-badge&logoColor=white)](https://github.com/dsevero/dsevero/blob/master/static/cv.pdf)
 
-[Slides from DCC 2025 (click here)](https://nbviewer.org/github/dsevero/dsevero/blob/master/static/DCC2025%20-%20PCircuits.pdf) / [(mirror)](static/DCC2025%20-%20PCircuits.pdf)
-
 # Research Interests
 I'm interested in information theory, machine learning, and AI.
 
@@ -43,7 +41,8 @@ Currently, I'm interested in the application of RPCs to reduce the memory footpr
 
 **April 2023** - [Random Edge Coding](https://arxiv.org/abs/2305.09705) and [Action Matching](https://arxiv.org/abs/2210.06662) were accepted to ICML 2023.
 
-# Tutorials and Workshops
+# Tutorials, Workshops, and Talks
+- [Slides from DCC2025 (click here)](https://nbviewer.org/github/dsevero/dsevero/blob/master/static/DCC2025%20-%20PCircuits.pdf) / [(mirror)](static/DCC2025%20-%20PCircuits.pdf), 2025
 - [ICML 2023 Workshop on Neural Compression and Information Theory](https://neuralcompression.github.io/workshop23), 2023
 - [Asymmetric Numeral Systems (ANS) codec in pure Python](https://gist.github.com/dsevero/7e02d96e079ce44b89ff33d7a1ce1738), 2021
 - [A tutorial on bits-back with Huffman coding](https://gist.github.com/dsevero/8e7c38b44953964d3b9873b6bd96d9b2), 2021
@@ -52,7 +51,6 @@ Currently, I'm interested in the application of RPCs to reduce the memory footpr
 
 # Recommended readings (not my authorship)
 - [Darts, Dice, and Coins: Sampling from a Discrete Distribution](https://www.keithschwarz.com/darts-dice-coins/) by Keith Schwarz, 2011
-
 
 # Selected Publications and Preprints
 For a complete list, please see my [Google Scholar](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en) profile.
