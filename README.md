@@ -12,7 +12,7 @@ Before grad school I worked as an electronics engineer (hardware/firmware for em
 ](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en)
 [![X (Twitter)](https://img.shields.io/badge/X-000000.svg?style=for-the-badge&logo=X&logoColor=white)
 ](https://twitter.com/_dsevero)
-[![CV](https://img.shields.io/badge/CV%20&#40;last%20updated%20October%202025&#41;-009900?style=for-the-badge&logoColor=white)](https://github.com/dsevero/dsevero/blob/master/static/cv.pdf)
+[![CV](https://img.shields.io/badge/CV%20&#40;last%20updated%20October%202025&#41;-009900?style=for-the-badge&logoColor=white)](https://drive.google.com/file/d/1vpLWEKpd_YyPJPj78dGnIOYNQrukO92C/view?usp=drivesdk)
 
 ## Selected projects from 2024/2025
 - Advancing flow matching pre-training (https://arxiv.org/abs/2412.03487)
