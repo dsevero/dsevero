@@ -1,7 +1,7 @@
 
 **Research Engineer**
 
-**Meta Superinteligence Labs - Fundamental AI Research (MSL - FAIR)**
+**Meta Superintelligence Labs - Fundamental AI Research (MSL - FAIR)**
 
 I work on advancing pre-training and inference-time compute of autoregressive next-token prediction, diffusion, and flow matching models at scale.
 In 2024 I obtained a Ph.D. from the University of Toronto and the Vector Institute for A.I. in generative modelling and information theory.
