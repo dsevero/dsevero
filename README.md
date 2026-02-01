@@ -12,7 +12,7 @@ Before grad school I worked as an electronics engineer (hardware/firmware for em
 ](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en)
 [![X (Twitter)](https://img.shields.io/badge/X-000000.svg?style=for-the-badge&logo=X&logoColor=white)
 ](https://twitter.com/_dsevero)
-[![CV](https://img.shields.io/badge/CV%20&#40;last%20updated%20February%202026&#41;-009900?style=for-the-badge&logoColor=white)](https://drive.google.com/file/d/1vpLWEKpd_YyPJPj78dGnIOYNQrukO92C/view?usp=drivesdk)
+[![CV](https://img.shields.io/badge/CV%20&#40;last%20updated%20February%202026&#41;-009900?style=for-the-badge&logoColor=white)](https://drive.google.com/file/d/1OQOWoz0kHbahTWU_8eyEZJ4TTqrwUODH/view?usp=sharing)
 
 ## Selected projects from 2025/2026
 - (ICLR 2026) Efficient learning and inference of distributions over permutations applied to re-ranking in recommendation systems (https://arxiv.org/abs/2505.24664)
