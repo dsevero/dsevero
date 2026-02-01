@@ -14,11 +14,11 @@ Before grad school I worked as an electronics engineer (hardware/firmware for em
 ](https://twitter.com/_dsevero)
 [![CV](https://img.shields.io/badge/CV%20&#40;last%20updated%20October%202025&#41;-009900?style=for-the-badge&logoColor=white)](https://drive.google.com/file/d/1vpLWEKpd_YyPJPj78dGnIOYNQrukO92C/view?usp=drivesdk)
 
-## Selected projects from 2024/2025
-- Advancing flow matching pre-training for de novo material generation (https://arxiv.org/abs/2412.03487)
-- Reducing the number of forward passes for code generation with masked diffusion models, without re-training (https://arxiv.org/abs/2505.24857)
-- Improving memory efficiency of vector databases (FAISS) via lossless compression, with no impact to search quality (https://arxiv.org/abs/2501.10479)
-- Efficient learning and inference of distributions over permutations applied to re-ranking in recommendation systems (https://arxiv.org/abs/2505.24664)
+## Selected projects from 2025/2026
+- (ICLR 2026) Efficient learning and inference of distributions over permutations applied to re-ranking in recommendation systems (https://arxiv.org/abs/2505.24664)
+- (ICLR 2025 oral) Advancing flow matching pre-training (\url{https://arxiv.org/abs/2412.03487})
+- (NeurIPS 2025) Reducing the number of forward passes for code generation with masked diffusion models, without re-training (https://arxiv.org/abs/2505.24857)
+- (Under Review) Improving memory efficiency of vector databases (FAISS) via lossless compression, with no impact to search quality (https://arxiv.org/abs/2501.10479)
 
 For a complete list, please see my [Google Scholar](https://scholar.google.com/citations?user=5bQjLz4AAAAJ&hl=en) profile.
 
