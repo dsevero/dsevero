@@ -3,7 +3,9 @@
 
 **Meta Superintelligence Labs - Fundamental AI Research (MSL - FAIR)**
 
-I'm a researcher in the Generative Modelling Foundations group at FAIR, advancing the foundations of flow matching and diffusion as well as applications at scale.
+I'm a Senior Researcher at FAIR - Meta Superintelligence Labs.
+I work on developing world models (focusing on robotics) on the JEPA team (Montréal).
+Before, I helped advance the foundations of flow matching and diffusion as well as applications at scale.
 In 2024 I obtained a Ph.D. from the University of Toronto and the Vector Institute for A.I. in information theory, generative modelling, and data compression.
 I spent most of grad school interning at Meta (FAIR Labs) and Google AI.
 Before grad school I worked as an electronics engineer (hardware/firmware for embedded systems), as well as a machine learning engineer in recommendation systems and ML for health.
