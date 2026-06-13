@@ -18,7 +18,7 @@ Before grad school I worked as an electronics engineer (hardware/firmware for em
 
 ## Selected projects from 2025/2026
 - (ICLR 2026) Efficient learning and inference of distributions over permutations applied to re-ranking in recommendation systems (https://arxiv.org/abs/2505.24664)
-- (ICLR 2025 oral) Advancing flow matching pre-training (\url{https://arxiv.org/abs/2412.03487})
+- (ICLR 2025 oral) Advancing flow matching pre-training (https://arxiv.org/abs/2412.03487)
 - (NeurIPS 2025) Reducing the number of forward passes for code generation with masked diffusion models, without re-training (https://arxiv.org/abs/2505.24857)
 - (Under Review) Improving memory efficiency of vector databases (FAISS) via lossless compression, with no impact to search quality (https://arxiv.org/abs/2501.10479)
 
